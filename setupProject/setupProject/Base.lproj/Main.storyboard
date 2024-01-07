@@ -17,20 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kWz-dj-4aX">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kWz-dj-4aX">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="kWz-dj-4aX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Tl0-dj-lA1"/>
-                            <constraint firstItem="kWz-dj-4aX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nF5-iX-p79"/>
-                            <constraint firstItem="kWz-dj-4aX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oHe-4f-N1b"/>
-                            <constraint firstItem="kWz-dj-4aX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ylL-1S-wlQ"/>
+                            <constraint firstItem="kWz-dj-4aX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C0i-Up-bBO"/>
+                            <constraint firstAttribute="trailing" secondItem="kWz-dj-4aX" secondAttribute="trailing" id="drV-qh-N1x"/>
+                            <constraint firstItem="kWz-dj-4aX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iMw-1k-VS1"/>
+                            <constraint firstAttribute="bottom" secondItem="kWz-dj-4aX" secondAttribute="bottom" id="uP6-nB-1sb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="kWz-dj-4aX" id="7af-V0-gCr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

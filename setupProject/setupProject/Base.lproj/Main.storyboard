@@ -19,7 +19,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kWz-dj-4aX">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="IiG-4g-mNm"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="H9M-1e-qIN"/>
@@ -27,16 +27,17 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="tintColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kWz-dj-4aX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C0i-Up-bBO"/>
+                            <constraint firstAttribute="bottom" secondItem="kWz-dj-4aX" secondAttribute="bottom" id="cQ4-Oi-iMb"/>
                             <constraint firstAttribute="trailing" secondItem="kWz-dj-4aX" secondAttribute="trailing" id="drV-qh-N1x"/>
                             <constraint firstItem="kWz-dj-4aX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iMw-1k-VS1"/>
-                            <constraint firstAttribute="bottom" secondItem="kWz-dj-4aX" secondAttribute="bottom" id="zjs-fB-e6G"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="kWz-dj-4aX" id="7af-V0-gCr"/>
+                        <outlet property="tableView" destination="kWz-dj-4aX" id="nib-KP-BdJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -45,8 +46,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -30,6 +30,12 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="0uf-nl-KuU">
                                                     <rect key="frame" x="16" y="4" width="361" height="220"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT8-yM-Ijk" userLabel="LikeButton">
                                                     <rect key="frame" x="335" y="4" width="42" height="42"/>
@@ -43,7 +49,6 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="0.0" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="oT8-yM-Ijk" firstAttribute="trailing" secondItem="0uf-nl-KuU" secondAttribute="trailing" id="2Z7-wF-CVl"/>
                                                 <constraint firstItem="oT8-yM-Ijk" firstAttribute="top" secondItem="0uf-nl-KuU" secondAttribute="top" id="Na0-63-TNk"/>

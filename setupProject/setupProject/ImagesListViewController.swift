@@ -14,6 +14,7 @@ class ImagesListViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+
     }
 
 }
@@ -33,8 +34,10 @@ extension ImagesListViewController: UITableViewDataSource{
             return UITableViewCell()
         }
         configCell(for: imageListCell, with: indexPath)
+        
         return imageListCell
     }
+    
 }
 extension ImagesListViewController{
     func configCell(for cell: ImageListCell, with indexPath: IndexPath) { }

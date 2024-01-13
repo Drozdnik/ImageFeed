@@ -14,7 +14,6 @@ class ImagesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.contentInset = UIEdgeInsets(top:12, left: 0, bottom: 12, right: 0)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -25,15 +24,6 @@ class ImagesListViewController: UIViewController {
         formatter.timeStyle = .none
         return formatter
     }()
-}
-
-extension ImagesListViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
-    private func tableView(_ tableView:UITableView, didSelectRowAt indexPath: IndexPath) -> CGFloat{
-        guard let image = UIImage(named: photosName[indexPath.row]) else {
-            return 0
-        }
-    }
 }
 
 extension ImagesListViewController: UITableViewDataSource{
@@ -52,9 +42,33 @@ extension ImagesListViewController: UITableViewDataSource{
     }
 }
 
+extension ImagesListViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    private func tableView(_ tableView:UITableView, didSelectRowAt indexPath: IndexPath) -> CGFloat{
+        guard let image = UIImage(named: photosName[indexPath.row]) else {
+            return 0
+        }
+        
+        let imageInserts = UIEdgeInsets(top:12, left: 0, bottom: 12, right: 0)
+        let imageViewWidth = tableView.bounds.width - imageInserts.left - imageInserts.right
+        let imageWidth = image.size.width
+        let scale = imageViewWidth / imageWidth
+        let cellHeigh = image.size.height * scale + imageInserts.top + imageInserts.bottom
+        return cellHeigh
+    }
+}
+
 extension ImagesListViewController{
     func configCell(for cell: ImageListCell, with indexPath: IndexPath) {
-        dateFormatter.string(from: <#T##Date#>)
+        guard let image = UIImage(named: photosName[indexPath.row]) else {
+            return
+        }
+        
+        cell.cellImage.image = image
+        cell.dateLabel.text = dateFormatter.string(from: Date())
+        
+        let isLiked = indexPath.row % 2 == 0
+        let likeImage = isLiked ? UIImage(named: "buttonTapped") : UIImage(named: "buttonDisabled")
+        cell.likeButton.setImage(likeImage, for: .normal)
     }
-    
 }

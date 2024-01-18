@@ -43,7 +43,7 @@
                                                     <state key="normal" image="buttonTapped"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 января 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-8D-Uwa" userLabel="DataLabel">
-                                                    <rect key="frame" x="24" y="208" width="361" height="16"/>
+                                                    <rect key="frame" x="24" y="200" width="361" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,13 +51,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="oT8-yM-Ijk" firstAttribute="trailing" secondItem="0uf-nl-KuU" secondAttribute="trailing" id="2Z7-wF-CVl"/>
-                                                <constraint firstItem="oT8-yM-Ijk" firstAttribute="top" secondItem="0uf-nl-KuU" secondAttribute="top" id="Na0-63-TNk"/>
+                                                <constraint firstItem="0uf-nl-KuU" firstAttribute="bottom" secondItem="tT5-8D-Uwa" secondAttribute="bottom" constant="8" id="MHc-Z9-r75"/>
                                                 <constraint firstItem="0uf-nl-KuU" firstAttribute="leading" secondItem="cM8-ek-d9t" secondAttribute="leading" constant="16" id="WPh-ZS-4f0"/>
                                                 <constraint firstItem="0uf-nl-KuU" firstAttribute="top" secondItem="cM8-ek-d9t" secondAttribute="top" constant="4" id="Yx3-0Q-tL7"/>
                                                 <constraint firstItem="tT5-8D-Uwa" firstAttribute="leading" secondItem="0uf-nl-KuU" secondAttribute="leading" constant="8" id="b8Y-de-drX"/>
                                                 <constraint firstAttribute="bottom" secondItem="0uf-nl-KuU" secondAttribute="bottom" id="hI5-7t-ufW"/>
                                                 <constraint firstItem="tT5-8D-Uwa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0uf-nl-KuU" secondAttribute="trailing" constant="8" id="k7k-hI-w5A"/>
-                                                <constraint firstItem="tT5-8D-Uwa" firstAttribute="bottom" secondItem="0uf-nl-KuU" secondAttribute="bottom" id="oq5-SW-fXK"/>
+                                                <constraint firstItem="oT8-yM-Ijk" firstAttribute="top" secondItem="0uf-nl-KuU" secondAttribute="top" id="nJA-YM-yhs"/>
                                                 <constraint firstAttribute="trailing" secondItem="0uf-nl-KuU" secondAttribute="trailing" constant="16" id="qJB-vu-Rfq"/>
                                             </constraints>
                                         </tableViewCellContentView>

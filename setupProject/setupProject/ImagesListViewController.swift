@@ -21,9 +21,13 @@ class ImagesListViewController: UIViewController {
 }
 
 extension ImagesListViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return photosName.count
-    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+         return photosName.count
+     }
+     
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return 1 // Теперь каждая секция будет содержать только одну ячейку
+     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ImageListCell.resuceIdentifier, for: indexPath)
@@ -40,7 +44,7 @@ extension ImagesListViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let image = UIImage(named: photosName[indexPath.row]) else {
+        guard let image = UIImage(named: photosName[indexPath.section]) else {
             return 0
         }
         let imageInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
@@ -51,18 +55,27 @@ extension ImagesListViewController: UITableViewDelegate{
         return cellHeight
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10 // Высота отступа между секциями
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+          let footerView = UIView()
+          footerView.backgroundColor = UIColor.clear // Сделать фон прозрачным
+          return footerView
+      }
 }
 
 extension ImagesListViewController{
     func configCell(for cell: ImageListCell, with indexPath: IndexPath) {
-        guard let image = UIImage(named: photosName[indexPath.row]) else {
+        guard let image = UIImage(named: photosName[indexPath.section]) else {
             return
         }
         
         cell.cellImage.image = image
         cell.dateLabel.text = dateFormatter.string(from: Date())
         
-        let isLiked = indexPath.row % 2 == 0
+        let isLiked = indexPath.section % 2  == 1
         let likeImage = isLiked ? UIImage(named: "buttonTapped") : UIImage(named: "buttonDisabled")
         cell.likeButton.setImage(likeImage, for: .normal)
     }

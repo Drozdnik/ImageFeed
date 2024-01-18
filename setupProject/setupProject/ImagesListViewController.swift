@@ -9,6 +9,7 @@ class ImagesListViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.sectionHeaderHeight = 300
     }
     
     private lazy var dateFormatter: DateFormatter = {
@@ -38,11 +39,10 @@ extension ImagesListViewController: UITableViewDataSource{
 extension ImagesListViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
     
-    private func tableView(_ tableView:UITableView, didSelectRowAt indexPath: IndexPath) -> CGFloat{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let image = UIImage(named: photosName[indexPath.row]) else {
             return 0
         }
-        
         let imageInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
         let imageViewWidth = tableView.bounds.width - imageInsets.left - imageInsets.right
         let imageWidth = image.size.width
@@ -50,6 +50,7 @@ extension ImagesListViewController: UITableViewDelegate{
         let cellHeight = image.size.height * scale + imageInsets.top + imageInsets.bottom
         return cellHeight
     }
+    
 }
 
 extension ImagesListViewController{

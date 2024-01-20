@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */; };
+		8791DD112B5C1B08003E8A0C /* YSDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */; };
+		8791DD122B5C1B08003E8A0C /* YSDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */; };
 		87EFD2D82B418A1C00735931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2D72B418A1C00735931 /* AppDelegate.swift */; };
 		87EFD2DA2B418A1C00735931 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2D92B418A1C00735931 /* SceneDelegate.swift */; };
 		87EFD2DC2B418A1C00735931 /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2DB2B418A1C00735931 /* ImagesListViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		87EFD2D42B418A1C00735931 /* imageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EFD2D72B418A1C00735931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87EFD2D92B418A1C00735931 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,35 @@
 			path = ProfileView;
 			sourceTree = "<group>";
 		};
+		8791DD0C2B5C1A2A003E8A0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8791DD0D2B5C1B08003E8A0C /* Fonts */,
+				87EFD2E52B418A1D00735931 /* Info.plist */,
+				87EFD2E22B418A1D00735931 /* LaunchScreen.storyboard */,
+				87EFD2DD2B418A1C00735931 /* Main.storyboard */,
+				87EFD2E02B418A1D00735931 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8791DD0D2B5C1B08003E8A0C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8791DD0E2B5C1B08003E8A0C /* MovieQuizFonts */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8791DD0E2B5C1B08003E8A0C /* MovieQuizFonts */ = {
+			isa = PBXGroup;
+			children = (
+				8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */,
+				8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */,
+			);
+			path = MovieQuizFonts;
+			sourceTree = "<group>";
+		};
 		87EFD2CB2B418A1C00735931 = {
 			isa = PBXGroup;
 			children = (
@@ -111,14 +144,11 @@
 		87EFD2D62B418A1C00735931 /* imageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				8791DD0C2B5C1A2A003E8A0C /* Resources */,
 				8791DD092B5BEC2D003E8A0C /* ProfileView */,
 				87FB44162B4C156500A8338B /* ImageList */,
 				87EFD2D72B418A1C00735931 /* AppDelegate.swift */,
 				87EFD2D92B418A1C00735931 /* SceneDelegate.swift */,
-				87EFD2DD2B418A1C00735931 /* Main.storyboard */,
-				87EFD2E02B418A1D00735931 /* Assets.xcassets */,
-				87EFD2E22B418A1D00735931 /* LaunchScreen.storyboard */,
-				87EFD2E52B418A1D00735931 /* Info.plist */,
 			);
 			path = imageFeed;
 			sourceTree = "<group>";
@@ -253,9 +283,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8791DD112B5C1B08003E8A0C /* YSDisplay-Medium.ttf in Resources */,
 				87EFD2E42B418A1D00735931 /* LaunchScreen.storyboard in Resources */,
 				87EFD2E12B418A1D00735931 /* Assets.xcassets in Resources */,
 				87EFD2DF2B418A1C00735931 /* Main.storyboard in Resources */,
+				8791DD122B5C1B08003E8A0C /* YSDisplay-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +508,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.drozdnik.setupProject;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.drozdnik.ImageFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -509,7 +541,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.drozdnik.setupProject;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.drozdnik.ImageFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

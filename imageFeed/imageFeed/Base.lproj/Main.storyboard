@@ -118,6 +118,9 @@
                                 <rect key="frame" x="321" y="114" width="48" height="38"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="logout_button"/>
+                                <connections>
+                                    <action selector="didTapLogoutButton:" destination="215-yd-V5a" eventType="touchUpInside" id="etM-Ga-dxU"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iYj-mC-0AF">
                                 <rect key="frame" x="16" y="169" width="377" height="74.333333333333314"/>
@@ -156,6 +159,13 @@
                             <constraint firstItem="kb9-yl-8vG" firstAttribute="top" secondItem="Y1Z-Kb-G1N" secondAttribute="top" constant="32" id="uti-Ww-olU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avatarImage" destination="kb9-yl-8vG" id="SE8-fc-Y43"/>
+                        <outlet property="logOutButton" destination="cT6-B5-npV" id="fVG-Jp-Fmr"/>
+                        <outlet property="loginNameLabel" destination="yni-Re-qIw" id="Tps-YJ-bCl"/>
+                        <outlet property="nameLabel" destination="kWr-O2-8bP" id="4nr-Dk-XVP"/>
+                        <outlet property="statusLabel" destination="iPb-7f-nPO" id="BmP-Nf-BrM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMC-qm-Zjy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -91,6 +91,7 @@
                             <constraint firstItem="kWz-dj-4aX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iMw-1k-VS1"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Pac-YS-cc9"/>
                     <connections>
                         <outlet property="tableView" destination="kWz-dj-4aX" id="nib-KP-BdJ"/>
                     </connections>
@@ -99,7 +100,24 @@
             </objects>
             <point key="canvasLocation" x="127.48091603053435" y="-2.1126760563380285"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="pgV-9h-U5a">
+            <objects>
+                <tabBarController id="5UL-M6-x7r" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BGs-TV-67r">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Mq3-nu-ndm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ID-iS-Upc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-892" y="-463"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="OA5-I4-q2b">
             <objects>
                 <viewController id="215-yd-V5a" customClass="ProfileViewController" customModule="imageFeed" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,6 +177,7 @@
                             <constraint firstItem="kb9-yl-8vG" firstAttribute="top" secondItem="Y1Z-Kb-G1N" secondAttribute="top" constant="32" id="uti-Ww-olU"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="pQc-0J-4sF"/>
                     <connections>
                         <outlet property="avatarImage" destination="kb9-yl-8vG" id="SE8-fc-Y43"/>
                         <outlet property="logOutButton" destination="cT6-B5-npV" id="fVG-Jp-Fmr"/>
@@ -169,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMC-qm-Zjy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167" y="-679"/>
+            <point key="canvasLocation" x="127" y="-663"/>
         </scene>
     </scenes>
     <resources>

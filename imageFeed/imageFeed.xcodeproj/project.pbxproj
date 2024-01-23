@@ -495,7 +495,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4ZCZ4F2W3F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = setupProject/Info.plist;
+				INFOPLIST_FILE = imageFeed/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -528,7 +528,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4ZCZ4F2W3F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = setupProject/Info.plist;
+				INFOPLIST_FILE = imageFeed/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

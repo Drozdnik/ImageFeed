@@ -199,7 +199,7 @@
         <!--Single Image View Controller-->
         <scene sceneID="nki-xs-6Js">
             <objects>
-                <viewController id="tX7-j3-ieK" customClass="SingleImageViewController" customModule="Image_Feed" sceneMemberID="viewController">
+                <viewController id="tX7-j3-ieK" customClass="SingleImageViewController" customModule="imageFeed" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UTt-TA-iMc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

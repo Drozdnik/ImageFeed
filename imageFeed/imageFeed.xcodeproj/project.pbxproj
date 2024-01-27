@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788BDF12B62805400722EF5 /* SingleImageViewController.swift */; };
 		8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */; };
 		8791DD112B5C1B08003E8A0C /* YSDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */; };
 		8791DD122B5C1B08003E8A0C /* YSDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8788BDF12B62805400722EF5 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Medium.ttf"; sourceTree = "<group>"; };
 		8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Bold.ttf"; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8788BDF02B62803600722EF5 /* SingleImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8788BDF12B62805400722EF5 /* SingleImageViewController.swift */,
+			);
+			path = SingleImageViewController;
+			sourceTree = "<group>";
+		};
 		8791DD092B5BEC2D003E8A0C /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 		87EFD2D62B418A1C00735931 /* imageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				8788BDF02B62803600722EF5 /* SingleImageViewController */,
 				8791DD0C2B5C1A2A003E8A0C /* Resources */,
 				8791DD092B5BEC2D003E8A0C /* ProfileView */,
 				87FB44162B4C156500A8338B /* ImageList */,
@@ -316,6 +327,7 @@
 				87FB44142B4C14C700A8338B /* ImageListCell.swift in Sources */,
 				8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */,
 				87EFD2D82B418A1C00735931 /* AppDelegate.swift in Sources */,
+				8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */,
 				87EFD2DA2B418A1C00735931 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

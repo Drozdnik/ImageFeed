@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kWz-dj-4aX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kWz-dj-4aX">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -33,7 +33,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="224"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="0uf-nl-KuU">
+                                                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="0uf-nl-KuU">
                                                     <rect key="frame" x="16" y="4" width="361" height="220"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -71,6 +71,7 @@
                                             <outlet property="cellImage" destination="0uf-nl-KuU" id="aeI-Qo-Iy4"/>
                                             <outlet property="dateLabel" destination="tT5-8D-Uwa" id="1we-0O-dsV"/>
                                             <outlet property="likeButton" destination="oT8-yM-Ijk" id="1YY-Ry-5mz"/>
+                                            <segue destination="tX7-j3-ieK" kind="show" identifier="ShowSingleImage" trigger="accessoryAction" id="0hX-3H-mtp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -195,13 +196,43 @@
             </objects>
             <point key="canvasLocation" x="127" y="-663"/>
         </scene>
+        <!--Single Image View Controller-->
+        <scene sceneID="nki-xs-6Js">
+            <objects>
+                <viewController id="tX7-j3-ieK" customClass="SingleImageViewController" customModule="Image_Feed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UTt-TA-iMc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="9yx-3A-cna">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qSb-oK-MOr"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9yx-3A-cna" firstAttribute="leading" secondItem="qSb-oK-MOr" secondAttribute="leading" id="Xza-Dw-mq9"/>
+                            <constraint firstItem="qSb-oK-MOr" firstAttribute="bottom" secondItem="9yx-3A-cna" secondAttribute="bottom" id="agR-AO-Dw0"/>
+                            <constraint firstItem="qSb-oK-MOr" firstAttribute="trailing" secondItem="9yx-3A-cna" secondAttribute="trailing" id="nAj-Kd-Pid"/>
+                            <constraint firstItem="9yx-3A-cna" firstAttribute="top" secondItem="qSb-oK-MOr" secondAttribute="top" id="pbl-dH-QjS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uYH-44-vE2"/>
+                    <connections>
+                        <outlet property="imageView" destination="9yx-3A-cna" id="tqV-tt-Tyo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnc-4X-dl9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="-2"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
         <image name="avatar" width="70" height="70"/>
         <image name="buttonTapped" width="42" height="42"/>
         <image name="logout_button" width="24" height="24"/>
-        <image name="tab_editorial_active" width="20" height="22"/>
+        <image name="tab_editorial_active" width="30" height="30"/>
         <image name="tab_profile_active" width="75" height="49"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

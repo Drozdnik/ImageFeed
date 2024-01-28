@@ -199,7 +199,7 @@
         <!--Single Image View Controller-->
         <scene sceneID="q1q-w0-rXc">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="svH-vr-tW7" customClass="SingleImageViewController" customModule="Image_Feed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="svH-vr-tW7" customClass="SingleImageViewController" customModule="imageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fkg-v1-q9B">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,12 +235,12 @@
                                     <action selector="didTapBackButton:" destination="svH-vr-tW7" eventType="touchUpInside" id="O0A-iy-Tw4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-0j-E4D">
-                                <rect key="frame" x="171.66666666666666" y="766" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-0j-E4D" userLabel="shareButton">
+                                <rect key="frame" x="171" y="765" width="51" height="51"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="share_button"/>
+                                <state key="normal" image="Sharing"/>
                                 <connections>
-                                    <action selector="didTapShareButton:" destination="svH-vr-tW7" eventType="touchUpInside" id="v01-HH-Wek"/>
+                                    <action selector="didTapShareButton:" destination="svH-vr-tW7" eventType="touchUpInside" id="DbL-9N-Bvf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -270,11 +270,11 @@
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
+        <image name="Sharing" width="51" height="51"/>
         <image name="avatar" width="70" height="70"/>
         <image name="buttonTapped" width="42" height="42"/>
         <image name="logout_button" width="24" height="24"/>
         <image name="nav_back_button_white" width="24" height="24"/>
-        <image name="share_button" width="50" height="50"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <image name="tab_profile_active" width="75" height="49"/>
         <systemColor name="labelColor">

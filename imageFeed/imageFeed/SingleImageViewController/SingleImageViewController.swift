@@ -18,7 +18,7 @@ final class SingleImageViewController: UIViewController{
         scrollView.maximumZoomScale = 1.25
         rescaleAndCenterImageInScrollView(image: image)
     }
-    
+    // Можно сейчас не добавлять картинку на весь экран? тк это мы сделаем в следующих спринтах, когда будем получать ее по api. 
     private func rescaleAndCenterImageInScrollView(image: UIImage){
         let minZoomScale = scrollView.minimumZoomScale
         let maxZoomScale = scrollView.maximumZoomScale

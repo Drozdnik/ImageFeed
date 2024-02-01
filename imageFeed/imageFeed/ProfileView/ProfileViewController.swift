@@ -2,10 +2,6 @@ import UIKit
 
 class ProfileViewController: UIViewController{
     
-    private var nameLabel: UILabel?
-    private var idLabel: UILabel?
-    private var statusLabel:UILabel?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
@@ -13,21 +9,17 @@ class ProfileViewController: UIViewController{
     }
     
      func addSubviews(){
-        nameLabel = createLabel("Екатерина Новикова", size: 23, color: .white)
-        idLabel = createLabel("@ekaterina_nov", color: .gray)
-        statusLabel = createLabel("HelloWorld", color: .white)
         view.addSubview(avatarImageView)
         view.addSubview(exitButton)
-        if let nameLabel = nameLabel { view.addSubview(nameLabel)}
-        if let idLabel = idLabel{view.addSubview(idLabel)}
-        if let statusLabel = statusLabel {view.addSubview(statusLabel)}
     }
     
     private func configureConstraints(){
-        
-        guard let nameLabel = nameLabel else {return}
-        guard let idLabel = idLabel else {return}
-        guard let statusLabel = statusLabel else {return}
+        let nameLabel = createLabel("Name", size: 23, color: .white)
+        let idLabel = createLabel("@Id", color: .gray)
+        let statusLabel = createLabel("Status", color: .white)
+        view.addSubview(nameLabel)
+        view.addSubview(idLabel)
+        view.addSubview(statusLabel)
         
         NSLayoutConstraint.activate([
             avatarImageView.widthAnchor.constraint(equalToConstant: 70),
@@ -49,7 +41,7 @@ class ProfileViewController: UIViewController{
         ])
     }
     
-    private let avatarImageView: UIImageView = {
+    private lazy var avatarImageView: UIImageView = {
         let profileImage = UIImage(named: "avatar")
         let avatarImageView = UIImageView(image: profileImage)
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -78,15 +70,6 @@ class ProfileViewController: UIViewController{
     }
  
     @objc private func didTapButton(){
-        nameLabel?.removeFromSuperview()
-        nameLabel = nil
-        
-        idLabel?.removeFromSuperview()
-        idLabel = nil
-        
-        statusLabel?.removeFromSuperview()
-        statusLabel = nil
-        
         avatarImageView.image = UIImage(systemName: "person.crop.circle.fill")
         avatarImageView.tintColor = .gray
         }

@@ -9,8 +9,8 @@ final class SingleImageViewController: UIViewController{
         }
     }
     
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet weak var scrollView:UIScrollView!
+    @IBOutlet private var imageView: UIImageView!
+    @IBOutlet private weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = image
@@ -18,7 +18,7 @@ final class SingleImageViewController: UIViewController{
         scrollView.maximumZoomScale = 1.25
         rescaleAndCenterImageInScrollView(image: image)
     }
-    // Можно сейчас не добавлять картинку на весь экран? тк это мы сделаем в следующих спринтах, когда будем получать ее по api. 
+
     private func rescaleAndCenterImageInScrollView(image: UIImage){
         let minZoomScale = scrollView.minimumZoomScale
         let maxZoomScale = scrollView.maximumZoomScale
@@ -36,11 +36,11 @@ final class SingleImageViewController: UIViewController{
         scrollView.setContentOffset(CGPoint(x: x, y: y), animated: false)
     }
     
-    @IBAction func didTapBackButton(_ sender: Any) {
+    @IBAction private func didTapBackButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func didTapShareButton(_ sender: Any) {
+    @IBAction private func didTapShareButton(_ sender: Any) {
         let share = UIActivityViewController(
         activityItems: [image],
         applicationActivities: nil)

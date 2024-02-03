@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873C76312B6EA0E800B62A93 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C76302B6EA0E800B62A93 /* constants.swift */; };
+		873C76342B6EBEF200B62A93 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C76332B6EBEF200B62A93 /* AuthViewController.swift */; };
+		873C76362B6EC93100B62A93 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C76352B6EC93100B62A93 /* UIColor.swift */; };
+		873C76382B6ED24A00B62A93 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C76372B6ED24A00B62A93 /* WebViewController.swift */; };
 		8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788BDF12B62805400722EF5 /* SingleImageViewController.swift */; };
 		8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */; };
 		8791DD112B5C1B08003E8A0C /* YSDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		873C76302B6EA0E800B62A93 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		873C76332B6EBEF200B62A93 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		873C76352B6EC93100B62A93 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		873C76372B6ED24A00B62A93 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8788BDF12B62805400722EF5 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Medium.ttf"; sourceTree = "<group>"; };
@@ -86,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		873C76322B6EBAC700B62A93 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				873C76332B6EBEF200B62A93 /* AuthViewController.swift */,
+				873C76372B6ED24A00B62A93 /* WebViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		8788BDF02B62803600722EF5 /* SingleImageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +127,7 @@
 				87EFD2E22B418A1D00735931 /* LaunchScreen.storyboard */,
 				87EFD2DD2B418A1C00735931 /* Main.storyboard */,
 				87EFD2E02B418A1D00735931 /* Assets.xcassets */,
+				873C76352B6EC93100B62A93 /* UIColor.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -154,12 +172,14 @@
 		87EFD2D62B418A1C00735931 /* imageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				873C76322B6EBAC700B62A93 /* Auth */,
 				8788BDF02B62803600722EF5 /* SingleImageViewController */,
 				8791DD0C2B5C1A2A003E8A0C /* Resources */,
 				8791DD092B5BEC2D003E8A0C /* ProfileView */,
 				87FB44162B4C156500A8338B /* ImageList */,
 				87EFD2D72B418A1C00735931 /* AppDelegate.swift */,
 				87EFD2D92B418A1C00735931 /* SceneDelegate.swift */,
+				873C76302B6EA0E800B62A93 /* constants.swift */,
 			);
 			path = imageFeed;
 			sourceTree = "<group>";
@@ -326,6 +346,10 @@
 				87EFD2DC2B418A1C00735931 /* ImagesListViewController.swift in Sources */,
 				87FB44142B4C14C700A8338B /* ImageListCell.swift in Sources */,
 				8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */,
+				873C76382B6ED24A00B62A93 /* WebViewController.swift in Sources */,
+				873C76312B6EA0E800B62A93 /* constants.swift in Sources */,
+				873C76362B6EC93100B62A93 /* UIColor.swift in Sources */,
+				873C76342B6EBEF200B62A93 /* AuthViewController.swift in Sources */,
 				87EFD2D82B418A1C00735931 /* AppDelegate.swift in Sources */,
 				8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */,
 				87EFD2DA2B418A1C00735931 /* SceneDelegate.swift in Sources */,

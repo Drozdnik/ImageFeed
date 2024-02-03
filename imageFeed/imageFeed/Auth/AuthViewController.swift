@@ -1,8 +1,6 @@
 import UIKit
-import WebKit
-
-class  AuthViewController: UIViewController{
-    
+class AuthViewController: UIViewController{
+    private let segueIdToWebView:String = "ShowWebView"
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubViews()
@@ -46,6 +44,6 @@ class  AuthViewController: UIViewController{
     }()
     
     @objc private func didTapButton(){
-        print ("Auth")
+        self.performSegue(withIdentifier: segueIdToWebView, sender: self)
     }
 }

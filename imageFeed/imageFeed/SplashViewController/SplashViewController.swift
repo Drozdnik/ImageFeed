@@ -24,10 +24,15 @@ class SplashViewController: UIViewController{
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
     private func toBarController(){
         guard let window = UIApplication.shared.windows.first else {fatalError("Invalid conf")}
         let tabBarController = UIStoryboard(name: "Main", bundle: .main)
-            .instantiateViewController(identifier: "TabBarViewController") //Вот тут упасть может
+            .instantiateViewController(identifier: "TabBarController") //Вот тут упасть может
         window.rootViewController = tabBarController
     }
     
@@ -70,14 +75,16 @@ extension SplashViewController: AuthViewControllerDelegate{
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
             self.fetchToken(code)
+            toBarController()
         }
     }
     
     private func fetchToken(_ code: String){
         outh2Service.fetchOAuthToken(code) { [weak self] result in
+            guard let self = self else {return}
             switch result {
             case .success:
-                self?.toBarController()
+                self.toBarController()
             case .failure:
                 // will do in 11
                 break

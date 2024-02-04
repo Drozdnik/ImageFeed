@@ -3,7 +3,9 @@ import WebKit
 class AuthViewController: UIViewController{
     
     private let segueIdToWebView:String = "ShowWebView"
+    
     weak var delegate: AuthViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubViews()

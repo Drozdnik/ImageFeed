@@ -3,12 +3,12 @@ import WebKit
 
 final class WebViewController: UIViewController{
     private let UnsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
+    
     weak var delegate: WebViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.navigationDelegate = self
-        
         addSubview()
         configureConstraints()
  
@@ -107,8 +107,8 @@ extension WebViewController: WKNavigationDelegate{
                          decidePolicyFor navigationAction: WKNavigationAction,
                          decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
     ){
-        if let _ = code(from: navigationAction){
-            // TODO: no code yet
+        if let code = code(from: navigationAction){
+            delegate?.webViewViewController(self, didAuthenticateWithCode: code)
             decisionHandler(.cancel)
         } else {
             decisionHandler(.allow)

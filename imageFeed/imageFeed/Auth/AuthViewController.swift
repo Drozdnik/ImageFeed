@@ -1,6 +1,8 @@
 import UIKit
 class AuthViewController: UIViewController{
+    
     private let segueIdToWebView:String = "ShowWebView"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubViews()
@@ -46,4 +48,23 @@ class AuthViewController: UIViewController{
     @objc private func didTapButton(){
         self.performSegue(withIdentifier: segueIdToWebView, sender: self)
     }
+}
+
+extension AuthViewController: WebViewControllerDelegate{
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdToWebView,
+           let webViewController = segue.destination as? WebViewController{
+            webViewController.delegate = self
+        }
+    }
+    func webViewViewController(_ vs: WebViewController, didAuthenticateWithCode code: String) {
+        
+    }
+    
+    func webViewViewControllerDidCancel(_ vc: WebViewController) {
+        dismiss(animated: true)
+    }
+    
+    
 }

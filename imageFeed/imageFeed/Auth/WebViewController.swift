@@ -62,7 +62,7 @@ class WebViewController: UIViewController{
     }()
     
    @objc private func didTapBackButton(){
-        print ("Back")
+       delegate?.webViewViewControllerDidCancel(self)
     }
 }
 

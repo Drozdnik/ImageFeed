@@ -72,6 +72,7 @@ extension SplashViewController: AuthViewControllerDelegate{
             self.fetchToken(code)
         }
     }
+    
     private func fetchToken(_ code: String){
         outh2Service.fetchOAuthToken(code) { [weak self] result in
             switch result {

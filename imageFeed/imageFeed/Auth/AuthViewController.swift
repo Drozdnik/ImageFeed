@@ -26,6 +26,7 @@ class AuthViewController: UIViewController{
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
+    
     private lazy var logoImageView: UIImageView = {
         let logoImage = UIImage(named: "authScreenLogo")
         let logoImageView = UIImageView(image: logoImage)

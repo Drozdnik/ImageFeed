@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UWQ-Ow-dkg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9NI-CA-vCO">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -114,7 +114,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pgV-9h-U5a">
             <objects>
-                <tabBarController id="5UL-M6-x7r" sceneMemberID="viewController">
+                <tabBarController id="5UL-M6-x7r" customClass="TabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BGs-TV-67r">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -225,7 +225,7 @@
             <objects>
                 <viewController id="XEP-17-O8A" customClass="AuthViewController" customModule="imageFeed" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PeX-dy-O8f">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3dW-MY-fGH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -245,7 +245,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UWQ-Ow-dkg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pyo-Lq-pcs">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -256,6 +256,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ane-ni-ezx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3647" y="-463"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="L1h-Y0-LW4">
+            <objects>
+                <viewController id="9NI-CA-vCO" customClass="SplashViewController" customModule="imageFeed" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pb8-nJ-EUv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Al8-tC-hZr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="UWQ-Ow-dkg" kind="presentation" identifier="ShowAuthenticationScreen" id="o6z-Rq-FTc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Chy-gI-vEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4502" y="-463"/>
         </scene>
     </scenes>
     <resources>

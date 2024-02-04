@@ -3,7 +3,7 @@ import WebKit
 class AuthViewController: UIViewController{
     
     private let segueIdToWebView:String = "ShowWebView"
-    
+    weak var delegate: AuthViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubViews()
@@ -52,7 +52,6 @@ class AuthViewController: UIViewController{
 }
 
 extension AuthViewController: WebViewControllerDelegate{
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueIdToWebView,
            let webViewController = segue.destination as? WebViewController{
@@ -69,9 +68,9 @@ extension AuthViewController: WebViewControllerDelegate{
                 print("Ошибка получения токена: \(error)")
             }
         }
+        
+        delegate?.authViewController(self, didAuthWithCode: code)
     }
-    
-    
     
     func webViewViewControllerDidCancel(_ vc: WebViewController) {
         dismiss(animated: true)

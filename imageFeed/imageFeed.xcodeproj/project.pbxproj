@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8734BA2F2B6F92D600764B71 /* WebViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8734BA2E2B6F92D600764B71 /* WebViewControllerDelegate.swift */; };
 		873C76312B6EA0E800B62A93 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C76302B6EA0E800B62A93 /* constants.swift */; };
 		873C76342B6EBEF200B62A93 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C76332B6EBEF200B62A93 /* AuthViewController.swift */; };
 		873C76362B6EC93100B62A93 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C76352B6EC93100B62A93 /* UIColor.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8734BA2E2B6F92D600764B71 /* WebViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerDelegate.swift; sourceTree = "<group>"; };
 		873C76302B6EA0E800B62A93 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		873C76332B6EBEF200B62A93 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		873C76352B6EC93100B62A93 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				873C76332B6EBEF200B62A93 /* AuthViewController.swift */,
 				873C76372B6ED24A00B62A93 /* WebViewController.swift */,
+				8734BA2E2B6F92D600764B71 /* WebViewControllerDelegate.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				87EFD2DC2B418A1C00735931 /* ImagesListViewController.swift in Sources */,
 				87FB44142B4C14C700A8338B /* ImageListCell.swift in Sources */,
 				8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */,
+				8734BA2F2B6F92D600764B71 /* WebViewControllerDelegate.swift in Sources */,
 				873C76382B6ED24A00B62A93 /* WebViewController.swift in Sources */,
 				873C76312B6EA0E800B62A93 /* constants.swift in Sources */,
 				873C76362B6EC93100B62A93 /* UIColor.swift in Sources */,

@@ -2,8 +2,13 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController{
+    private let UnsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
+    weak var delegate: WebViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.navigationDelegate = self
+        
         addSubview()
         configureConstraints()
         
@@ -58,5 +63,35 @@ class WebViewController: UIViewController{
     
    @objc private func didTapBackButton(){
         print ("Back")
+    }
+}
+
+extension WebViewController: WKNavigationDelegate{
+    func webView(_ webView:WKWebView,
+                         decidePolicyFor navigationAction: WKNavigationAction,
+                         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
+    ){
+        if let code = code(from: navigationAction){
+            // TODO: no code yet
+            decisionHandler(.cancel)
+        } else {
+            decisionHandler(.allow)
+        }
+    }
+    
+    private func code (from navigationAction: WKNavigationAction) -> String?{
+        // TODO: Вернуться проверить что выведет navigationAction
+        print (navigationAction)
+        if
+            let url = navigationAction.request.url,
+            let urlComponents = URLComponents(string: url.absoluteString),
+            urlComponents.path == "/oauth/authorize/native",
+            let items = urlComponents.queryItems,
+            let codeItem = items.first(where: {$0.name == "code"})
+        {
+            return codeItem.value
+        } else {
+            return nil
+        }
     }
 }

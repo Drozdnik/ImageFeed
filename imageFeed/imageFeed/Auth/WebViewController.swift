@@ -28,6 +28,7 @@ class WebViewController: UIViewController{
     private func addSubview(){
         view.addSubview(webView)
         view.addSubview(backButton)
+        view.addSubview(progressView)
     }
     
     private func configureConstraints(){
@@ -38,7 +39,11 @@ class WebViewController: UIViewController{
             webView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 9),
-            backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 9)
+            backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 9),
+            
+            progressView.topAnchor.constraint(equalTo: backButton.bottomAnchor, constant: 4),
+            progressView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            progressView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
     
@@ -61,6 +66,14 @@ class WebViewController: UIViewController{
         return webView
     }()
     
+    private lazy var progressView: UIProgressView = {
+        let progressView = UIProgressView(progressViewStyle: .default)
+        progressView.progressTintColor = customBlack
+        progressView.progress = 0.5
+        progressView.translatesAutoresizingMaskIntoConstraints = false
+        return progressView
+    }()
+    
    @objc private func didTapBackButton(){
        delegate?.webViewViewControllerDidCancel(self)
     }
@@ -71,7 +84,7 @@ extension WebViewController: WKNavigationDelegate{
                          decidePolicyFor navigationAction: WKNavigationAction,
                          decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
     ){
-        if let code = code(from: navigationAction){
+        if let _ = code(from: navigationAction){
             // TODO: no code yet
             decisionHandler(.cancel)
         } else {
@@ -81,7 +94,6 @@ extension WebViewController: WKNavigationDelegate{
     
     private func code (from navigationAction: WKNavigationAction) -> String?{
         // TODO: Вернуться проверить что выведет navigationAction
-        print (navigationAction)
         if
             let url = navigationAction.request.url,
             let urlComponents = URLComponents(string: url.absoluteString),

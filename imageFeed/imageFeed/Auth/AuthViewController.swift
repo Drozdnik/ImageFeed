@@ -1,4 +1,5 @@
 import UIKit
+import WebKit
 class AuthViewController: UIViewController{
     
     private let segueIdToWebView:String = "ShowWebView"
@@ -58,6 +59,7 @@ extension AuthViewController: WebViewControllerDelegate{
             webViewController.delegate = self
         }
     }
+    
     func webViewViewController(_ vs: WebViewController, didAuthenticateWithCode code: String) {
         
     }

@@ -60,9 +60,18 @@ extension AuthViewController: WebViewControllerDelegate{
         }
     }
     
-    func webViewViewController(_ vs: WebViewController, didAuthenticateWithCode code: String) {
-        
+    func webViewViewController(_ vc: WebViewController, didAuthenticateWithCode code: String) {
+        OAuth2Service.shared.fetchOAuthToken(code) { result in
+            switch result {
+            case .success(let token):
+                OAuth2TokenStorage().token = token
+            case .failure(let error):
+                print("Ошибка получения токена: \(error)")
+            }
+        }
     }
+    
+    
     
     func webViewViewControllerDidCancel(_ vc: WebViewController) {
         dismiss(animated: true)

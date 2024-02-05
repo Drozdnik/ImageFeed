@@ -23,6 +23,7 @@ class AuthViewController: UIViewController{
             authButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -90),
             authButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             authButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            authButton.heightAnchor.constraint(equalToConstant: 48),
             
             logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)

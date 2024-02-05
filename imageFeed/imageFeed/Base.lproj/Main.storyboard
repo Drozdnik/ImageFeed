@@ -225,7 +225,7 @@
             <objects>
                 <viewController id="XEP-17-O8A" customClass="AuthViewController" customModule="imageFeed" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PeX-dy-O8f">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3dW-MY-fGH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -244,8 +244,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UWQ-Ow-dkg" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cgL-bj-gcg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pyo-Lq-pcs">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -268,7 +269,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="UWQ-Ow-dkg" kind="presentation" identifier="ShowAuthenticationScreen" id="o6z-Rq-FTc"/>
+                        <segue destination="UWQ-Ow-dkg" kind="presentation" identifier="ShowAuthenticationScreen" animates="NO" modalPresentationStyle="fullScreen" id="o6z-Rq-FTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chy-gI-vEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

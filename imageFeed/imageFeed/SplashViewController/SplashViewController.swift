@@ -4,7 +4,7 @@ import UIKit
 class SplashViewController: UIViewController{
     
     private let showAuthScreenSegue = "ShowAuthenticationScreen"
-    private let outh2Service = OAuth2Service()
+    private let outh2Service = OAuth2Service.shared
     private let oauth2TokenStorage = OAuth2TokenStorage()
     
     

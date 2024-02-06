@@ -3,16 +3,19 @@ import Foundation
 fileprivate let defaultURL = URL(string: "https://api.unsplash.com")!
 
 final class OAuth2Service{
+    private init() {}
     static let shared = OAuth2Service()
-        private let urlSession = URLSession.shared
-        private (set) var authToken: String? {
-            get {
-                return OAuth2TokenStorage().token
-            }
-            set {
-                OAuth2TokenStorage().token = newValue
-    } }
     
+    private let urlSession = URLSession.shared
+    private (set) var authToken: String? {
+        get {
+            return OAuth2TokenStorage().token
+        }
+        set {
+            OAuth2TokenStorage().token = newValue
+        }
+    }
+
         func fetchOAuthToken(
             _ code: String,
     completion: @escaping (Result<String, Error>) -> Void ){

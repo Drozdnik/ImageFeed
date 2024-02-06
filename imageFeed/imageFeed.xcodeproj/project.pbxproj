@@ -20,6 +20,7 @@
 		8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */; };
 		8791DD112B5C1B08003E8A0C /* YSDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */; };
 		8791DD122B5C1B08003E8A0C /* YSDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */; };
+		87B14C0F2B72C39800433B46 /* enum networkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B14C0E2B72C39800433B46 /* enum networkError.swift */; };
 		87EFD2D82B418A1C00735931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2D72B418A1C00735931 /* AppDelegate.swift */; };
 		87EFD2DA2B418A1C00735931 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2D92B418A1C00735931 /* SceneDelegate.swift */; };
 		87EFD2DC2B418A1C00735931 /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2DB2B418A1C00735931 /* ImagesListViewController.swift */; };
@@ -63,6 +64,7 @@
 		8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Medium.ttf"; sourceTree = "<group>"; };
 		8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		87B14C0E2B72C39800433B46 /* enum networkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "enum networkError.swift"; sourceTree = "<group>"; };
 		87EFD2D42B418A1C00735931 /* imageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EFD2D72B418A1C00735931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87EFD2D92B418A1C00735931 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				8734BA302B6FE99400764B71 /* OAuth2Servive.swift */,
 				8734BA322B6FFDB900764B71 /* OAuth2TokenStorage.swift */,
 				8734BA372B70189600764B71 /* AuthViewControllerDelegate.swift */,
+				87B14C0E2B72C39800433B46 /* enum networkError.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				873C76312B6EA0E800B62A93 /* Constants.swift in Sources */,
 				873C76362B6EC93100B62A93 /* UIColor.swift in Sources */,
 				873C76342B6EBEF200B62A93 /* AuthViewController.swift in Sources */,
+				87B14C0F2B72C39800433B46 /* enum networkError.swift in Sources */,
 				87EFD2D82B418A1C00735931 /* AppDelegate.swift in Sources */,
 				8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */,
 				8734BA332B6FFDB900764B71 /* OAuth2TokenStorage.swift in Sources */,

@@ -86,12 +86,7 @@ final class OAuth2Service{
                    request.httpMethod = httpMethod
                    return request
            } }
-           // MARK: - Network Connection
-           enum NetworkError: Error {
-               case httpStatusCode(Int)
-               case urlRequestError(Error)
-               case urlSessionError
-           }
+ 
 
            extension URLSession {
                func data(

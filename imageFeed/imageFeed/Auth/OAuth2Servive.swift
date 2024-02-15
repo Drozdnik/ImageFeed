@@ -75,9 +75,6 @@ final class OAuth2Service{
     } }
 
     // MARK: - HTTP Request
-
- 
-
            extension URLSession {
                func data(
                    for request: URLRequest,

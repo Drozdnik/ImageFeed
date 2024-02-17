@@ -116,7 +116,6 @@ extension WebViewController: WKNavigationDelegate{
     }
     
     private func code (from navigationAction: WKNavigationAction) -> String?{
-        // TODO: Вернуться проверить что выведет navigationAction
         if
             let url = navigationAction.request.url,
             let urlComponents = URLComponents(string: url.absoluteString),

@@ -1,5 +1,6 @@
 
 import UIKit
+import ProgressHUD
 
 class SplashViewController: UIViewController{
     
@@ -73,8 +74,9 @@ extension SplashViewController {
     }
 }
 
-extension SplashViewController: AuthViewControllerDelegate{
+extension SplashViewController:AuthViewControllerDelegate{
     func authViewController(_ vc: AuthViewController, didAuthWithCode code: String) {
+        ProgressHUD.show()
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
             self.fetchToken(code)
@@ -88,8 +90,10 @@ extension SplashViewController: AuthViewControllerDelegate{
             switch result {
             case .success:
                 self.toBarController()
+                ProgressHUD.dismiss()
             case .failure:
                 // will do in 11
+                ProgressHUD.dismiss()
                 break
             }
         }

@@ -80,7 +80,9 @@ extension SplashViewController:AuthViewControllerDelegate{
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
             self.fetchToken(code)
+            UIBlockingProgressHUD.dismiss()
             toBarController()
+            
         }
     }
     

@@ -96,7 +96,6 @@ extension OAuth2Service {
             case createdAt = "created_at"
         }
     }
-    
 }
 
 // MARK: - HTTP Request

@@ -76,7 +76,7 @@ extension SplashViewController {
 
 extension SplashViewController:AuthViewControllerDelegate{
     func authViewController(_ vc: AuthViewController, didAuthWithCode code: String) {
-        ProgressHUD.show()
+        UIBlockingProgressHUD.show()
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
             self.fetchToken(code)
@@ -89,10 +89,10 @@ extension SplashViewController:AuthViewControllerDelegate{
             guard let self = self else {return}
             switch result {
             case .success:
-            ProgressHUD.dismiss()
+                UIBlockingProgressHUD.dismiss()
             case .failure:
                 // will do in 11
-                ProgressHUD.dismiss()
+                UIBlockingProgressHUD.dismiss()
                 break
             }
         }

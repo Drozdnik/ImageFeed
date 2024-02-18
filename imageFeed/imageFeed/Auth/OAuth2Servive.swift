@@ -3,7 +3,11 @@ import Foundation
 final class OAuth2Service{
     private init() {}
     static let shared = OAuth2Service()
+    
     private let urlSession = URLSession.shared
+    private var task: URLSessionTask?
+    private var lastCode: String?
+    private let fetchTokenSemaphore = DispatchSemaphore(value: 1)
     
     private (set) var authToken: String? {
         get {
@@ -17,12 +21,27 @@ final class OAuth2Service{
     func fetchOAuthToken(
         _ code: String,
         completion: @escaping (Result<String, Error>) -> Void ){
-            guard let request = authTokenRequest(code: code) else {
-                assertionFailure("Request не может быть создан")
+            assert(Thread.isMainThread)
+            fetchTokenSemaphore.wait()
+            
+            if lastCode == code {
+                fetchTokenSemaphore.signal()
                 return
             }
-            let task = object(for: request) { [weak self] result in
-                guard let self = self else { return }
+            
+            task?.cancel()
+            lastCode = code
+            guard let request = authTokenRequest(code: code) else {
+                fetchTokenSemaphore.signal()
+                return
+            }
+            
+            let task = object(for: request) { [weak self, fetchTokenSemaphore] result in
+                guard let self = self else {
+                    fetchTokenSemaphore.signal()
+                    return
+                }
+                
                 switch result {
                 case .success(let body):
                     let authToken = body.accessToken
@@ -33,6 +52,7 @@ final class OAuth2Service{
                 }
             }
             task.resume()
+            fetchTokenSemaphore.signal()
         }
 }
 
@@ -49,11 +69,9 @@ extension OAuth2Service {
             completion(response)
         }
     }
-
+    
     private func authTokenRequest(code: String) -> URLRequest? {
         guard let baseUrl = URL(string: "https://unsplash.com") else {
-            // MARK: -TODelete
-            assertionFailure("Повалились на baseURL")
             return nil
         }
         let fullPath = "/oauth/token"
@@ -62,7 +80,7 @@ extension OAuth2Service {
         + "&&redirect_uri=\(redirectURI)"
         + "&&code=\(code)"
         + "&&grant_type=authorization_code"
-
+        
         return URLRequest.makeHTTPRequest(path: fullPath, httpMethod: "POST", baseURL: baseUrl)
     }
     

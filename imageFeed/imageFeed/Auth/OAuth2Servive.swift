@@ -1,12 +1,10 @@
 import Foundation
 
-fileprivate let defaultURL = URL(string: "https://api.unsplash.com")!
-
 final class OAuth2Service{
     private init() {}
     static let shared = OAuth2Service()
-    
     private let urlSession = URLSession.shared
+    
     private (set) var authToken: String? {
         get {
             return OAuth2TokenStorage().token
@@ -19,22 +17,22 @@ final class OAuth2Service{
     func fetchOAuthToken(
         _ code: String,
         completion: @escaping (Result<String, Error>) -> Void ){
-            if let request = authTokenRequest(code: code){
-                let task = object(for: request) { [weak self] result in
-                    guard let self = self else { return }
-                    switch result {
-                    case .success(let body):
-                        let authToken = body.accessToken
-                        self.authToken = authToken
-                        completion(.success(authToken))
-                    case .failure(let error):
-                        completion(.failure(error))
-                    }
-                }
-                task.resume()
-            } else {
-                assertionFailure("Request failed")
+            guard let request = authTokenRequest(code: code) else {
+                assertionFailure("Request не может быть создан")
+                return
             }
+            let task = object(for: request) { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(let body):
+                    let authToken = body.accessToken
+                    self.authToken = authToken
+                    completion(.success(authToken))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+            task.resume()
         }
 }
 
@@ -51,15 +49,21 @@ extension OAuth2Service {
             completion(response)
         }
     }
-    
+
     private func authTokenRequest(code: String) -> URLRequest? {
-        let path = "/oauth/token"
+        guard let baseUrl = URL(string: "https://unsplash.com") else {
+            // MARK: -TODelete
+            assertionFailure("Повалились на baseURL")
+            return nil
+        }
+        let fullPath = "/oauth/token"
         + "?client_id=\(accessKey)"
         + "&&client_secret=\(secretKey)"
         + "&&redirect_uri=\(redirectURI)"
         + "&&code=\(code)"
         + "&&grant_type=authorization_code"
-        return URLRequest.makeHTTPRequest(path: path, httpMethod: "POST", baseURL: defaultBaseURL)
+
+        return URLRequest.makeHTTPRequest(path: fullPath, httpMethod: "POST", baseURL: baseUrl)
     }
     
     private struct OAuthTokenResponseBody: Decodable {

@@ -21,7 +21,9 @@ final class WebViewController: UIViewController{
                URLQueryItem(name: "scope", value: acessScope)
         ]
         
-        let url = urlComponents.url!
+        guard let url = urlComponents.url else {
+            return
+        }
         let request = URLRequest(url: url)
         webView.load(request)
     }

@@ -89,8 +89,7 @@ extension SplashViewController:AuthViewControllerDelegate{
             guard let self = self else {return}
             switch result {
             case .success:
-                self.toBarController()
-                ProgressHUD.dismiss()
+            ProgressHUD.dismiss()
             case .failure:
                 // will do in 11
                 ProgressHUD.dismiss()

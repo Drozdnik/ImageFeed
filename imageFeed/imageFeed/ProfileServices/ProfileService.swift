@@ -30,7 +30,7 @@ final class ProfileService{
     }
     
     func fetchProfile(_ token: String, comletion: @escaping (Result<Profile, Error>) -> Void){
-
+        
     }
     
     private func getToken() -> String?{
@@ -43,20 +43,17 @@ final class ProfileService{
     }
     
     private func profileInfoRequest(token: String) -> URLRequest? {
-        guard let baseUrl = URL(string: "https://api.unsplash.com/me") else {
-            return nil
-        }
-        
-        var request = URLRequest(url:baseUrl)
-        request.httpMethod = "GET"
         guard let token = getToken() else {
             debugPrint("Нет токена")
             return nil
         }
-
-        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        let URLrequest = request
         
-        return URLrequest
+        guard let request = URLRequest.makeProfileRequest(path: "/me", httpMethod: "GET", token: token) else {
+            return nil
+        }
+        
+        return request
     }
 }
+
+

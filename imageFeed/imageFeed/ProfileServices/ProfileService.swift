@@ -29,9 +29,43 @@ final class ProfileService{
         }
     }
     
-    func fetchProfile(_ token: String, comletion: @escaping (Result<Profile, Error>) -> Void){
+    func fetchProfile(completion: @escaping (Result<Profile, Error>) -> Void){
+        guard let token = getToken() else {
+            assertionFailure("Не удалось получить токен")
+            return
+        }
         
+        guard let request = profileInfoRequest(token) else {
+            completion(.failure(ProfileError.failedToCreateRequest))
+            return
+        }
+        
+        let task = urlSession.dataTask(with: request){ data, response, error in
+            if let error = error {
+                completion(.failure(ProfileError.taskError))
+            }
+            
+            guard let httpResponce = response as? HTTPURLResponse, (200...299).contains(httpResponce.statusCode) else {
+                completion(.failure(ProfileError.invalidResponce))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(ProfileError.noData))
+                return
+            }
+            
+            do{
+                let profileResult = try JSONDecoder().decode(ProfileResult.self, from: data)
+                let profile = Profile(profileResult: profileResult)
+                completion(.success(profile))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
     }
+    
     
     private func getToken() -> String?{
         if let token = tokenStorage.token{
@@ -42,18 +76,15 @@ final class ProfileService{
         }
     }
     
-    private func profileInfoRequest(token: String) -> URLRequest? {
-        guard let token = getToken() else {
-            debugPrint("Нет токена")
-            return nil
-        }
-        
+    private func profileInfoRequest(_ token: String) -> URLRequest? {
         guard let request = URLRequest.makeProfileRequest(path: "/me", httpMethod: "GET", token: token) else {
+            assertionFailure("Не удалось создать request")
             return nil
         }
         
         return request
     }
 }
+
 
 

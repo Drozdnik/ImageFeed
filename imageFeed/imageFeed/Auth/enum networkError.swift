@@ -7,3 +7,12 @@ enum NetworkError: Error {
     case urlRequestError(Error)
     case urlSessionError
 }
+
+enum ProfileError: Error {
+    case failedToCreateRequest
+    case networkError
+    case decodingError
+    case taskError
+    case invalidResponce
+    case noData
+}

@@ -109,7 +109,7 @@ extension URLSession {
                 completion(result)
             }
         }
-        
+        // TODO: Сделать фукнцию для проверки statusCode чтобы избежать повторяющегося кода далее
         let task = dataTask(with: request, completionHandler: { data, response, error in
             if let data = data,
                let response = response,

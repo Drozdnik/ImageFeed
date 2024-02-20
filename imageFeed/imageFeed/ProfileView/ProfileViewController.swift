@@ -2,10 +2,16 @@ import UIKit
 
 class ProfileViewController: UIViewController{
     
+    private let profileService = ProfileService()
+    private var nameLabel: UILabel!
+    private var idLabel: UILabel!
+    private var statusLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
         configureConstraints()
+        fetchProfileAndUpdateUI()
     }
     
      func addSubviews(){
@@ -47,7 +53,7 @@ class ProfileViewController: UIViewController{
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
         return avatarImageView
     }()
-    // Не можем использовать let, тк self еще не инициализирован?
+
     private lazy var exitButton: UIButton = {
         let exitButton = UIButton.systemButton(
             with: UIImage(systemName: "ipad.and.arrow.forward")!,
@@ -67,6 +73,25 @@ class ProfileViewController: UIViewController{
         label.textColor = color
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }
+    
+    private func fetchProfileAndUpdateUI(){
+        profileService.fetchProfile() {[weak self] result in
+            switch result {
+            case .success(let profile):
+                DispatchQueue.main.async {
+                    self?.updateUI(with: profile)
+                }
+            case .failure(let error):
+                debugPrint("Failed to fetch profile: \(error)")
+            }
+        }
+    }
+    
+    private func updateUI(with profile: ProfileService.Profile){
+        nameLabel.text = profile.name
+        idLabel.text = profile.loginName
+        statusLabel.text = profile.bio
     }
  
     @objc private func didTapButton(){

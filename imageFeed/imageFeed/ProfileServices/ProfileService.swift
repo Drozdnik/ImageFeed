@@ -7,12 +7,17 @@ private var task: URLSessionTask?
 private let fetchTokenSemaphore = DispatchSemaphore(value: 1)
 
 final class ProfileService{
+    private let jsonDecoder :JSONDecoder
     
+    init (jsonDecoder: JSONDecoder = JSONDecoder()){
+        self.jsonDecoder = jsonDecoder
+        self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+    }
     struct ProfileResult: Codable{
-        let userName: String
+        let username: String
         let firstName: String
         let lastName: String
-        let bio: String
+        let bio: String?
     }
     
     struct Profile{
@@ -22,10 +27,10 @@ final class ProfileService{
         let bio: String
         
         init(profileResult: ProfileResult) {
-            self.username = profileResult.userName
+            self.username = profileResult.username
             self.name = profileResult.firstName + " " + profileResult.lastName
             self.loginName = "@" + username
-            self.bio = profileResult.bio
+            self.bio = profileResult.bio ?? " "
         }
     }
     
@@ -56,7 +61,7 @@ final class ProfileService{
             }
             
             do{
-                let profileResult = try JSONDecoder().decode(ProfileResult.self, from: data)
+                let profileResult = try self.jsonDecoder.decode(ProfileResult.self, from: data)
                 let profile = Profile(profileResult: profileResult)
                 completion(.success(profile))
             } catch {

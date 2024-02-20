@@ -1337,8 +1337,8 @@
             filePath = "imageFeed/ProfileServices/ProfileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "fetchProfile(completion:)"
             landmarkType = "7">
             <Locations>
@@ -1379,63 +1379,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "24D271B0-0ECA-4A05-8AF9-870F2011A340"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "imageFeed/ProfileServices/ProfileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "fetchProfile(completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "24D271B0-0ECA-4A05-8AF9-870F2011A340 - 7087fd3d8b8bec96"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "imageFeed"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "1500">
-               </Location>
-               <Location
-                  uuid = "24D271B0-0ECA-4A05-8AF9-870F2011A340 - 7087fd3d8b8becb7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "imageFeed"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "1084">
-               </Location>
-               <Location
-                  uuid = "24D271B0-0ECA-4A05-8AF9-870F2011A340 - 7087fd3d8b8becb7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "imageFeed"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "1100">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1448,8 +1401,8 @@
             filePath = "imageFeed/ProfileServices/ProfileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "fetchProfile(completion:)"
             landmarkType = "7">
             <Locations>
@@ -1496,8 +1449,8 @@
             filePath = "imageFeed/ProfileServices/ProfileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "fetchProfile(completion:)"
             landmarkType = "7">
             <Locations>
@@ -1574,8 +1527,8 @@
             filePath = "imageFeed/ProfileServices/ProfileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "profileInfoRequest(_:)"
             landmarkType = "7">
          </BreakpointContent>

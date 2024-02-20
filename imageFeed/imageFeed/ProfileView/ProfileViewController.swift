@@ -3,9 +3,9 @@ import UIKit
 class ProfileViewController: UIViewController{
     
     private let profileService = ProfileService()
-    private var nameLabel: UILabel!
-    private var idLabel: UILabel!
-    private var statusLabel: UILabel!
+    private var nameLabel = UILabel()
+    private var idLabel = UILabel()
+    private var statusLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,9 @@ class ProfileViewController: UIViewController{
     }
     
     private func configureConstraints(){
-        let nameLabel = createLabel("Name", size: 23, color: .white)
-        let idLabel = createLabel("@Id", color: .gray)
-        let statusLabel = createLabel("Status", color: .white)
+        nameLabel = createLabel("Name", size: 23, color: .white)
+        idLabel = createLabel("@Id", color: .gray)
+        statusLabel = createLabel("Status", color: .white)
         view.addSubview(nameLabel)
         view.addSubview(idLabel)
         view.addSubview(statusLabel)

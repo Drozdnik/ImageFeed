@@ -35,6 +35,7 @@ final class ProfileService{
     }
     
     func fetchProfile(completion: @escaping (Result<Profile, Error>) -> Void){
+        
         guard let token = getToken() else {
             assertionFailure("Не удалось получить токен")
             return

@@ -34,12 +34,8 @@ final class ProfileService{
         }
     }
     
-    func fetchProfile(completion: @escaping (Result<Profile, Error>) -> Void){
+    func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
         
-        guard let token = getToken() else {
-            assertionFailure("Не удалось получить токен")
-            return
-        }
         
         guard let request = profileInfoRequest(token) else {
             completion(.failure(ProfileError.failedToCreateRequest))

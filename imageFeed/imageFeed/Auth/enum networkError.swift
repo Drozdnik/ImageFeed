@@ -6,6 +6,7 @@ enum NetworkError: Error {
     case httpStatusCode(Int)
     case urlRequestError(Error)
     case urlSessionError
+    case invalidRequest
 }
 
 enum ProfileError: Error {
@@ -16,3 +17,6 @@ enum ProfileError: Error {
     case invalidResponce
     case noData
 }
+
+
+

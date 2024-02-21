@@ -21,15 +21,24 @@ final class OAuth2Service{
     func fetchOAuthToken(
         _ code: String,
         completion: @escaping (Result<String, Error>) -> Void ){
+            
             assert(Thread.isMainThread)
+            
             fetchTokenSemaphore.wait()
             
-            if lastCode == code {
-                fetchTokenSemaphore.signal()
-                return
+            if task != nil {
+                if lastCode != code {
+                    task?.cancel()
+                } else {
+                    completion(.failure(NetworkError.invalidRequest))
+                    return
+                }
+            } else {
+                if lastCode == code {                           
+                    completion(.failure(NetworkError.invalidRequest))
+                    return
+                }
             }
-            
-            task?.cancel()
             lastCode = code
             guard let request = authTokenRequest(code: code) else {
                 fetchTokenSemaphore.signal()

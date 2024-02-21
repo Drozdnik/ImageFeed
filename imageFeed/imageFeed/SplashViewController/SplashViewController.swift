@@ -7,7 +7,7 @@ class SplashViewController: UIViewController{
     private let showAuthScreenSegue = "ShowAuthenticationScreen"
     private let outh2Service = OAuth2Service.shared
     private let oauth2TokenStorage = OAuth2TokenStorage()
-    
+    private let profileService = ProfileService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,18 @@ class SplashViewController: UIViewController{
         super.viewDidAppear(animated)
         
         if let token = OAuth2TokenStorage().token{
-            toBarController()
+            profileService.fetchProfile(token) { [weak self] result in
+                guard let self = self else {return}
+                
+                switch result {
+                case .success:
+                    DispatchQueue.main.sync {
+                        self.toBarController()
+                    }
+                case .failure:
+                    debugPrint("Не удалось выполнить profileService.fetchProfile")
+                }
+            }
         } else {
             performSegue(withIdentifier: showAuthScreenSegue, sender: nil)
         }
@@ -66,6 +77,7 @@ extension SplashViewController {
             else { assertionFailure("Failed to prepare fo \(showAuthScreenSegue)")
                 return
             }
+            
             viewController.delegate = self
             
         } else {
@@ -79,19 +91,20 @@ extension SplashViewController:AuthViewControllerDelegate{
         UIBlockingProgressHUD.show()
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
-            self.fetchToken(code)
-            UIBlockingProgressHUD.dismiss()
-            toBarController()
+            self.fetchProfile(code)
+//            UIBlockingProgressHUD.dismiss()
+//            toBarController()
             
         }
     }
     
-    private func fetchToken(_ code: String){
-        outh2Service.fetchOAuthToken(code) { [weak self] result in
+    private func fetchProfile(_ token: String){
+        profileService.fetchProfile(token) { [weak self] result in
             guard let self = self else {return}
-            switch result {
+                switch result {
             case .success:
                 UIBlockingProgressHUD.dismiss()
+                    toBarController()
             case .failure:
                 // will do in 11
                 UIBlockingProgressHUD.dismiss()

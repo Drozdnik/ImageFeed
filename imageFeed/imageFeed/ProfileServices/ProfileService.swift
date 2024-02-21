@@ -7,8 +7,10 @@ private var task: URLSessionTask?
 private let fetchTokenSemaphore = DispatchSemaphore(value: 1)
 
 final class ProfileService{
-    private let jsonDecoder :JSONDecoder
     
+    private let profileQueue = DispatchQueue(label: "com.profileService")
+    
+    private let jsonDecoder: JSONDecoder
     init (jsonDecoder: JSONDecoder = JSONDecoder()){
         self.jsonDecoder = jsonDecoder
         self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -35,34 +37,37 @@ final class ProfileService{
     }
     
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
-        
-        
+        print (token)
         guard let request = profileInfoRequest(token) else {
             completion(.failure(ProfileError.failedToCreateRequest))
             return
         }
         
         let task = urlSession.dataTask(with: request){ data, response, error in
-            if let error = error {
-                completion(.failure(ProfileError.taskError))
+            self.profileQueue.sync {
+                
+                if let error = error {
+                    completion(.failure(ProfileError.taskError))
+                }
+                
+                guard let httpResponce = response as? HTTPURLResponse, (200...299).contains(httpResponce.statusCode) else {
+                    completion(.failure(ProfileError.invalidResponce))
+                    return
+                }
+                
+                guard let data = data else {
+                    completion(.failure(ProfileError.noData))
+                    return
+                }
+                DispatchQueue.main.async {
+                do{
+                        let profileResult = try self.jsonDecoder.decode(ProfileResult.self, from: data)
+                        let profile = Profile(profileResult: profileResult)
+                        completion(.success(profile))
+                } catch {
+                    completion(.failure(error))
+                }
             }
-            
-            guard let httpResponce = response as? HTTPURLResponse, (200...299).contains(httpResponce.statusCode) else {
-                completion(.failure(ProfileError.invalidResponce))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(ProfileError.noData))
-                return
-            }
-            
-            do{
-                let profileResult = try self.jsonDecoder.decode(ProfileResult.self, from: data)
-                let profile = Profile(profileResult: profileResult)
-                completion(.success(profile))
-            } catch {
-                completion(.failure(error))
             }
         }
         task.resume()

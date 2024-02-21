@@ -24,7 +24,7 @@ class SplashViewController: UIViewController{
                 
                 switch result {
                 case .success:
-                    DispatchQueue.main.sync {
+                    DispatchQueue.main.async {
                         self.toBarController()
                     }
                 case .failure:
@@ -88,15 +88,17 @@ extension SplashViewController {
 
 extension SplashViewController:AuthViewControllerDelegate{
     func authViewController(_ vc: AuthViewController, didAuthWithCode code: String) {
+        print (code)
         UIBlockingProgressHUD.show()
-        dismiss(animated: true){ [weak self] in
-            guard let self = self else {return}
-            self.fetchProfile(code)
-//            UIBlockingProgressHUD.dismiss()
-//            toBarController()
-            
-        }
+        dismiss(animated: true){ [weak self, code] in
+                    print (code)
+                    guard let self = self else {return}
+                    self.fetchProfile(code)
+                    UIBlockingProgressHUD.dismiss()
+                    toBarController()
+        
     }
+}
     
     private func fetchProfile(_ token: String){
         profileService.fetchProfile(token) { [weak self] result in

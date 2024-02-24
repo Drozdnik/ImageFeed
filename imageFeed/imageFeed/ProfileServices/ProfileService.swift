@@ -19,8 +19,6 @@ final class ProfileService{
         self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
     }
     
-    
-    
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
         print (token)
         guard let request = profileInfoRequest(token) else {
@@ -45,19 +43,18 @@ final class ProfileService{
                     return
                 }
                 DispatchQueue.main.async {
-                do{
+                    do{
                         let profileResult = try self.jsonDecoder.decode(ProfileResult.self, from: data)
                         let profile = Profile(profileResult: profileResult)
                         completion(.success(profile))
-                } catch {
-                    completion(.failure(error))
+                    } catch {
+                        completion(.failure(error))
+                    }
                 }
-            }
             }
         }
         task.resume()
     }
-    
     
     private func getToken() -> String?{
         if let token = tokenStorage.token{

@@ -1,40 +1,25 @@
 import UIKit
 
-let tokenStorage = OAuth2TokenStorage()
-private var lastToken: String?
 private let urlSession = URLSession.shared
 private var task: URLSessionTask?
-private let fetchTokenSemaphore = DispatchSemaphore(value: 1)
 
 final class ProfileService{
     
+    static let sharedProfile = ProfileService()
+    private(set) var profile:Profile?
+    let tokenStorage = OAuth2TokenStorage()
     private let profileQueue = DispatchQueue(label: "com.profileService")
+    private init (){
+        self.jsonDecoder = JSONDecoder()
+    }
     
     private let jsonDecoder: JSONDecoder
     init (jsonDecoder: JSONDecoder = JSONDecoder()){
         self.jsonDecoder = jsonDecoder
         self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
     }
-    struct ProfileResult: Codable{
-        let username: String
-        let firstName: String
-        let lastName: String
-        let bio: String?
-    }
     
-    struct Profile{
-        let username: String
-        let name: String
-        let loginName: String
-        let bio: String
-        
-        init(profileResult: ProfileResult) {
-            self.username = profileResult.username
-            self.name = profileResult.firstName + " " + profileResult.lastName
-            self.loginName = "@" + username
-            self.bio = profileResult.bio ?? " "
-        }
-    }
+    
     
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
         print (token)

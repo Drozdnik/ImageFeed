@@ -23,6 +23,7 @@
 		879E256F2B7FCEEA0065C4C6 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 879E256E2B7FCEEA0065C4C6 /* ProgressHUD */; };
 		879E25712B8276D70065C4C6 /* UIBlockingProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E25702B8276D60065C4C6 /* UIBlockingProgressHUD.swift */; };
 		879E25742B827FD00065C4C6 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E25732B827FD00065C4C6 /* ProfileService.swift */; };
+		879E25762B8A9A730065C4C6 /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879E25752B8A9A730065C4C6 /* ProfileModels.swift */; };
 		87B14C0F2B72C39800433B46 /* enum networkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B14C0E2B72C39800433B46 /* enum networkError.swift */; };
 		87B14C112B72CA8F00433B46 /* URL request + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B14C102B72CA8F00433B46 /* URL request + Extensions.swift */; };
 		87EFD2D82B418A1C00735931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2D72B418A1C00735931 /* AppDelegate.swift */; };
@@ -70,6 +71,7 @@
 		8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		879E25702B8276D60065C4C6 /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
 		879E25732B827FD00065C4C6 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		879E25752B8A9A730065C4C6 /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
 		87B14C0E2B72C39800433B46 /* enum networkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "enum networkError.swift"; sourceTree = "<group>"; };
 		87B14C102B72CA8F00433B46 /* URL request + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL request + Extensions.swift"; sourceTree = "<group>"; };
 		87EFD2D42B418A1C00735931 /* imageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				879E25732B827FD00065C4C6 /* ProfileService.swift */,
+				879E25752B8A9A730065C4C6 /* ProfileModels.swift */,
 			);
 			path = ProfileServices;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				879E25712B8276D70065C4C6 /* UIBlockingProgressHUD.swift in Sources */,
 				87EFD2DC2B418A1C00735931 /* ImagesListViewController.swift in Sources */,
 				8734BA312B6FE99400764B71 /* OAuth2Servive.swift in Sources */,
+				879E25762B8A9A730065C4C6 /* ProfileModels.swift in Sources */,
 				87FB44142B4C14C700A8338B /* ImageListCell.swift in Sources */,
 				8734BA382B70189600764B71 /* AuthViewControllerDelegate.swift in Sources */,
 				8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */,

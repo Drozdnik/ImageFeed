@@ -64,14 +64,14 @@ extension AuthViewController: WebViewControllerDelegate{
     }
     
     func webViewViewController(_ vc: WebViewController, didAuthenticateWithCode code: String) {
-        OAuth2Service.shared.fetchOAuthToken(code) { result in
-            switch result {
-            case .success(let token):
-                OAuth2TokenStorage().token = token
-            case .failure(let error):
-                print("Ошибка получения токена: \(error)")
-            }
-        }
+//        OAuth2Service.shared.fetchOAuthToken(code) { result in
+//            switch result {
+//            case .success(let token):
+//                OAuth2TokenStorage().token = token
+//            case .failure(let error):
+//                print("Ошибка получения токена: \(error)")
+//            }
+//        }
         
         delegate?.authViewController(self, didAuthWithCode: code)
     }

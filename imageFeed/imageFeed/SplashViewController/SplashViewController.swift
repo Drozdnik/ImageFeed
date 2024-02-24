@@ -2,11 +2,11 @@
 import UIKit
 import ProgressHUD
 
-class SplashViewController: UIViewController{
+final class SplashViewController: UIViewController{
     
     private let showAuthScreenSegue = "ShowAuthenticationScreen"
     private let outh2Service = OAuth2Service.shared
-    private let oauth2TokenStorage = OAuth2TokenStorage()
+    private let storage = OAuth2TokenStorage()
     private let profileService = ProfileService()
     
     override func viewDidLoad() {
@@ -88,25 +88,31 @@ extension SplashViewController {
 
 extension SplashViewController:AuthViewControllerDelegate{
     func authViewController(_ vc: AuthViewController, didAuthWithCode code: String) {
-        print (code)
-        UIBlockingProgressHUD.show()
-        dismiss(animated: true){ [weak self, code] in
-                    print (code)
-                    guard let self = self else {return}
-                    self.fetchProfile(code)
-                    UIBlockingProgressHUD.dismiss()
-                    toBarController()
-        
+        dismiss(animated: true){ [weak self] in
+            guard let self = self else {return}
+            UIBlockingProgressHUD.show()
+            fetchOAuthToken(code)
+        }
     }
-}
     
+    private func fetchOAuthToken(_ code: String){
+        OAuth2Service.shared.fetchOAuthToken(code){ [weak self] result in
+            guard let self = self else {return}
+            switch result {
+            case .success(let token):
+                fetchProfile(token)
+            case .failure(let error):
+                break
+            }
+        }
+    }
     private func fetchProfile(_ token: String){
         profileService.fetchProfile(token) { [weak self] result in
             guard let self = self else {return}
-                switch result {
-            case .success:
+            switch result {
+            case .success(let profile):
                 UIBlockingProgressHUD.dismiss()
-                    toBarController()
+                toBarController()
             case .failure:
                 // will do in 11
                 UIBlockingProgressHUD.dismiss()

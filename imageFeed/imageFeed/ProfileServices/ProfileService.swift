@@ -11,13 +11,14 @@ final class ProfileService{
     private let profileQueue = DispatchQueue(label: "com.profileService")
     private init (){
         self.jsonDecoder = JSONDecoder()
+        self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
     }
     
     private let jsonDecoder: JSONDecoder
-    init (jsonDecoder: JSONDecoder = JSONDecoder()){
-        self.jsonDecoder = jsonDecoder
-        self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-    }
+//    init (jsonDecoder: JSONDecoder = JSONDecoder()){
+//        self.jsonDecoder = jsonDecoder
+//        self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+//    }
     
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
         print (token)

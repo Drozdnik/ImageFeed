@@ -7,7 +7,7 @@ final class SplashViewController: UIViewController{
     private let showAuthScreenSegue = "ShowAuthenticationScreen"
     private let outh2Service = OAuth2Service.shared
     private let storage = OAuth2TokenStorage()
-
+    private let profileService = ProfileService.sharedProfile
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ final class SplashViewController: UIViewController{
         super.viewDidAppear(animated)
         
         if let token = OAuth2TokenStorage().token{
-            ProfileService.sharedProfile.fetchProfile(token) { [weak self] result in
+            profileService.fetchProfile(token) { [weak self] result in
                 guard let self = self else {return}
                 
                 switch result {
@@ -107,7 +107,7 @@ extension SplashViewController:AuthViewControllerDelegate{
         }
     }
     private func fetchProfile(_ token: String){
-        ProfileService.sharedProfile.fetchProfile(token) { [weak self] result in
+        profileService.fetchProfile(token) { [weak self] result in
             guard let self = self else {return}
             switch result {
             case .success(let profile):

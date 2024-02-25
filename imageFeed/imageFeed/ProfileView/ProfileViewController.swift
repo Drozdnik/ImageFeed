@@ -2,7 +2,7 @@ import UIKit
 
 class ProfileViewController: UIViewController{
     
-    private let profileService = ProfileService()
+    private let profileService = ProfileService.sharedProfile
     private var nameLabel = UILabel()
     private var idLabel = UILabel()
     private var statusLabel = UILabel()
@@ -11,6 +11,7 @@ class ProfileViewController: UIViewController{
         super.viewDidLoad()
         addSubviews()
         configureConstraints()
+        updateLabels()
     }
     
      func addSubviews(){
@@ -74,6 +75,12 @@ class ProfileViewController: UIViewController{
         return label
     }
     
+    private func updateLabels(){
+        guard let profile = ProfileService.sharedProfile.profile else {return}
+        nameLabel.text = profile.name
+        idLabel.text = profile.username
+        statusLabel.text = profile.bio
+    }
     @objc private func didTapButton(){
         avatarImageView.image = UIImage(systemName: "person.crop.circle.fill")
         avatarImageView.tintColor = .gray

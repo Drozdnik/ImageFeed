@@ -78,7 +78,7 @@ class ProfileViewController: UIViewController{
     private func updateLabels(){
         guard let profile = ProfileService.sharedProfile.profile else {return}
         nameLabel.text = profile.name
-        idLabel.text = profile.username
+        idLabel.text = profile.loginName
         statusLabel.text = profile.bio
     }
     @objc private func didTapButton(){

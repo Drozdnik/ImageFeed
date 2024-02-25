@@ -47,6 +47,7 @@ final class ProfileService{
                     do{
                         let profileResult = try self.jsonDecoder.decode(ProfileResult.self, from: data)
                         let profile = Profile(profileResult: profileResult)
+                        self.profile = profile
                         completion(.success(profile))
                     } catch {
                         completion(.failure(error))

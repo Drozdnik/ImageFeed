@@ -224,12 +224,11 @@
 		87EFD2D62B418A1C00735931 /* imageFeed */ = {
 			isa = PBXGroup;
 			children = (
-				879E25722B827FB50065C4C6 /* ProfileServices */,
+				87F6C8802B8FCCEA009C8531 /* Profile */,
 				8734BA342B70111800764B71 /* SplashViewController */,
 				873C76322B6EBAC700B62A93 /* Auth */,
 				8788BDF02B62803600722EF5 /* SingleImageViewController */,
 				8791DD0C2B5C1A2A003E8A0C /* Resources */,
-				8791DD092B5BEC2D003E8A0C /* ProfileView */,
 				87FB44162B4C156500A8338B /* ImageList */,
 				87EFD2D72B418A1C00735931 /* AppDelegate.swift */,
 				87EFD2D92B418A1C00735931 /* SceneDelegate.swift */,
@@ -253,6 +252,15 @@
 				87EFD2FA2B418A1E00735931 /* setupProjectUITestsLaunchTests.swift */,
 			);
 			path = setupProjectUITests;
+			sourceTree = "<group>";
+		};
+		87F6C8802B8FCCEA009C8531 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8791DD092B5BEC2D003E8A0C /* ProfileView */,
+				879E25722B827FB50065C4C6 /* ProfileServices */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		87FB44162B4C156500A8338B /* ImageList */ = {

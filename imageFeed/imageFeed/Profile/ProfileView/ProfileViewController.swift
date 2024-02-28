@@ -6,9 +6,20 @@ class ProfileViewController: UIViewController{
     private var nameLabel = UILabel()
     private var idLabel = UILabel()
     private var statusLabel = UILabel()
+    private var profileImageServiceObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        profileImageServiceObserver = NotificationCenter.default
+            .addObserver(
+                forName: ProfileImageService.didChangeNotification,
+                object: nil,
+                queue: .main
+            ) { [weak self] _ in
+                guard let self = self else {return}
+                self.updateAvatar()
+            }
         addSubviews()
         configureConstraints()
         updateLabels()
@@ -81,6 +92,14 @@ class ProfileViewController: UIViewController{
         idLabel.text = profile.loginName
         statusLabel.text = profile.bio
     }
+    
+    private func updateAvatar(){
+        guard
+            let profileImageURL = ProfileImageService.shared.avatarURl,
+            let url = URL(string: profileImageURL)
+        else {return}
+    }
+    
     @objc private func didTapButton(){
         avatarImageView.image = UIImage(systemName: "person.crop.circle.fill")
         avatarImageView.tintColor = .gray

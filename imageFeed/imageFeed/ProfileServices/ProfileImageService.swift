@@ -2,6 +2,7 @@
 import Foundation
 
 final class ProfileImageService {
+    static let didChangeNotification = Notification.Name(rawValue: "ProfileImageProviderChange")
     static let shared = ProfileImageService()
     private let jsonDecoder: JSONDecoder
     private init() {
@@ -41,6 +42,12 @@ final class ProfileImageService {
                     DispatchQueue.main.async {
                         completion(.success(smallImage))
                     }
+                    NotificationCenter.default
+                        .post(
+                            name: ProfileImageService.didChangeNotification,
+                            object: self,
+                            userInfo: ["URL": smallImage]
+                        )
                 } catch {
                     completion(.failure(error))
                 }

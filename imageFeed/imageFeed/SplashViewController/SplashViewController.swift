@@ -112,6 +112,7 @@ extension SplashViewController:AuthViewControllerDelegate{
             switch result {
             case .success(let profile):
                 UIBlockingProgressHUD.dismiss()
+                ProfileImageService.shared.fetchProfileImage(userName: profile.username) {_ in}
                 toBarController()
             case .failure:
                 // will do in 11

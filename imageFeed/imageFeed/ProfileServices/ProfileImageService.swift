@@ -38,7 +38,9 @@ final class ProfileImageService {
                     let imageResult = try self.jsonDecoder.decode(UserResult.self, from: data)
                     let smallImage = imageResult.profileImage.small
                     self.avatarURl = smallImage
-                    completion(.success(smallImage))
+                    DispatchQueue.main.async {
+                        completion(.success(smallImage))
+                    }
                 } catch {
                     completion(.failure(error))
                 }

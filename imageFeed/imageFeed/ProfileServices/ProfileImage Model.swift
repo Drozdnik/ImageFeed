@@ -2,5 +2,7 @@
 import Foundation
 
 struct smallImageResult: Decodable{
-    let smallImage: [String: String]
+    let small: String
+    let medium: String
+    let large: String
 }

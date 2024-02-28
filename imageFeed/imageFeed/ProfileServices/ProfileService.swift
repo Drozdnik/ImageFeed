@@ -8,20 +8,14 @@ final class ProfileService{
     static let sharedProfile = ProfileService()
     private(set) var profile:Profile?
     let tokenStorage = OAuth2TokenStorage()
+    private let jsonDecoder: JSONDecoder
     private let profileQueue = DispatchQueue(label: "com.profileService")
     private init (){
         self.jsonDecoder = JSONDecoder()
         self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
     }
     
-    private let jsonDecoder: JSONDecoder
-//    init (jsonDecoder: JSONDecoder = JSONDecoder()){
-//        self.jsonDecoder = jsonDecoder
-//        self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-//    }
-    
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
-        print (token)
         guard let request = profileInfoRequest(token) else {
             completion(.failure(ProfileError.failedToCreateRequest))
             return
@@ -56,15 +50,6 @@ final class ProfileService{
             }
         }
         task.resume()
-    }
-    
-    private func getToken() -> String?{
-        if let token = tokenStorage.token{
-            debugPrint("Токен получен: ", token)
-            return token
-        } else {
-            return nil
-        }
     }
     
     private func profileInfoRequest(_ token: String) -> URLRequest? {

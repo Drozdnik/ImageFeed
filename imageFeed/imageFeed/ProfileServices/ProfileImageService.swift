@@ -12,9 +12,11 @@ final class ProfileImageService {
     private let urlSession = URLSession.shared
     private var task: URLSessionTask?
     private (set) var avatarURl: String?
+    private let storage = OAuth2TokenStorage()
     
-    func fetchProfileImage(_ token: String, _ completion: @escaping (Result<String, Error>) -> Void){
-        guard let request = ImageRequest(token) else{
+    func fetchProfileImage(userName: String, _ completion: @escaping (Result<String, Error>) -> Void){
+        guard let token = getToken() else {return}
+        guard let request = ImageRequest(userName: userName, token: token) else{
             completion(.failure(ProfileError.failedToCreateRequest))
             return
         }
@@ -33,7 +35,7 @@ final class ProfileImageService {
             }
             DispatchQueue.main.async {
                 do{
-                    let imageResult = try self.jsonDecoder.decode(ProfileResult.self, from: data)
+                    let imageResult = try self.jsonDecoder.decode(UserResult.self, from: data)
                     let smallImage = imageResult.profileImage.small
                     self.avatarURl = smallImage
                     completion(.success(smallImage))
@@ -42,13 +44,21 @@ final class ProfileImageService {
                 }
             }
         }
+        task.resume()
     }
     
-    private func ImageRequest(_ token: String) -> URLRequest?{
-        guard let request = URLRequest.makeProfileRequest(path: "/me", httpMethod: "GET", token: token) else {
+    private func ImageRequest(userName:String , token: String) -> URLRequest?{
+        guard let request = URLRequest.makeProfileRequest(path: "/users/\(userName)", httpMethod: "GET", token: token) else {
             debugPrint("Не удалось выполнить Imagerequest")
             return nil
         }
         return request
+    }
+    
+    private func getToken() -> String?{
+        guard let token = storage.token else {
+            return nil
+        }
+        return token
     }
 }

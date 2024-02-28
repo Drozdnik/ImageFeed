@@ -12,7 +12,6 @@ struct ProfileResult: Decodable{
     let firstName: String
     let lastName: String
     let bio: String?
-    let profileImage: smallImageResult // вот тут добавил
 }
 
 struct Profile{

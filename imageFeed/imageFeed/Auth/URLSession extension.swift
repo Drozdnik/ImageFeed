@@ -28,6 +28,7 @@ extension URLSession {
                     completion(.success(decodedObject))
                 } catch {
                     completion(.failure(error))
+                    debugPrint("Decodind error: \(error.localizedDescription), Data: \(String(data:data, encoding: .utf8) ?? "")")
                 }
             }
         }

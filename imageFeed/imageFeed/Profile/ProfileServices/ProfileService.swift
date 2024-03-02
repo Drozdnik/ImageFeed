@@ -16,6 +16,9 @@ final class ProfileService{
     }
     
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
+        if tokenStorage.token == nil {
+            tokenStorage.token = token
+        }
         guard let request = profileInfoRequest(token) else {
             completion(.failure(ProfileError.failedToCreateRequest))
             return

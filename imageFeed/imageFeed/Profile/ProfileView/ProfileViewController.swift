@@ -11,15 +11,7 @@ class ProfileViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profileImageServiceObserver = NotificationCenter.default
-            .addObserver(
-                forName: ProfileImageService.didChangeNotification,
-                object: nil,
-                queue: .main
-            ) { [weak self] _ in
-                guard let self = self else {return}
-                self.updateAvatar()
-            }
+    
         addSubviews()
         configureConstraints()
         updateLabels()
@@ -95,7 +87,7 @@ class ProfileViewController: UIViewController{
     
     private func updateAvatar(){
         guard
-            let profileImageURL = ProfileImageService.shared.avatarURl,
+            let profileImageURL = ProfileImageService.shared.avatarURL,
             let url = URL(string: profileImageURL)
         else {return}
     }

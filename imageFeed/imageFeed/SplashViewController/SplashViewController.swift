@@ -100,7 +100,7 @@ extension SplashViewController:AuthViewControllerDelegate{
                 UIBlockingProgressHUD.show()
                 guard let self = self else {return}
                 switch result {
-                 case .success(let token):
+                case .success(let token):
                     self.fetchProfile(token.accessToken)
                 case .failure(let error):
                     break
@@ -110,16 +110,18 @@ extension SplashViewController:AuthViewControllerDelegate{
     }
     private func fetchProfile(_ token: String){
         profileService.fetchProfile(token) { [weak self] result in
-            guard let self = self else {return}
-            switch result {
-            case .success(let profile):
-                UIBlockingProgressHUD.dismiss()
-                ProfileImageService.shared.fetchProfileImage(userName: profile.username) {_ in}
-                toBarController()
-            case .failure:
-                // will do in 11
-                UIBlockingProgressHUD.dismiss()
-                break
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                switch result {
+                case .success(let profile):
+                    UIBlockingProgressHUD.dismiss()
+                    ProfileImageService.shared.fetchProfileImage(userName: profile.username) {_ in}
+                    self.toBarController()
+                case .failure:
+                    // will do in 11
+                    UIBlockingProgressHUD.dismiss()
+                    break
+                }
             }
         }
     }

@@ -6,7 +6,7 @@ struct UserResult:Decodable{
 }
 
 struct smallImageResult: Decodable{
-    let small: String
+    let small: String?
     let medium: String
     let large: String
 }

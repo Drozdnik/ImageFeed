@@ -24,11 +24,11 @@ final class OAuth2Service{
         }
         
         let task = urlSession.objectTask(for: request) { (result: Result<OAuthTokenResponseBody, Error>) in
-            completion(result) // Прямая передача результата в completion handler
+            completion(result)
         }
         task.resume()
     }
-
+    
     private func authTokenRequest(code: String) -> URLRequest? {
         guard let baseUrl = URL(string: "https://unsplash.com") else {
             return nil
@@ -48,11 +48,5 @@ final class OAuth2Service{
         let tokenType: String
         let scope: String
         let createdAt: Int
-        enum CodingKeys: String, CodingKey {
-            case accessToken = "access_token"
-            case tokenType = "token_type"
-            case scope
-            case createdAt = "created_at"
-        }
     }
 }

@@ -3,7 +3,11 @@ import Foundation
 extension URLSession {
     func objectTask<T: Decodable>(
         for request: URLRequest,
-        decoder: JSONDecoder = JSONDecoder(),
+        decoder: JSONDecoder = {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            return decoder
+        }(),
         completion: @escaping (Result<T, Error>) -> Void
     ) -> URLSessionTask {
         let task = self.dataTask(with: request) { data, response, error in

@@ -21,31 +21,15 @@ final class ProfileService{
             return
         }
         
-        let task = urlSession.dataTask(with: request){ data, response, error in
-            self.profileQueue.sync {
-                
-                if let error = error {
-                    completion(.failure(ProfileError.taskError))
-                }
-                
-                guard let httpResponce = response as? HTTPURLResponse, (200...299).contains(httpResponce.statusCode) else {
-                    completion(.failure(ProfileError.invalidResponce))
-                    return
-                }
-                
-                guard let data = data else {
-                    completion(.failure(ProfileError.noData))
-                    return
-                }
-                DispatchQueue.main.async {
-                    do{
-                        let profileResult = try self.jsonDecoder.decode(ProfileResult.self, from: data)
-                        let profile = Profile(profileResult: profileResult)
-                        self.profile = profile
-                        completion(.success(profile))
-                    } catch {
-                        completion(.failure(error))
-                    }
+        let task = urlSession.objectTask(for: request) {[weak self] (result: Result<ProfileResult, Error>) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let profileResult):
+                    let profile = Profile(profileResult: profileResult)
+                    self?.profile = profile
+                    completion (.success(profile))
+                case .failure(let error):
+                    completion (.failure(error))
                 }
             }
         }

@@ -2,61 +2,45 @@
 import Foundation
 
 final class ProfileImageService {
-    static let didChangeNotification = Notification.Name(rawValue: "ProfileImageProviderChange")
     static let shared = ProfileImageService()
-    private let jsonDecoder: JSONDecoder
-    private init() {
-        self.jsonDecoder = JSONDecoder()
-        self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-    }
+    private init() {}
     
     private let urlSession = URLSession.shared
     private var task: URLSessionTask?
-    private (set) var avatarURl: String?
+    private (set) var avatarURL: String?
     private let storage = OAuth2TokenStorage()
     
-    func fetchProfileImage(userName: String, _ completion: @escaping (Result<String, Error>) -> Void){
-        guard let token = getToken() else {return}
-        guard let request = ImageRequest(userName: userName, token: token) else{
-            completion(.failure(ProfileError.failedToCreateRequest))
-            return
-        }
-        
-        let task = urlSession.dataTask(with: request){data, response, error in
-            if let error = error{
-                completion(.failure(ProfileError.taskError))
-            }
-            guard let httpResponce = response as? HTTPURLResponse, (200...299).contains(httpResponce.statusCode) else {
-                completion(.failure(ProfileError.invalidResponce))
+    func fetchProfileImage(userName: String, _ completion: @escaping (Result<String, Error>) -> Void) {
+            guard let token = getToken() else {
+                completion(.failure(ProfileError.failedToCreateRequest))
                 return
             }
-            guard let data = data else {
-                completion(.failure(ProfileError.noData))
+            
+            guard let request = imageRequest(userName: userName, token: token) else {
+                completion(.failure(ProfileError.failedToCreateRequest))
                 return
             }
-            DispatchQueue.main.async {
-                do{
-                    let imageResult = try self.jsonDecoder.decode(UserResult.self, from: data)
-                    let smallImage = imageResult.profileImage.small
-                    self.avatarURl = smallImage
-                    DispatchQueue.main.async {
-                        completion(.success(smallImage))
+            
+            task = urlSession.objectTask(for: request) { [weak self] (result: Result<UserResult, Error>) in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let userResult):
+                        guard let smallImageURL = userResult.profileImage.small else {
+                            completion(.failure(ProfileError.noData))
+                            return
+                        }
+                        debugPrint(smallImageURL)
+                        self?.avatarURL = smallImageURL
+                        completion(.success(smallImageURL))
+                    case .failure(let error):
+                        completion(.failure(error))
                     }
-                    NotificationCenter.default
-                        .post(
-                            name: ProfileImageService.didChangeNotification,
-                            object: self,
-                            userInfo: ["URL": smallImage]
-                        )
-                } catch {
-                    completion(.failure(error))
                 }
             }
+            task?.resume()
         }
-        task.resume()
-    }
     
-    private func ImageRequest(userName:String , token: String) -> URLRequest?{
+    private func imageRequest(userName:String , token: String) -> URLRequest?{
         guard let request = URLRequest.makeProfileRequest(path: "/users/\(userName)", httpMethod: "GET", token: token) else {
             debugPrint("Не удалось выполнить Imagerequest")
             return nil

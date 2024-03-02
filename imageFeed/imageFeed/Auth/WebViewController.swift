@@ -40,11 +40,7 @@ final class WebViewController: UIViewController{
         // Added Observer
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress),options: .new, context: nil)
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        webView.removeObserver(self, forKeyPath:#keyPath(WKWebView.estimatedProgress))
-//    }
-    
+
     private func addSubview(){
         view.addSubview(webView)
         view.addSubview(backButton)

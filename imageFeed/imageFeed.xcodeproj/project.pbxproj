@@ -37,6 +37,7 @@
 		87EFD2EF2B418A1E00735931 /* setupProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2EE2B418A1E00735931 /* setupProjectTests.swift */; };
 		87EFD2F92B418A1E00735931 /* setupProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2F82B418A1E00735931 /* setupProjectUITests.swift */; };
 		87EFD2FB2B418A1E00735931 /* setupProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2FA2B418A1E00735931 /* setupProjectUITestsLaunchTests.swift */; };
+		87F6C8C22B93C538009C8531 /* URLSession extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F6C8C12B93C538009C8531 /* URLSession extension.swift */; };
 		87FB44142B4C14C700A8338B /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FB44132B4C14C700A8338B /* ImageListCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		87EFD2F42B418A1E00735931 /* imageFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imageFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87EFD2F82B418A1E00735931 /* setupProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupProjectUITests.swift; sourceTree = "<group>"; };
 		87EFD2FA2B418A1E00735931 /* setupProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		87F6C8C12B93C538009C8531 /* URLSession extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession extension.swift"; sourceTree = "<group>"; };
 		87FB44132B4C14C700A8338B /* ImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				87B14C0E2B72C39800433B46 /* enum networkError.swift */,
 				87B14C102B72CA8F00433B46 /* URL request + Extensions.swift */,
 				879E25702B8276D60065C4C6 /* UIBlockingProgressHUD.swift */,
+				87F6C8C12B93C538009C8531 /* URLSession extension.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				879E257B2B8BD8670065C4C6 /* ProfileImageService.swift in Sources */,
 				879E25742B827FD00065C4C6 /* ProfileService.swift in Sources */,
 				87EFD2D82B418A1C00735931 /* AppDelegate.swift in Sources */,
+				87F6C8C22B93C538009C8531 /* URLSession extension.swift in Sources */,
 				8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */,
 				8734BA332B6FFDB900764B71 /* OAuth2TokenStorage.swift in Sources */,
 				879E257D2B8BD9300065C4C6 /* ProfileImage Model.swift in Sources */,

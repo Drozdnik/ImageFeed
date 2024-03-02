@@ -90,13 +90,14 @@ extension SplashViewController:AuthViewControllerDelegate{
     func authViewController(_ vc: AuthViewController, didAuthWithCode code: String) {
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
-            fetchOAuthToken(code)
+            UIBlockingProgressHUD.show()
+            self.fetchOAuthToken(code)
         }
     }
     
     private func fetchOAuthToken(_ code: String){
         OAuth2Service.shared.fetchOAuthToken(code){ [weak self] result in
-            UIBlockingProgressHUD.show()
+//            UIBlockingProgressHUD.show()
             guard let self = self else {return}
             switch result {
             case .success(let token):
@@ -106,6 +107,7 @@ extension SplashViewController:AuthViewControllerDelegate{
             }
         }
     }
+    
     private func fetchProfile(_ token: String){
         profileService.fetchProfile(token) { [weak self] result in
             guard let self = self else {return}

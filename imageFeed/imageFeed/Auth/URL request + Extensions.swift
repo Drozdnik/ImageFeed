@@ -5,12 +5,16 @@ extension URLRequest {
     static func makeHTTPRequest(
         path: String,
         httpMethod: String,
-        baseURL: URL = defaultBaseURL
+        defaultBaseURL: URL? = defaultBaseURL
     ) -> URLRequest {
-        var request = URLRequest(url: URL(string: path, relativeTo: baseURL)!)
-               request.httpMethod = httpMethod
-               return request
-       }
+        guard
+            let defaultBaseURL =  defaultBaseURL,
+            let url = URL(string: path, relativeTo: defaultBaseURL)
+        else { fatalError("Failed to create URL") }
+        var request = URLRequest(url: url)
+        request.httpMethod = httpMethod
+        return request
+    }
     
     static func makeProfileRequest(
         path:String,

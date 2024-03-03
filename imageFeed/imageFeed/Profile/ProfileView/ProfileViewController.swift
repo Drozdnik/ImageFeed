@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class ProfileViewController: UIViewController{
     
@@ -15,6 +16,7 @@ class ProfileViewController: UIViewController{
         addSubviews()
         configureConstraints()
         updateLabels()
+        updateAvatar()
     }
     
      func addSubviews(){
@@ -54,6 +56,8 @@ class ProfileViewController: UIViewController{
         let profileImage = UIImage(named: "avatar")
         let avatarImageView = UIImageView(image: profileImage)
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
+        avatarImageView.layer.cornerRadius = 35
+        avatarImageView.layer.masksToBounds = true
         return avatarImageView
     }()
 
@@ -87,9 +91,9 @@ class ProfileViewController: UIViewController{
     
     private func updateAvatar(){
         guard
-            let profileImageURL = ProfileImageService.shared.avatarURL,
-            let url = URL(string: profileImageURL)
-        else {return}
+            let profileImageUrl = ProfileImageService.shared.avatarURL,
+            let url = URL(string: profileImageUrl) else {return}
+        avatarImageView.kf.setImage(with: url)
     }
     
     @objc private func didTapButton(){

@@ -90,8 +90,8 @@ extension SplashViewController:AuthViewControllerDelegate{
     func authViewController(_ vc: AuthViewController, didAuthWithCode code: String) {
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
-            UIBlockingProgressHUD.show()
             fetchOAuthToken(code)
+            UIBlockingProgressHUD.show()
         }
     }
     
@@ -99,6 +99,7 @@ extension SplashViewController:AuthViewControllerDelegate{
         UIBlockingProgressHUD.show()
         OAuth2Service.shared.fetchOAuthToken(code: code){ [weak self] result in
             DispatchQueue.main.async {
+                UIBlockingProgressHUD.show()
                 guard let self = self else {return}
                 switch result {
                 case .success(let token):
@@ -111,14 +112,15 @@ extension SplashViewController:AuthViewControllerDelegate{
         }
     }
     private func fetchProfile(_ token: String){
+        UIBlockingProgressHUD.show()
         profileService.fetchProfile(token) { [weak self] result in
             DispatchQueue.main.async {
                 guard let self = self else {return}
                 switch result {
                 case .success(let profile):
-                    UIBlockingProgressHUD.dismiss()
                     ProfileImageService.shared.fetchProfileImage(userName: profile.username) {_ in}
                     self.toBarController()
+                    UIBlockingProgressHUD.dismiss()
                 case .failure:
                     // will do in 11
                     UIBlockingProgressHUD.dismiss()
@@ -128,14 +130,5 @@ extension SplashViewController:AuthViewControllerDelegate{
         }
     }
 }
-
-//extension SplashViewController {
-//    func showAlert(message: String) {
-//        let alert = UIAlertController(title: "Что-то пошло не так(", message: message, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
-//        self.present(alert, animated: true, completion: nil)
-//    }
-//}
-
 
 

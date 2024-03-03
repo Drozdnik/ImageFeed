@@ -38,6 +38,7 @@
 		87EFD2F92B418A1E00735931 /* setupProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2F82B418A1E00735931 /* setupProjectUITests.swift */; };
 		87EFD2FB2B418A1E00735931 /* setupProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD2FA2B418A1E00735931 /* setupProjectUITestsLaunchTests.swift */; };
 		87F6C8C22B93C538009C8531 /* URLSession extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F6C8C12B93C538009C8531 /* URLSession extension.swift */; };
+		87F6C8C52B94B67D009C8531 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F6C8C42B94B67D009C8531 /* AlertPresenter.swift */; };
 		87FB44142B4C14C700A8338B /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FB44132B4C14C700A8338B /* ImageListCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		87EFD2F82B418A1E00735931 /* setupProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupProjectUITests.swift; sourceTree = "<group>"; };
 		87EFD2FA2B418A1E00735931 /* setupProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		87F6C8C12B93C538009C8531 /* URLSession extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession extension.swift"; sourceTree = "<group>"; };
+		87F6C8C42B94B67D009C8531 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		87FB44132B4C14C700A8338B /* ImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +229,7 @@
 		87EFD2D62B418A1C00735931 /* imageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				87F6C8C32B94B651009C8531 /* AlertPresenter */,
 				87F6C8802B8FCCEA009C8531 /* Profile */,
 				8734BA342B70111800764B71 /* SplashViewController */,
 				873C76322B6EBAC700B62A93 /* Auth */,
@@ -264,6 +267,14 @@
 				879E25722B827FB50065C4C6 /* ProfileServices */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		87F6C8C32B94B651009C8531 /* AlertPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				87F6C8C42B94B67D009C8531 /* AlertPresenter.swift */,
+			);
+			path = AlertPresenter;
 			sourceTree = "<group>";
 		};
 		87FB44162B4C156500A8338B /* ImageList */ = {
@@ -437,6 +448,7 @@
 				8734BA332B6FFDB900764B71 /* OAuth2TokenStorage.swift in Sources */,
 				879E257D2B8BD9300065C4C6 /* ProfileImage Model.swift in Sources */,
 				87EFD2DA2B418A1C00735931 /* SceneDelegate.swift in Sources */,
+				87F6C8C52B94B67D009C8531 /* AlertPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

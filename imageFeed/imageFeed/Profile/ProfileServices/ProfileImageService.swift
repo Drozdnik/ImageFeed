@@ -34,6 +34,7 @@ final class ProfileImageService {
                         completion(.success(smallImageURL))
                     case .failure(let error):
                         completion(.failure(error))
+                        debugPrint("Error in ImageService \(error.localizedDescription)")
                     }
                 }
             }

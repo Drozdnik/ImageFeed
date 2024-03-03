@@ -28,9 +28,9 @@ final class OAuth2Service{
         }
         task.resume()
     }
-    
+   
     private func authTokenRequest(code: String) -> URLRequest? {
-        guard let baseUrl = URL(string: "https://unsplash.com") else {
+        guard let baseUrl = URL(string: "https://unsplash.com") else { 
             return nil
         }
         let fullPath = "/oauth/token"

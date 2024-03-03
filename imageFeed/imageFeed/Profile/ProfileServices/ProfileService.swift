@@ -33,6 +33,7 @@ final class ProfileService{
                     completion (.success(profile))
                 case .failure(let error):
                     completion (.failure(error))
+                    
                 }
             }
         }

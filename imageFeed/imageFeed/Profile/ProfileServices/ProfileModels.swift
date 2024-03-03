@@ -10,7 +10,7 @@ import Foundation
 struct ProfileResult: Decodable{
     let username: String
     let firstName: String
-    let lastName: String
+    let lastName: String?
     let bio: String?
 }
 
@@ -22,7 +22,7 @@ struct Profile{
     
     init(profileResult: ProfileResult) {
         self.username = profileResult.username
-        self.name = profileResult.firstName + " " + profileResult.lastName
+        self.name = profileResult.firstName + " " + (profileResult.lastName ?? "")
         self.loginName = "@" + username
         self.bio = profileResult.bio ?? " "
     }

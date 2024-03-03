@@ -90,20 +90,22 @@ extension SplashViewController:AuthViewControllerDelegate{
     func authViewController(_ vc: AuthViewController, didAuthWithCode code: String) {
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
+            UIBlockingProgressHUD.show()
             fetchOAuthToken(code)
         }
     }
     
     private func fetchOAuthToken(_ code: String){
+        UIBlockingProgressHUD.show()
         OAuth2Service.shared.fetchOAuthToken(code: code){ [weak self] result in
             DispatchQueue.main.async {
-                UIBlockingProgressHUD.show()
                 guard let self = self else {return}
                 switch result {
                 case .success(let token):
                     self.fetchProfile(token.accessToken)
                 case .failure(let error):
-                    break
+                    UIBlockingProgressHUD.dismiss()
+                    self.presentAlertOnTopViewController(message: "Не удалось войти в систему")
                 }
             }
         }
@@ -120,9 +122,20 @@ extension SplashViewController:AuthViewControllerDelegate{
                 case .failure:
                     // will do in 11
                     UIBlockingProgressHUD.dismiss()
-                    break
+                    self.presentAlertOnTopViewController(message: "Не удалось получить данные профиля")
                 }
             }
         }
     }
 }
+
+//extension SplashViewController {
+//    func showAlert(message: String) {
+//        let alert = UIAlertController(title: "Что-то пошло не так(", message: message, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+//        self.present(alert, animated: true, completion: nil)
+//    }
+//}
+
+
+

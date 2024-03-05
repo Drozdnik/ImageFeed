@@ -28,6 +28,7 @@ class ProfileViewController: UIViewController{
         nameLabel = createLabel("Name", size: 23, color: .white)
         idLabel = createLabel("@Id", color: .gray)
         statusLabel = createLabel("Status", color: .white)
+        view.backgroundColor = customBlack
         view.addSubview(nameLabel)
         view.addSubview(idLabel)
         view.addSubview(statusLabel)

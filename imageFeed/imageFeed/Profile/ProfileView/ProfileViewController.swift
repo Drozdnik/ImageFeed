@@ -69,7 +69,7 @@ class ProfileViewController: UIViewController{
             action: #selector(didTapButton)
         )
         
-        exitButton.tintColor = .red
+        exitButton.tintColor = customRedForBackButton
         exitButton.translatesAutoresizingMaskIntoConstraints = false
         return exitButton
     }()

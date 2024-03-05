@@ -91,8 +91,8 @@ extension SplashViewController:AuthViewControllerDelegate{
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
             fetchOAuthToken(code)
-            UIBlockingProgressHUD.show()
         }
+        UIBlockingProgressHUD.show()
     }
     
     private func fetchOAuthToken(_ code: String){
@@ -110,7 +110,9 @@ extension SplashViewController:AuthViewControllerDelegate{
                 }
             }
         }
+        UIBlockingProgressHUD.show()
     }
+    
     private func fetchProfile(_ token: String){
         UIBlockingProgressHUD.show()
         profileService.fetchProfile(token) { [weak self] result in

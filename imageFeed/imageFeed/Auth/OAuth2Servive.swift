@@ -18,23 +18,44 @@ final class OAuth2Service{
     }
     
     func fetchOAuthToken(code: String, completion: @escaping (Result<OAuthTokenResponseBody, Error>) -> Void) {
+        assert(Thread.isMainThread)
+        if task != nil {
+            if lastCode != code{
+                task?.cancel()
+            } else {
+                completion(.failure(NetworkError.invalidRequest))
+                return
+            }
+        } else {
+            if lastCode == code {
+                completion(.failure(NetworkError.invalidRequest))
+                return
+            }
+        }
+        
+        lastCode = code
         guard let request = self.authTokenRequest(code: code) else {
             completion(.failure(NetworkError.invalidRequest))
             return
         }
         
         let task = urlSession.objectTask(for: request) { [weak self] (result: Result<OAuthTokenResponseBody, Error>) in
-            switch result {
-            case .success(let responseBody):
-                let token = responseBody.accessToken
-                if self?.authToken == nil {
-                    self?.authToken = token
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let responseBody):
+                    let token = responseBody.accessToken
+                    if self?.authToken == nil {
+                        self?.authToken = token
+                    }
+                    self?.task = nil
+                    self?.lastCode = nil
+                    completion(.success(responseBody))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-                completion(.success(responseBody))
-            case .failure(let error):
-                completion(.failure(error))
             }
         }
+        self.task = task
         task.resume()
     }
    

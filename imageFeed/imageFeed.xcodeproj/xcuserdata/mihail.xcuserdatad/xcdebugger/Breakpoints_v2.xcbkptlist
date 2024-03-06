@@ -595,8 +595,8 @@
             filePath = "imageFeed/Auth/OAuth2Servive.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "authTokenRequest(code:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -611,8 +611,8 @@
             filePath = "imageFeed/Auth/OAuth2Servive.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "authTokenRequest(code:)"
             landmarkType = "7">
             <Locations>

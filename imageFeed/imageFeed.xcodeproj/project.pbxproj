@@ -210,8 +210,8 @@
 			children = (
 				879E25732B827FD00065C4C6 /* ProfileService.swift */,
 				879E25752B8A9A730065C4C6 /* ProfileModels.swift */,
-				879E257A2B8BD8670065C4C6 /* ProfileImageService.swift */,
 				879E257C2B8BD9300065C4C6 /* ProfileImage Model.swift */,
+				879E257A2B8BD8670065C4C6 /* ProfileImageService.swift */,
 			);
 			path = ProfileServices;
 			sourceTree = "<group>";

@@ -8,7 +8,7 @@ final class SplashViewController: UIViewController{
     private let outh2Service = OAuth2Service.shared
     private let storage = OAuth2TokenStorage()
     private let profileService = ProfileService.sharedProfile
-    private let networkQueue = DispatchQueue(label: "com.imageFeed.networkQueue", qos: .userInitiated)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubViews()
@@ -97,41 +97,39 @@ extension SplashViewController:AuthViewControllerDelegate{
     
     private func fetchOAuthToken(_ code: String){
         UIBlockingProgressHUD.show()
-        networkQueue.async { [weak self] in
-            OAuth2Service.shared.fetchOAuthToken(code: code){ result in
-                DispatchQueue.main.async {
-                    guard let self = self else {return}
-                    switch result {
-                    case .success(let token):
-                        self.fetchProfile(token.accessToken)
-                    case .failure(let error):
-                        UIBlockingProgressHUD.dismiss()
-                        self.presentAlertOnTopViewController(message: "Не удалось войти в систему")
-                    }
+        OAuth2Service.shared.fetchOAuthToken(code: code){ [weak self] result in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                switch result {
+                case .success(let token):
+                    self.fetchProfile(token.accessToken)
+                case .failure(let error):
+                    UIBlockingProgressHUD.dismiss()
+                    self.presentAlertOnTopViewController(message: "Не удалось войти в систему")
                 }
             }
         }
     }
     
+    
     private func fetchProfile(_ token: String){
         UIBlockingProgressHUD.show()
-        networkQueue.async { [weak self] in
-            self?.profileService.fetchProfile(token) { result in
-                DispatchQueue.main.async {
-                    guard let self = self else {return}
-                    switch result {
-                    case .success(let profile):
-                        ProfileImageService.shared.fetchProfileImage(userName: profile.username) {_ in}
-                        self.toBarController()
-                        UIBlockingProgressHUD.dismiss()
-                    case .failure:
-                        UIBlockingProgressHUD.dismiss()
-                        self.presentAlertOnTopViewController(message: "Не удалось получить данные профиля")
-                    }
+        profileService.fetchProfile(token) {[weak self] result in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                switch result {
+                case .success(let profile):
+                    ProfileImageService.shared.fetchProfileImage(userName: profile.username) {_ in}
+                    self.toBarController()
+                    UIBlockingProgressHUD.dismiss()
+                case .failure:
+                    UIBlockingProgressHUD.dismiss()
+                    self.presentAlertOnTopViewController(message: "Не удалось получить данные профиля")
                 }
             }
         }
     }
 }
+
 
 

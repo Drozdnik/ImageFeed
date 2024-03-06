@@ -8,12 +8,8 @@ final class ProfileService{
     static let sharedProfile = ProfileService()
     private(set) var profile:Profile?
     let tokenStorage = OAuth2TokenStorage()
-    private let jsonDecoder: JSONDecoder
     private let profileQueue = DispatchQueue(label: "com.profileService")
-    private init (){
-        self.jsonDecoder = JSONDecoder()
-        self.jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-    }
+    private init (){}
     
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
         if tokenStorage.token == nil {

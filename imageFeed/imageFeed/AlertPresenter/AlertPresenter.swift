@@ -12,21 +12,21 @@ extension UIViewController {
         }
     }
     
-       private func getTopViewController() -> UIViewController? {
-                // Получаем активное ключевое окно из первой доступной UIWindowScene
-                let currentWindow = UIApplication.shared
-                    .connectedScenes
-                    .compactMap { $0 as? UIWindowScene }
-                    .flatMap { $0.windows }
-                    .first(where: { $0.isKeyWindow })
-
-                // Начиная с корневого контроллера этого окна, идем вглубь по иерархии представлений
-                var topController = currentWindow?.rootViewController
-                while let presentedController = topController?.presentedViewController {
-                    topController = presentedController
-                }
-
-                return topController
-            }
+    private func getTopViewController() -> UIViewController? {
+        // Получаем активное ключевое окно из первой доступной UIWindowScene
+        let currentWindow = UIApplication.shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first(where: { $0.isKeyWindow })
+        
+        // Начиная с корневого контроллера этого окна, идем вглубь по иерархии представлений
+        var topController = currentWindow?.rootViewController
+        while let presentedController = topController?.presentedViewController {
+            topController = presentedController
+        }
+        
+        return topController
     }
+}
 

@@ -4,9 +4,9 @@ import Kingfisher
 class ProfileViewController: UIViewController{
     
     private let profileService = ProfileService.sharedProfile
-    private var nameLabel = UILabel()
-    private var idLabel = UILabel()
-    private var statusLabel = UILabel()
+    private lazy var nameLabel = UILabel()
+    private lazy var idLabel = UILabel()
+    private lazy var statusLabel = UILabel()
     private var profileImageServiceObserver: NSObjectProtocol?
     
     override func viewDidLoad() {

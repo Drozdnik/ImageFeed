@@ -1,10 +1,8 @@
 import UIKit
 
-private let urlSession = URLSession.shared
-private var task: URLSessionTask?
-
 final class ProfileService{
-    
+    private let urlSession = URLSession.shared
+    private var task: URLSessionTask?
     static let sharedProfile = ProfileService()
     private(set) var profile:Profile?
     let tokenStorage = OAuth2TokenStorage()
@@ -12,7 +10,9 @@ final class ProfileService{
     private init (){}
     
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
-        guard task == nil else { return }
+        if task != nil {
+            task?.cancel()
+        }
         
         guard let request = profileInfoRequest(token) else {
             completion(.failure(ProfileError.failedToCreateRequest))
@@ -30,8 +30,10 @@ final class ProfileService{
                     completion (.failure(error))
                     
                 }
+                self?.task = nil
             }
         }
+        self.task = task
         task.resume()
     }
     

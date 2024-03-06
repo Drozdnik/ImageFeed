@@ -15,6 +15,7 @@ final class ProfileImageService {
         if task != nil {
             task?.cancel()
         }
+        
         guard let token = getToken() else {
             completion(.failure(ProfileError.failedToCreateRequest))
             return

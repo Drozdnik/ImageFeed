@@ -1990,8 +1990,8 @@
             filePath = "imageFeed/Profile/ProfileServices/ProfileImageService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "fetchProfileImage(userName:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2006,8 +2006,8 @@
             filePath = "imageFeed/Profile/ProfileServices/ProfileImageService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "fetchProfileImage(userName:_:)"
             landmarkType = "7">
             <Locations>
@@ -2069,8 +2069,8 @@
             filePath = "imageFeed/Profile/ProfileServices/ProfileImageService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "fetchProfileImage(userName:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2208,8 +2208,8 @@
             filePath = "imageFeed/Profile/ProfileServices/ProfileImageService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "fetchProfileImage(userName:_:)"
             landmarkType = "7">
          </BreakpointContent>

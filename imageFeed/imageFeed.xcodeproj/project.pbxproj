@@ -19,6 +19,8 @@
 		876042A92B950979008AB202 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 876042A82B950979008AB202 /* Kingfisher */; };
 		876042AC2B951E04008AB202 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 876042AB2B951E04008AB202 /* SwiftKeychainWrapper */; };
 		876042EA2B9742BA008AB202 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876042E92B9742BA008AB202 /* TabBarController.swift */; };
+		876042EC2B990A0E008AB202 /* imageListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876042EB2B990A0E008AB202 /* imageListService.swift */; };
+		876042EE2B990C44008AB202 /* ImageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876042ED2B990C44008AB202 /* ImageListModel.swift */; };
 		8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788BDF12B62805400722EF5 /* SingleImageViewController.swift */; };
 		8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */; };
 		8791DD112B5C1B08003E8A0C /* YSDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */; };
@@ -73,6 +75,8 @@
 		873C76352B6EC93100B62A93 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		873C76372B6ED24A00B62A93 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		876042E92B9742BA008AB202 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		876042EB2B990A0E008AB202 /* imageListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageListService.swift; sourceTree = "<group>"; };
+		876042ED2B990C44008AB202 /* ImageListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListModel.swift; sourceTree = "<group>"; };
 		8788BDF12B62805400722EF5 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Medium.ttf"; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 			children = (
 				87EFD2DB2B418A1C00735931 /* ImagesListViewController.swift */,
 				87FB44132B4C14C700A8338B /* ImageListCell.swift */,
+				876042EB2B990A0E008AB202 /* imageListService.swift */,
+				876042ED2B990C44008AB202 /* ImageListModel.swift */,
 			);
 			name = ImageList;
 			sourceTree = "<group>";
@@ -454,6 +460,7 @@
 				879E257B2B8BD8670065C4C6 /* ProfileImageService.swift in Sources */,
 				879E25742B827FD00065C4C6 /* ProfileService.swift in Sources */,
 				87EFD2D82B418A1C00735931 /* AppDelegate.swift in Sources */,
+				876042EE2B990C44008AB202 /* ImageListModel.swift in Sources */,
 				876042EA2B9742BA008AB202 /* TabBarController.swift in Sources */,
 				87F6C8C22B93C538009C8531 /* URLSession extension.swift in Sources */,
 				8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */,
@@ -461,6 +468,7 @@
 				879E257D2B8BD9300065C4C6 /* ProfileImage Model.swift in Sources */,
 				87EFD2DA2B418A1C00735931 /* SceneDelegate.swift in Sources */,
 				87F6C8C52B94B67D009C8531 /* AlertPresenter.swift in Sources */,
+				876042EC2B990A0E008AB202 /* imageListService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,15 +44,13 @@ final class OAuth2Service{
                 switch result {
                 case .success(let responseBody):
                     let token = responseBody.accessToken
-                    if self?.authToken == nil {
                         self?.authToken = token
-                    }
-                    self?.task = nil
-                    self?.lastCode = nil
                     completion(.success(responseBody))
                 case .failure(let error):
                     completion(.failure(error))
                 }
+                self?.task = nil
+                self?.lastCode = nil
             }
         }
         self.task = task

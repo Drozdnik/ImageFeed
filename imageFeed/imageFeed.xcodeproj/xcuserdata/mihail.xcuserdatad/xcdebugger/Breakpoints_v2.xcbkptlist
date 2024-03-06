@@ -595,8 +595,8 @@
             filePath = "imageFeed/Auth/OAuth2Servive.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "authTokenRequest(code:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -611,8 +611,8 @@
             filePath = "imageFeed/Auth/OAuth2Servive.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "authTokenRequest(code:)"
             landmarkType = "7">
             <Locations>
@@ -1677,8 +1677,8 @@
             filePath = "imageFeed/Profile/ProfileServices/ProfileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
             landmarkName = "fetchProfile(_:completion:)"
             landmarkType = "7">
             <Locations>
@@ -1725,8 +1725,8 @@
             filePath = "imageFeed/Profile/ProfileServices/ProfileService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "fetchProfile(_:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2275,70 +2275,6 @@
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3FC2E071-792B-43AF-BE7D-D8FF31B87FC1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "imageFeed/Auth/OAuth2Servive.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "fetchOAuthToken(code:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3FC2E071-792B-43AF-BE7D-D8FF31B87FC1 - ef1feb6a03ff030c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "imageFeed.OAuth2Service.fetchOAuthToken(code: Swift.String, completion: (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "imageFeed"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Auth/OAuth2Servive.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "308">
-               </Location>
-               <Location
-                  uuid = "3FC2E071-792B-43AF-BE7D-D8FF31B87FC1 - 2096841d3ef6f62b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.OAuth2Service.fetchOAuthToken(code: Swift.String, completion: (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "imageFeed"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Auth/OAuth2Servive.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A79559F8-5A7E-4A79-917E-0F427D52DE13"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "imageFeed/Auth/OAuth2Servive.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "fetchOAuthToken(code:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

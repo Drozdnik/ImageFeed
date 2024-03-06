@@ -23,8 +23,17 @@ final class OAuth2Service{
             return
         }
         
-        let task = urlSession.objectTask(for: request) { (result: Result<OAuthTokenResponseBody, Error>) in
-            completion(result)
+        let task = urlSession.objectTask(for: request) { [weak self] (result: Result<OAuthTokenResponseBody, Error>) in
+            switch result {
+            case .success(let responseBody):
+                let token = responseBody.accessToken
+                if self?.authToken == nil {
+                    self?.authToken = token
+                }
+                completion(.success(responseBody))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
         task.resume()
     }

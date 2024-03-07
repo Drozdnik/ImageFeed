@@ -14,8 +14,8 @@
             filePath = "imageFeed/Auth/WebViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "code(from:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "imageFeed/Auth/WebViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "code(from:)"
             landmarkType = "7">
             <Locations>
@@ -78,58 +78,10 @@
             filePath = "imageFeed/Auth/WebViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "code(from:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8C2AEC59-FEFA-4452-962A-60E4CB4DD2E5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "imageFeed/Auth/OAuth2TokenStorage.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6"
-            endingLineNumber = "6"
-            landmarkName = "token"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "07726E7E-26BA-4C31-8A3F-AA19145B407E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "imageFeed/Auth/OAuth2TokenStorage.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "7"
-            endingLineNumber = "7"
-            landmarkName = "token"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1FFBACCE-36FA-46E8-B1EB-E15D4727035C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "imageFeed/Auth/OAuth2TokenStorage.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "10"
-            endingLineNumber = "10"
-            landmarkName = "token"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -142,10 +94,57 @@
             filePath = "imageFeed/SplashViewController/SplashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8EDA8100-CBDB-4487-B6C3-A3ADA5B78008 - 2b9d2a97dfecdb5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "8EDA8100-CBDB-4487-B6C3-A3ADA5B78008 - 2b9d2a97dfecdb5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "8EDA8100-CBDB-4487-B6C3-A3ADA5B78008 - 2b9d2a97dfecdb5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,8 +157,8 @@
             filePath = "imageFeed/SplashViewController/SplashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +173,8 @@
             filePath = "imageFeed/SplashViewController/SplashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,40 +189,130 @@
             filePath = "imageFeed/SplashViewController/SplashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "fetchToken(_:)"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "fetchProfile(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - 37de0cad520efe16"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
-                  moduleName = "imageFeed"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mihail/Documents/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - f4319cc0ea82e9dc"
+                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - 26b2c61223d0e8bc"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
                   moduleName = "imageFeed"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mihail/Documents/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "52">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - e55d567f9b5cff55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - 26b2c61223d0e89f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - 26b2c61223d0e8bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - e55d567f9b5cff76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - 26b2c61223d0e8bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - 1d08a745be3e0224"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "A7FAD1A8-C434-46AE-B563-B490ECBC02D5 - d439f072b0343eb3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "36">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -238,9 +327,9 @@
             filePath = "imageFeed/SplashViewController/SplashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "fetchToken(_:)"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "fetchProfile(_:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -301,8 +390,8 @@
             filePath = "imageFeed/SplashViewController/SplashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "toBarController()"
             landmarkType = "7">
             <Locations>
@@ -336,6 +425,21 @@
                   endingLineNumber = "33"
                   offsetFromSymbolStart = "64">
                </Location>
+               <Location
+                  uuid = "5E675686-9C9B-4BCD-969D-B15E1D803033 - a468cb92056a44f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.toBarController() -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "64">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -349,8 +453,8 @@
             filePath = "imageFeed/SplashViewController/SplashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "authViewController(_:didAuthWithCode:)"
             landmarkType = "7">
             <Locations>
@@ -384,6 +488,36 @@
                   endingLineNumber = "75"
                   offsetFromSymbolStart = "40">
                </Location>
+               <Location
+                  uuid = "DF6F357F-086F-46C9-BF0A-461F309715DF - 50f76910d58d1f82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "DF6F357F-086F-46C9-BF0A-461F309715DF - 50f76910d58d1f82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "104">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -397,8 +531,8 @@
             filePath = "imageFeed/Auth/WebViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -445,9 +579,1717 @@
             filePath = "imageFeed/SplashViewController/SplashViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "toBarController()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68AFDABA-3A21-4FC9-A6EF-DA4C2E51B057"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Auth/OAuth2Servive.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "authTokenRequest(code:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20E71F4A-EB47-4533-9F27-B858D697795F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Auth/OAuth2Servive.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "authTokenRequest(code:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "20E71F4A-EB47-4533-9F27-B858D697795F - 3c5ec166598996c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.OAuth2Service.authTokenRequest(code: Swift.String) -&gt; Swift.Optional&lt;Foundation.URLRequest&gt;"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Auth/OAuth2Servive.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "20E71F4A-EB47-4533-9F27-B858D697795F - 3c5ec166598996c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.OAuth2Service.authTokenRequest(code: Swift.String) -&gt; Swift.Optional&lt;Foundation.URLRequest&gt;"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Auth/OAuth2Servive.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "388">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A90B70F-9000-433B-A0FC-CCC124F9967E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Auth/WebViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1A90B70F-9000-433B-A0FC-CCC124F9967E - 9451c65a521b4bf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.WebViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Auth/WebViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "1640">
+               </Location>
+               <Location
+                  uuid = "1A90B70F-9000-433B-A0FC-CCC124F9967E - 9451c65a521b4bf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.WebViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Auth/WebViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "1748">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8315DDFF-77A7-458F-A577-C981A0421D62"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Auth/WebViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA2A7B26-4097-45DC-B7B5-8B04FE51827D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Auth/WebViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D85CF62A-6330-47E1-B6B1-0FF2DA9CAE92"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "fetchProfile(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D85CF62A-6330-47E1-B6B1-0FF2DA9CAE92 - 9425b9f002553f20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "D85CF62A-6330-47E1-B6B1-0FF2DA9CAE92 - 387fe46ebab53747"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "D85CF62A-6330-47E1-B6B1-0FF2DA9CAE92 - 387fe46ebab53705"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "D85CF62A-6330-47E1-B6B1-0FF2DA9CAE92 - 387fe46ebab536c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE6DD4D4-4F38-47E1-AF0F-E33CAE1CB150"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "fetchProfile(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AE6DD4D4-4F38-47E1-AF0F-E33CAE1CB150 - 26b2c61223d0e997"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "AE6DD4D4-4F38-47E1-AF0F-E33CAE1CB150 - 26b2c61223d0e976"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "AE6DD4D4-4F38-47E1-AF0F-E33CAE1CB150 - 387fe46ebab536a0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "344">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CEE40F47-E90F-4FB9-B568-9B97B982F4F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "fetchProfile(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CEE40F47-E90F-4FB9-B568-9B97B982F4F5 - 9425b9f002553e85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "CEE40F47-E90F-4FB9-B568-9B97B982F4F5 - 387fe46ebab53681"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "344">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58C80D5E-C077-4BE5-9863-0D6306B09216"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "fetchProfile(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58C80D5E-C077-4BE5-9863-0D6306B09216 - 26b2c61223d0e8bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "58C80D5E-C077-4BE5-9863-0D6306B09216 - 26b2c61223d0e8bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F4E13DE-95A1-401C-8AA5-FDF4395AA0BB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "fetchProfile(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F4E13DE-95A1-401C-8AA5-FDF4395AA0BB - 26b2c61223d0e8dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "8F4E13DE-95A1-401C-8AA5-FDF4395AA0BB - 26b2c61223d0e8fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3E443A25-331B-4979-9D88-A939837D4817"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "fetchProfile(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3E443A25-331B-4979-9D88-A939837D4817 - 387fe46ebab535ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "3E443A25-331B-4979-9D88-A939837D4817 - 611d01eaf57f5d02"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in closure #1 () -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "380">
+               </Location>
+               <Location
+                  uuid = "3E443A25-331B-4979-9D88-A939837D4817 - 387fe46ebab5362c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "380">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FDBF1293-0B79-46C5-AF74-9441BFDC902B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileServices/ProfileService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchProfile(_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FDBF1293-0B79-46C5-AF74-9441BFDC902B - 140511a3cadef7d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "FDBF1293-0B79-46C5-AF74-9441BFDC902B - 140511a3cadef7d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "FDBF1293-0B79-46C5-AF74-9441BFDC902B - e231040183429a89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "FDBF1293-0B79-46C5-AF74-9441BFDC902B - 140511a3cadef790"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "FDBF1293-0B79-46C5-AF74-9441BFDC902B - e231040183429a4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "FDBF1293-0B79-46C5-AF74-9441BFDC902B - 140511a3cadef75e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE0E682C-1618-4918-B1EB-9953EF656E93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileServices/ProfileService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "authViewController(_:didAuthWithCode:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - 50f76910d58d1fad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - e6b966f7e561b682"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - e6b966f7e561b682"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - 50f76910d58d1f6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - 50f76910d58d1f4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - 50f76910d58d1f4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - e6b966f7e561b663"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - e6b966f7e561b663"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - 50f76910d58d1f82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "A05B58B2-9692-4C3E-AD07-3B89A14BAC22 - e6b966f7e561b6ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in imageFeed.SplashViewController.authViewController(_: imageFeed.AuthViewController, didAuthWithCode: Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D0850A6-81EE-4234-960F-B02452284168"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "authViewController(_:didAuthWithCode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CB121AB-7348-4A8D-8A3A-6D3CB0A5B459"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileServices/ProfileService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "toBarController()"
+            landmarkName = "fetchProfile(_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5CB121AB-7348-4A8D-8A3A-6D3CB0A5B459 - e231040183429b53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "5CB121AB-7348-4A8D-8A3A-6D3CB0A5B459 - e231040183429b6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "5CB121AB-7348-4A8D-8A3A-6D3CB0A5B459 - e231040183429b6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "5CB121AB-7348-4A8D-8A3A-6D3CB0A5B459 - e231040183429b2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "5CB121AB-7348-4A8D-8A3A-6D3CB0A5B459 - e231040183429b2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "552">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "822CD7C8-1C52-4229-AB6A-F4FC7B5D3BC0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileServices/ProfileService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetchProfile(_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "822CD7C8-1C52-4229-AB6A-F4FC7B5D3BC0 - e6ce5524356399c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "822CD7C8-1C52-4229-AB6A-F4FC7B5D3BC0 - e6ce5524356399c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "822CD7C8-1C52-4229-AB6A-F4FC7B5D3BC0 - e6ce5524356399ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "822CD7C8-1C52-4229-AB6A-F4FC7B5D3BC0 - e6ce5524356399ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.ProfileService.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA2C178F-DBEF-4B09-A062-08D813A06AB2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileServices/ProfileService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchProfile(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA71C989-F755-4DBB-9C57-ABED082C2C3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "fetchProfile(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3EAAFED-D5B5-4534-A43A-BA5A855B4D71"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileView/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C5352F6-15DA-4AE2-969E-E6B81457A94C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileServices/ProfileImage Model.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "smallImageResult"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26C21880-A663-4033-974E-B6311DFE0C91"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileServices/ProfileImageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchProfileImage(userName:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E14FECB-90E6-4A4E-85D3-21EBA08A49A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileServices/ProfileImageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "fetchProfileImage(userName:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8401CE6-726F-4562-B5C3-4736BE3A7216"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/ProfileServices/ProfileImageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "fetchProfileImage(userName:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10ABF542-9B7A-411B-BF84-CCB314E20401"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "fetchOAuthToken(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FE14A9E-38F8-4EF2-8859-7D65DD14D629"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Profile/ProfileServices/ProfileService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "fetchProfile(_:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0FE14A9E-38F8-4EF2-8859-7D65DD14D629 - 130b6703c245b5e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Profile/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "0FE14A9E-38F8-4EF2-8859-7D65DD14D629 - 130b6703c245b5e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileService.fetchProfile(_: Swift.String, completion: (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Profile/ProfileServices/ProfileService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1388BE0-5DC0-4450-80F5-16BAACEF16F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Profile/ProfileServices/ProfileService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchProfile(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FDF24F9-E7DD-4615-B2DB-48ADBD3BEC70"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "fetchOAuthToken(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7FDF24F9-E7DD-4615-B2DB-48ADBD3BEC70 - 108cd25c43ca65b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "7FDF24F9-E7DD-4615-B2DB-48ADBD3BEC70 - 108cd25c43ca65b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "7FDF24F9-E7DD-4615-B2DB-48ADBD3BEC70 - 108cd25c43ca6477"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "663B8CF4-BFF6-4015-9DE4-A00B08A32403"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "fetchOAuthToken(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "663B8CF4-BFF6-4015-9DE4-A00B08A32403 - 108cd25c43ca6416"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "663B8CF4-BFF6-4015-9DE4-A00B08A32403 - 108cd25c43ca6416"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "663B8CF4-BFF6-4015-9DE4-A00B08A32403 - 5720ae738abd1028"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed%2018.08.41/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "663B8CF4-BFF6-4015-9DE4-A00B08A32403 - 108cd25c43ca6477"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "663B8CF4-BFF6-4015-9DE4-A00B08A32403 - 108cd25c43ca6477"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "663B8CF4-BFF6-4015-9DE4-A00B08A32403 - 108cd25c43ca6439"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C86BA04A-0C96-4D89-8C99-6C4D48C5E9AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "fetchOAuthToken(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C86BA04A-0C96-4D89-8C99-6C4D48C5E9AB - 108cd25c43ca6454"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "C86BA04A-0C96-4D89-8C99-6C4D48C5E9AB - 108cd25c43ca6454"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "C86BA04A-0C96-4D89-8C99-6C4D48C5E9AB - 108cd25c43ca6416"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "296">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E55E808E-8943-4E40-80B9-AA8EE716CC2C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Profile/ProfileServices/ProfileImageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "fetchProfileImage(userName:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EAFC5EE-8EF3-48BD-AB18-A90E18C3300D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Profile/ProfileServices/ProfileImageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchProfileImage(userName:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5EAFC5EE-8EF3-48BD-AB18-A90E18C3300D - 5032ab03de9e6e4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.ProfileImageService.fetchProfileImage(userName: Swift.String, _: (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Profile/ProfileServices/ProfileImageService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "372">
+               </Location>
+               <Location
+                  uuid = "5EAFC5EE-8EF3-48BD-AB18-A90E18C3300D - a1f23af391b710d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;imageFeed.UserResult, Swift.Error&gt;) -&gt; () in imageFeed.ProfileImageService.fetchProfileImage(userName: Swift.String, _: (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Profile/ProfileServices/ProfileImageService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "5EAFC5EE-8EF3-48BD-AB18-A90E18C3300D - be5f06a39b21c23d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.UserResult, Swift.Error&gt;) -&gt; () in imageFeed.ProfileImageService.fetchProfileImage(userName: Swift.String, _: (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/Profile/ProfileServices/ProfileImageService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6F6A9D9-9AF4-4345-A454-D0ADE208E14B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Profile/ProfileServices/ProfileImageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchProfileImage(userName:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FAE4BC0-1736-45A1-B6A0-57906D75E25A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "fetchProfile(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2FAE4BC0-1736-45A1-B6A0-57906D75E25A - 387fe46ebab53705"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "2FAE4BC0-1736-45A1-B6A0-57906D75E25A - 17afbeccf06e667d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "2FAE4BC0-1736-45A1-B6A0-57906D75E25A - 387fe46ebab53705"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "2FAE4BC0-1736-45A1-B6A0-57906D75E25A - 387fe46ebab53724"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "2FAE4BC0-1736-45A1-B6A0-57906D75E25A - 17afbeccf06e665c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "2FAE4BC0-1736-45A1-B6A0-57906D75E25A - 387fe46ebab536e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "2FAE4BC0-1736-45A1-B6A0-57906D75E25A - 17afbeccf06e679a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.Profile, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchProfile(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "121"
+                  endingLineNumber = "121"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BA5D932-B023-4532-8B46-25B28A0E436E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/Profile/ProfileServices/ProfileImageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "fetchProfileImage(userName:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9B0D990-7A0A-4C85-AB76-6316AE06C72F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "fetchOAuthToken(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C9B0D990-7A0A-4C85-AB76-6316AE06C72F - 108cd25c43ca6439"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "C9B0D990-7A0A-4C85-AB76-6316AE06C72F - 108cd25c43ca6439"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "324">
+               </Location>
+               <Location
+                  uuid = "C9B0D990-7A0A-4C85-AB76-6316AE06C72F - 5720ae738abd10cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;imageFeed.OAuth2Service.OAuthTokenResponseBody, Swift.Error&gt;) -&gt; () in imageFeed.SplashViewController.fetchOAuthToken(Swift.String) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed%2018.08.41/imageFeed/imageFeed/SplashViewController/SplashViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "324">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E8017606-5A47-41D6-A725-639F18C8F404"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

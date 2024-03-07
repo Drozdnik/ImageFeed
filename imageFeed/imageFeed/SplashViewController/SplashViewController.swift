@@ -1,12 +1,13 @@
 
 import UIKit
+import ProgressHUD
 
-class SplashViewController: UIViewController{
+final class SplashViewController: UIViewController{
     
     private let showAuthScreenSegue = "ShowAuthenticationScreen"
     private let outh2Service = OAuth2Service.shared
-    private let oauth2TokenStorage = OAuth2TokenStorage()
-    
+    private let storage = OAuth2TokenStorage()
+    private let profileService = ProfileService.sharedProfile
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,18 @@ class SplashViewController: UIViewController{
         super.viewDidAppear(animated)
         
         if let token = OAuth2TokenStorage().token{
-            toBarController()
+            profileService.fetchProfile(token) { [weak self] result in
+                guard let self = self else {return}
+                
+                switch result {
+                case .success:
+                    DispatchQueue.main.async {
+                        self.toBarController()
+                    }
+                case .failure:
+                    debugPrint("Не удалось выполнить profileService.fetchProfile")
+                }
+            }
         } else {
             performSegue(withIdentifier: showAuthScreenSegue, sender: nil)
         }
@@ -65,6 +77,7 @@ extension SplashViewController {
             else { assertionFailure("Failed to prepare fo \(showAuthScreenSegue)")
                 return
             }
+            
             viewController.delegate = self
             
         } else {
@@ -73,25 +86,50 @@ extension SplashViewController {
     }
 }
 
-extension SplashViewController: AuthViewControllerDelegate{
+extension SplashViewController:AuthViewControllerDelegate{
     func authViewController(_ vc: AuthViewController, didAuthWithCode code: String) {
+        UIBlockingProgressHUD.show()
         dismiss(animated: true){ [weak self] in
             guard let self = self else {return}
-            self.fetchToken(code)
-            toBarController()
+            fetchOAuthToken(code)
         }
     }
     
-    private func fetchToken(_ code: String){
-        outh2Service.fetchOAuthToken(code) { [weak self] result in
-            guard let self = self else {return}
-            switch result {
-            case .success:
-                self.toBarController()
-            case .failure:
-                // will do in 11
-                break
+    private func fetchOAuthToken(_ code: String){
+        UIBlockingProgressHUD.show()
+        OAuth2Service.shared.fetchOAuthToken(code: code){ [weak self] result in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                switch result {
+                case .success(let token):
+                    self.fetchProfile(token.accessToken)
+                case .failure(let error):
+                    UIBlockingProgressHUD.dismiss()
+                    self.presentAlertOnTopViewController(message: "Не удалось войти в систему")
+                }
+            }
+        }
+    }
+    
+    
+    private func fetchProfile(_ token: String){
+        UIBlockingProgressHUD.show()
+        profileService.fetchProfile(token) {[weak self] result in
+            DispatchQueue.main.async {
+                guard let self = self else {return}
+                switch result {
+                case .success(let profile):
+                    ProfileImageService.shared.fetchProfileImage(userName: profile.username) {_ in}
+                    self.toBarController()
+                    UIBlockingProgressHUD.dismiss()
+                case .failure:
+                    UIBlockingProgressHUD.dismiss()
+                    self.presentAlertOnTopViewController(message: "Не удалось получить данные профиля")
+                }
             }
         }
     }
 }
+
+
+

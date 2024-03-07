@@ -27,7 +27,7 @@
         <!--ImageList-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="ImageList" id="BYZ-38-t0r" customClass="ImagesListViewController" customModule="imageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImagesListViewController" title="ImageList" id="BYZ-38-t0r" customClass="ImagesListViewController" customModule="imageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pgV-9h-U5a">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="5UL-M6-x7r" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="5UL-M6-x7r" customClass="TabBarController" customModule="imageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BGs-TV-67r">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -124,10 +124,6 @@
                             <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         </tabBarAppearance>
                     </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ZKq-Mm-n5C"/>
-                        <segue destination="215-yd-V5a" kind="relationship" relationship="viewControllers" id="p3x-D7-GOV"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ID-iS-Upc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

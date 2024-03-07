@@ -1,11 +1,22 @@
 import UIKit
+import Kingfisher
 
 class ProfileViewController: UIViewController{
     
+    private let profileService = ProfileService.sharedProfile
+    private lazy var nameLabel = UILabel()
+    private lazy var idLabel = UILabel()
+    private lazy var statusLabel = UILabel()
+    private var profileImageServiceObserver: NSObjectProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
         addSubviews()
         configureConstraints()
+        updateLabels()
+        updateAvatar()
     }
     
      func addSubviews(){
@@ -14,9 +25,10 @@ class ProfileViewController: UIViewController{
     }
     
     private func configureConstraints(){
-        let nameLabel = createLabel("Name", size: 23, color: .white)
-        let idLabel = createLabel("@Id", color: .gray)
-        let statusLabel = createLabel("Status", color: .white)
+        nameLabel = createLabel("Name", size: 23, color: .white)
+        idLabel = createLabel("@Id", color: .gray)
+        statusLabel = createLabel("Status", color: .white)
+        view.backgroundColor = customBlack
         view.addSubview(nameLabel)
         view.addSubview(idLabel)
         view.addSubview(statusLabel)
@@ -45,9 +57,11 @@ class ProfileViewController: UIViewController{
         let profileImage = UIImage(named: "avatar")
         let avatarImageView = UIImageView(image: profileImage)
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
+        avatarImageView.layer.cornerRadius = 35
+        avatarImageView.layer.masksToBounds = true
         return avatarImageView
     }()
-    // Не можем использовать let, тк self еще не инициализирован?
+
     private lazy var exitButton: UIButton = {
         let exitButton = UIButton.systemButton(
             with: UIImage(systemName: "ipad.and.arrow.forward")!,
@@ -55,7 +69,7 @@ class ProfileViewController: UIViewController{
             action: #selector(didTapButton)
         )
         
-        exitButton.tintColor = .red
+        exitButton.tintColor = customRedForBackButton
         exitButton.translatesAutoresizingMaskIntoConstraints = false
         return exitButton
     }()
@@ -68,7 +82,21 @@ class ProfileViewController: UIViewController{
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }
- 
+    
+    private func updateLabels(){
+        guard let profile = ProfileService.sharedProfile.profile else {return}
+        nameLabel.text = profile.name
+        idLabel.text = profile.loginName
+        statusLabel.text = profile.bio
+    }
+    
+    private func updateAvatar(){
+        guard
+            let profileImageUrl = ProfileImageService.shared.avatarURL,
+            let url = URL(string: profileImageUrl) else {return}
+        avatarImageView.kf.setImage(with: url)
+    }
+    
     @objc private func didTapButton(){
         avatarImageView.image = UIImage(systemName: "person.crop.circle.fill")
         avatarImageView.tintColor = .gray

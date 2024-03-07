@@ -20,4 +20,4 @@ extension UIColor {
 //Кастомные цвета
 let customBlack = UIColor(rgb: 0x1A1B22)
 let customWhiteBackGrounds = UIColor(rgb: 0xFFFFFF)
-
+let customRedForBackButton = UIColor(rgb: 0xF56B6C)

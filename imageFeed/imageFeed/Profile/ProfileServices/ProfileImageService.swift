@@ -49,7 +49,7 @@ final class ProfileImageService {
     }
     
     private func imageRequest(userName:String , token: String) -> URLRequest?{
-        guard let request = URLRequest.makeProfileRequest(path: "/users/\(userName)", httpMethod: "GET", token: token) else {
+        guard let request = URLRequest.makeRequestWithToken(path: "/users/\(userName)", httpMethod: "GET", token: token) else {
             debugPrint("Не удалось выполнить Imagerequest")
             return nil
         }

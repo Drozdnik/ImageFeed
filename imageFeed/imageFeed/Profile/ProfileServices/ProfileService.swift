@@ -6,7 +6,6 @@ final class ProfileService{
     static let sharedProfile = ProfileService()
     private(set) var profile:Profile?
     let tokenStorage = OAuth2TokenStorage()
-    private let profileQueue = DispatchQueue(label: "com.profileService")
     private init (){}
     
     func fetchProfile(_ token: String, completion: @escaping (Result<Profile, Error>) -> Void){
@@ -23,7 +22,8 @@ final class ProfileService{
             DispatchQueue.main.async {
                 switch result {
                 case .success(let profileResult):
-                    let profile = Profile(profileResult: profileResult)
+                    let profile =
+                    Profile(profileResult: profileResult)
                     self?.profile = profile
                     completion (.success(profile))
                 case .failure(let error):
@@ -38,7 +38,7 @@ final class ProfileService{
     }
     
     private func profileInfoRequest(_ token: String) -> URLRequest? {
-        guard let request = URLRequest.makeProfileRequest(path: "/me", httpMethod: "GET", token: token) else {
+        guard let request = URLRequest.makeRequestWithToken(path: "/me", httpMethod: "GET", token: token) else {
             assertionFailure("Не удалось создать request")
             return nil
         }

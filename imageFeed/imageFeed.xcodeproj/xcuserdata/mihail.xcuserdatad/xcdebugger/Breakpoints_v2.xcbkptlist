@@ -2296,22 +2296,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "699645FF-0585-4751-8330-213AB5145754"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "setupProjectTests/setupProjectTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E61929C1-BD02-4B15-8E07-E1FB9E281BC7"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2319,8 +2303,8 @@
             filePath = "setupProjectTests/setupProjectTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "testFetchPhotosNextPage()"
             landmarkType = "7">
             <Locations>

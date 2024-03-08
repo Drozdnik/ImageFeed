@@ -11,7 +11,7 @@ struct Photo: Decodable{
     
     init(photoResult: PhotoResult) {
         self.id = photoResult.id
-        self.createdAt = photoResult.createdAt
+        self.createdAt = photoResult.dateCreatedAt
         self.welcomeDesctiption = photoResult.description ?? " "
         self.thumbImageURL = photoResult.urls.thumb
         self.largeImageURL = photoResult.urls.full
@@ -24,10 +24,16 @@ struct PhotoResult: Decodable{
     let id: String
     let width: Int
     let height: Int
-    let createdAt: Date?
+    let createdAt: String?
     let description: String?
     let likedByUser: Bool
     let urls: URlImageResult
+    
+    var dateCreatedAt: Date?{
+        guard let createdAtString = createdAt else {return nil}
+        return dateFormatter.date(from: createdAtString)
+        
+    }
 }
 
 struct URlImageResult:Decodable{

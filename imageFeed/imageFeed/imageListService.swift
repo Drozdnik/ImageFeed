@@ -1,12 +1,15 @@
 import UIKit
 
 final class ImageListService {
+    static let shared = ImageListService()
+    static let didChangeNotification = Notification.Name(rawValue: "ImagesListServiceDidChange")
+    
     private let urlSession = URLSession.shared
     let tokenStorage = OAuth2TokenStorage()
     private var task: URLSessionTask?
-    static let didChangeNotification = Notification.Name(rawValue: "ImagesListServiceDidChange")
     private lazy var lastLoadedPage: Int = 0
     private (set) var photos: [Photo] = []
+    init(){}
     
     func fetchPhotosNextPage(completion: @escaping (Result<[Photo], Error>) -> Void) {
         let nextPage = lastLoadedPage + 1
@@ -18,7 +21,7 @@ final class ImageListService {
        
         guard let token = tokenStorage.token else {return}
         
-        guard let request = URLRequest.makeRequestWithToken(path: "//photos?page=\(nextPage)", httpMethod: "GET", token: token) else {
+        guard let request = URLRequest.makeRequestWithToken(path: "/photos?page=\(nextPage)", httpMethod: "GET", token: token) else {
             completion (.failure(NetworkError.invalidRequest))
             return
         }

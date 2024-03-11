@@ -92,6 +92,7 @@ extension ImagesListViewController{
                     .transition(.fade(1))
                 ]
             )
+            // убрал так как блокировало загрузку назад
 //            {[weak self] result in
 //                switch result {
 //                case .success:
@@ -105,8 +106,12 @@ extension ImagesListViewController{
 //                }
 //            }
         }
-        
-        cell.dateLabel.text = dateFormatter.string(from: Date())
+        if let createdAt = photo.createdAt {
+            cell.dateLabel.text = dateFormatter.string(from: createdAt)
+        } else {
+            cell.dateLabel.text = " "
+        }
+       
         
         let isLiked = indexPath.section % 2  == 1
         let likeImage = isLiked ? UIImage(named: "buttonTapped") : UIImage(named: "buttonDisabled")
@@ -134,7 +139,6 @@ extension ImagesListViewController{
             return
         }
         let oldPhotosCount = photos.count
-        photos.append(contentsOf: newPhotos)
         let newIndexPath = (oldPhotosCount..<photos.count).map{IndexPath(row: $0, section: 0) }
         
         tableView.performBatchUpdates({

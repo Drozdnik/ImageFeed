@@ -106,8 +106,15 @@ extension ImagesListViewController{
 //                }
 //            }
         }
+        let dateFormatterForImageView: DateFormatter = {
+           let formatter = DateFormatter()
+            formatter.dateFormat = "d MMMM yyyy 'года'"
+            formatter.locale = Locale(identifier: "ru_RU")
+            return formatter
+        }()
+        
         if let createdAt = photo.createdAt {
-            cell.dateLabel.text = dateFormatter.string(from: createdAt)
+            cell.dateLabel.text = dateFormatterForImageView.string(from: createdAt)
         } else {
             cell.dateLabel.text = " "
         }

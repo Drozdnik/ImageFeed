@@ -4,7 +4,6 @@ class ImagesListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     
     private let showSingleImageSegueIdentifier = "ShowSingleImage"
-    private let photosName: [String] = Array(0..<20).map{"\($0)"}
     private var  photos: [Photo] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,21 +23,15 @@ class ImagesListViewController: UIViewController {
         if segue.identifier == showSingleImageSegueIdentifier {
             let viewController = segue.destination as! SingleImageViewController
             let indexPath = sender as! IndexPath
-            let imageName = photosName[indexPath.section]
-            let image = UIImage(named: "\(imageName)_full_size") ?? UIImage(named: imageName)
-            viewController.image = image
+        //TODO: передалать в photos.fullImage[indexPath.section]
+//            let imageName = photosName[indexPath.section]
+//            let image = UIImage(named: "\(imageName)_full_size") ?? UIImage(named: imageName)
+//            viewController.image = image
         } else {
             super.prepare(for: segue, sender: sender)
         }
     }
     
-    
-    private lazy var dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        return formatter
-    }()
 }
 
 extension ImagesListViewController: UITableViewDataSource{
@@ -63,8 +56,8 @@ extension ImagesListViewController: UITableViewDataSource{
 extension ImagesListViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1
-        if indexPath.row == lastRowIndex {
+        let lastIndex = photos.count - 1
+        if indexPath.row == lastIndex {
             fetchPhotosNextPage()
         }
     }
@@ -74,35 +67,43 @@ extension ImagesListViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let image = UIImage(named: photosName[indexPath.section]) else {
-            return 0
-        }
+        let photo = photos[indexPath.row]
         let imageInsets = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
         let imageViewWidth = tableView.bounds.width - imageInsets.left - imageInsets.right
-        let imageWidth = image.size.width
+        let imageWidth = photo.size.width
+        let imageHeight = photo.size.height
+        
         let scale = imageViewWidth / imageWidth
-        let cellHeight = image.size.height * scale + imageInsets.top + imageInsets.bottom
+        let cellHeight = imageHeight * scale + imageInsets.top + imageInsets.bottom
         return cellHeight
     }
     
 }
 
 extension ImagesListViewController{
-   private func configCell(for cell: ImageListCell, with indexPath: IndexPath, photo: Photo) {
-            if let url = URL(string: photo.thumbImageURL){
-            cell.cellImage.kf.indicatorType = .activity // Индикатор активности от кф
-            cell.cellImage.kf.setImage(with: url){[weak self] result in
-                switch result {
-                case .success:
-                    DispatchQueue.main.async {
-                        self?.tableView.beginUpdates()
-                        self?.tableView.reloadRows(at: [indexPath], with: .none)
-                        self?.tableView.endUpdates()
-                    }
-                case .failure(let error):
-                    debugPrint(error)
-                }
-            }
+    private func configCell(for cell: ImageListCell, with indexPath: IndexPath, photo: Photo) {
+        if let url = URL(string: photo.thumbImageURL){
+            cell.cellImage.kf.indicatorType = .activity
+            cell.cellImage.kf.setImage(
+                with: url,
+                placeholder: UIImage(named: "Stub"),
+                options: [
+                    .cacheOriginalImage,
+                    .transition(.fade(1))
+                ]
+            )
+//            {[weak self] result in
+//                switch result {
+//                case .success:
+//                    DispatchQueue.main.async {
+////                        self?.tableView.beginUpdates()
+////                        self?.tableView.reloadRows(at: [indexPath], with: .none)
+////                        self?.tableView.endUpdates()
+//                    }
+//                case .failure(let error):
+//                    debugPrint(error)
+//                }
+//            }
         }
         
         cell.dateLabel.text = dateFormatter.string(from: Date())
@@ -139,6 +140,6 @@ extension ImagesListViewController{
         tableView.performBatchUpdates({
             tableView.insertRows(at: newIndexPath, with: .automatic)
         }, completion: nil) // можно вставить доп логику после завершения анимации
-                                                                
+        
     }
 }

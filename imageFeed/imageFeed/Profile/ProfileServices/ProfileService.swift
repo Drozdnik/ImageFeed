@@ -27,6 +27,7 @@ final class ProfileService{
                     self?.profile = profile
                     completion (.success(profile))
                 case .failure(let error):
+                    debugPrint(error)
                     completion (.failure(error))
                     
                 }

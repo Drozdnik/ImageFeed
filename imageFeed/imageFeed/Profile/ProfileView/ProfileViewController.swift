@@ -84,7 +84,7 @@ class ProfileViewController: UIViewController{
     }
     
     private func updateLabels(){
-        guard let profile = ProfileService.sharedProfile.profile else {return}
+        guard let profile = profileService.profile else {return}
         nameLabel.text = profile.name
         idLabel.text = profile.loginName
         statusLabel.text = profile.bio

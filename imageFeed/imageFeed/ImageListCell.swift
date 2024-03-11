@@ -8,4 +8,9 @@ final class ImageListCell: UITableViewCell{
     
     static let resuceIdentifier = "ImageListCell"
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cellImage.kf.cancelDownloadTask()
+    }
 }
+    

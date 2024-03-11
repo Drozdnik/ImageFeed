@@ -44,7 +44,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="0uf-nl-KuU">
-                                                    <rect key="frame" x="16" y="4" width="361" height="220"/>
+                                                    <rect key="frame" x="16" y="8" width="361" height="216"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="16"/>
@@ -53,7 +53,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT8-yM-Ijk" userLabel="LikeButton">
-                                                    <rect key="frame" x="335" y="4" width="42" height="42"/>
+                                                    <rect key="frame" x="335" y="8" width="42" height="42"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="buttonTapped"/>
                                                 </button>
@@ -68,7 +68,7 @@
                                                 <constraint firstItem="oT8-yM-Ijk" firstAttribute="trailing" secondItem="0uf-nl-KuU" secondAttribute="trailing" id="2Z7-wF-CVl"/>
                                                 <constraint firstItem="0uf-nl-KuU" firstAttribute="bottom" secondItem="tT5-8D-Uwa" secondAttribute="bottom" constant="8" id="MHc-Z9-r75"/>
                                                 <constraint firstItem="0uf-nl-KuU" firstAttribute="leading" secondItem="cM8-ek-d9t" secondAttribute="leading" constant="16" id="WPh-ZS-4f0"/>
-                                                <constraint firstItem="0uf-nl-KuU" firstAttribute="top" secondItem="cM8-ek-d9t" secondAttribute="top" constant="4" id="Yx3-0Q-tL7"/>
+                                                <constraint firstItem="0uf-nl-KuU" firstAttribute="top" secondItem="cM8-ek-d9t" secondAttribute="top" constant="8" id="YRz-Q4-4mx"/>
                                                 <constraint firstItem="tT5-8D-Uwa" firstAttribute="leading" secondItem="0uf-nl-KuU" secondAttribute="leading" constant="8" id="b8Y-de-drX"/>
                                                 <constraint firstAttribute="bottom" secondItem="0uf-nl-KuU" secondAttribute="bottom" id="hI5-7t-ufW"/>
                                                 <constraint firstItem="tT5-8D-Uwa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0uf-nl-KuU" secondAttribute="trailing" constant="8" id="k7k-hI-w5A"/>

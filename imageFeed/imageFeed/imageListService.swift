@@ -14,11 +14,12 @@ final class ImageListService {
     func fetchPhotosNextPage(completion: @escaping (Result<[Photo], Error>) -> Void) {
         let nextPage = lastLoadedPage + 1
         assert(Thread.isMainThread)
-//        lastLoadedPage += 1
+
         if task != nil{
             task?.cancel()
+            debugPrint("Таск нил")
         }
-       
+        debugPrint("таск не нил")
         guard let token = tokenStorage.token else {return}
         
         guard let request = URLRequest.makeRequestWithToken(path: "/photos?page=\(nextPage)", httpMethod: "GET", token: token) else {
@@ -28,11 +29,19 @@ final class ImageListService {
         
         let task = urlSession.objectTask(for: request) {[weak self] (result: Result<[PhotoResult], Error>) in
             DispatchQueue.main.async {
+                debugPrint("task внутри замыкания")
                 switch result {
                 case .success(let photoResult):
                     let photos = photoResult.map {Photo(photoResult: $0)}
                     self?.photos.append(contentsOf: photos)
+                    self?.lastLoadedPage += 1
                     completion(.success(photos))
+                    NotificationCenter.default.post(
+                                    name: ImageListService.didChangeNotification,
+                                    object: self,
+                                    userInfo: ["photos": photos]
+                                )
+                    
                 case .failure(let error):
                     completion (.failure(error))
                 }

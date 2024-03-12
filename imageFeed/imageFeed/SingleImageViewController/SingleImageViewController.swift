@@ -1,22 +1,21 @@
 
 import UIKit
+import Kingfisher
 
 final class SingleImageViewController: UIViewController{
-    var image: UIImage! {
-        didSet {
-            guard isViewLoaded else { return }
-            imageView.image = image
-        }
-    }
+    var imageURL:URL?
+    
     
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = image
         scrollView.minimumZoomScale = 0.1
         scrollView.maximumZoomScale = 1.25
-        rescaleAndCenterImageInScrollView(image: image)
+        if let imageURL = imageURL {
+            UIBlockingProgressHUD.show()
+            loadImage(from: imageURL)
+        }
     }
 
     private func rescaleAndCenterImageInScrollView(image: UIImage){
@@ -35,14 +34,29 @@ final class SingleImageViewController: UIViewController{
         let y = (newContentSize.height - visibleRectSize.height) / 2
         scrollView.setContentOffset(CGPoint(x: x, y: y), animated: false)
     }
-    
+    private func loadImage(from url: URL){
+        imageView.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(1))]){[weak self] result in
+            guard let self else {return}
+            
+            switch result{
+            case .success(let photoFull):
+                self.imageView.image = photoFull.image
+                self.rescaleAndCenterImageInScrollView(image: photoFull.image)
+                UIBlockingProgressHUD.dismiss()
+            case .failure(let error):
+                UIBlockingProgressHUD.dismiss()
+                debugPrint(error)
+            }
+        }
+    }
     @IBAction private func didTapBackButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction private func didTapShareButton(_ sender: Any) {
+        guard let imageToShare = imageView.image else {return}
         let share = UIActivityViewController(
-        activityItems: [image],
+        activityItems: [imageToShare],
         applicationActivities: nil)
         self.present(share, animated: true, completion: nil)
     }

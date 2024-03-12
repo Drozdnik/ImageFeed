@@ -18,5 +18,9 @@ final class ImageListCell: UITableViewCell{
     @IBAction func likeButtonClicked(_ sender: UIButton) {
         delegate?.imageListCellDidTapLike(self)
     }
+    
+    func setLikeButton(enabled: Bool){
+        likeButton.isEnabled = enabled
+    }
 }
     

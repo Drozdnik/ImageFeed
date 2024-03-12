@@ -2541,8 +2541,8 @@
             filePath = "imageFeed/ImagesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "configCell(for:with:photo:)"
             landmarkType = "7">
             <Locations>
@@ -2589,8 +2589,8 @@
             filePath = "imageFeed/ImagesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "fetchPhotosNextPage()"
             landmarkType = "7">
             <Locations>
@@ -2730,8 +2730,8 @@
             filePath = "imageFeed/ImagesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "tableView(_:willDisplay:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2746,8 +2746,8 @@
             filePath = "imageFeed/ImagesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "tableView(_:willDisplay:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2762,8 +2762,8 @@
             filePath = "imageFeed/ImagesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "tableView(_:willDisplay:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2810,8 +2810,8 @@
             filePath = "imageFeed/ImagesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "imageListCellDidTapLike(_:)"
             landmarkType = "7">
             <Locations>
@@ -2867,7 +2867,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F5FF8634-9F9A-4020-9636-891A5B9FDAE0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "imageFeed/imageListService.swift"
@@ -2883,7 +2883,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "697BAA92-6D32-4355-8324-024DD5FA2EDD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "imageFeed/imageListService.swift"
@@ -2931,16 +2931,48 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B83A2AD6-44C3-41D8-B72A-BA7F42D4E433"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "imageFeed/ImagesListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "imageListCellDidTapLike(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B83A2AD6-44C3-41D8-B72A-BA7F42D4E433 - 2dc2492e5e26b191"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in imageFeed.ImagesListViewController.imageListCellDidTapLike(imageFeed.ImageListCell) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ImagesListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "B83A2AD6-44C3-41D8-B72A-BA7F42D4E433 - 2dc2492e5e26b024"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in imageFeed.ImagesListViewController.imageListCellDidTapLike(imageFeed.ImageListCell) -&gt; ()"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/ImagesListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

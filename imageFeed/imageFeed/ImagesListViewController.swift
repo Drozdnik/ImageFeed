@@ -21,12 +21,11 @@ class ImagesListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showSingleImageSegueIdentifier {
-            let viewController = segue.destination as! SingleImageViewController
-            let indexPath = sender as! IndexPath
-        //TODO: передалать в photos.fullImage[indexPath.section]
-//            let imageName = photosName[indexPath.section]
-//            let image = UIImage(named: "\(imageName)_full_size") ?? UIImage(named: imageName)
-//            viewController.image = image
+            if let viewController = segue.destination as? SingleImageViewController,
+                let indexPath = sender as? IndexPath{
+                let photo = photos[indexPath.section]
+                viewController.imageURL = URL(string: photo.largeImageURL)
+            }
         } else {
             super.prepare(for: segue, sender: sender)
         }
@@ -92,20 +91,7 @@ extension ImagesListViewController{
                     .cacheOriginalImage,
                     .transition(.fade(1))
                 ]
-            )
-            // убрал так как блокировало загрузку назад
-//            {[weak self] result in
-//                switch result {
-//                case .success:
-//                    DispatchQueue.main.async {
-////                        self?.tableView.beginUpdates()
-////                        self?.tableView.reloadRows(at: [indexPath], with: .none)
-////                        self?.tableView.endUpdates()
-//                    }
-//                case .failure(let error):
-//                    debugPrint(error)
-//                }
-//            }
+                )
         }
         let dateFormatterForImageView: DateFormatter = {
            let formatter = DateFormatter()
@@ -121,8 +107,8 @@ extension ImagesListViewController{
         }
        
         
-        let isLiked = indexPath.section % 2  == 1
-        let likeImage = isLiked ? UIImage(named: "buttonTapped") : UIImage(named: "buttonDisabled")
+        
+        let likeImage = photo.isLiked ? UIImage(named: "buttonTapped") : UIImage(named: "buttonDisabled")
         cell.likeButton.setImage(likeImage, for: .normal)
     }
     
@@ -159,15 +145,17 @@ extension ImagesListViewController{
 
 extension ImagesListViewController: ImageListCellDelegate{
     func imageListCellDidTapLike(_ cell: ImageListCell) {
+        cell.setLikeButton(enabled: false)
         guard let indexPath = tableView.indexPath(for: cell) else {return}
         let photo = photos[indexPath.row]
-        let isLiked = photo.isLiked
+        let isLiked = !photo.isLiked
         
         ImageListService.shared.changeLike(photoId: photo.id, isLike: isLiked) {[weak self] result in
             switch result {
             case .success():
                 self?.photos[indexPath.row].isLiked = isLiked
                 self?.tableView.reloadRows(at: [indexPath], with: .automatic)
+                cell.setLikeButton(enabled: true)
             case .failure(let error):
                 debugPrint(error)
             }

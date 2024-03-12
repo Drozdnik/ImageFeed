@@ -56,6 +56,9 @@
                                                     <rect key="frame" x="335" y="8" width="42" height="42"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="buttonTapped"/>
+                                                    <connections>
+                                                        <action selector="likeButtonClicked:" destination="lq1-i0-63O" eventType="touchUpInside" id="Oqw-Ri-Vyj"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 января 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-8D-Uwa" userLabel="DataLabel">
                                                     <rect key="frame" x="24" y="200" width="361" height="16"/>

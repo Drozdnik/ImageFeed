@@ -41,11 +41,12 @@ extension ImagesListViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ImageListCell.resuceIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ImageListCell.reuseIdentifier, for: indexPath)
+        
         guard let imageListCell = cell as? ImageListCell else {
             return UITableViewCell()
         }
-        
+        imageListCell.delegate = self
         let photo = photos[indexPath.row]
         configCell(for: imageListCell, with: indexPath, photo: photo)
         
@@ -141,6 +142,7 @@ extension ImagesListViewController{
             }
         }
     }
+    
     @objc private func handeDataServiceUpdate(_ notification: Notification){
         guard let newPhotos = notification.userInfo?["photos"] as? [Photo] else {
             return
@@ -152,5 +154,23 @@ extension ImagesListViewController{
             tableView.insertRows(at: newIndexPath, with: .automatic)
         }, completion: nil) // можно вставить доп логику после завершения анимации
         
+    }
+}
+
+extension ImagesListViewController: ImageListCellDelegate{
+    func imageListCellDidTapLike(_ cell: ImageListCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        let photo = photos[indexPath.row]
+        let isLiked = !photo.isLiked
+        
+        ImageListService.shared.changeLike(photoId: photo.id, isLike: isLiked) {[weak self] result in
+            switch result {
+            case .success():
+                self?.photos[indexPath.row].isLiked = isLiked
+                self?.tableView.reloadRows(at: [indexPath], with: .automatic)
+            case .failure(let error):
+                debugPrint(error)
+            }
+        }
     }
 }

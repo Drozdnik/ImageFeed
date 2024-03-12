@@ -4,15 +4,15 @@ struct Photo: Decodable{
     let id: String
     let size: CGSize
     let createdAt: Date?
-    let welcomeDesctiption: String?
+    let welcomeDescription: String?
     let thumbImageURL: String
     let largeImageURL: String
-    let isLiked: Bool
+    var isLiked: Bool
     
     init(photoResult: PhotoResult) {
         self.id = photoResult.id
         self.createdAt = photoResult.dateCreatedAt
-        self.welcomeDesctiption = photoResult.description ?? " "
+        self.welcomeDescription = photoResult.description ?? " "
         self.thumbImageURL = photoResult.urls.thumb
         self.largeImageURL = photoResult.urls.full
         self.isLiked = photoResult.likedByUser
@@ -26,7 +26,7 @@ struct PhotoResult: Decodable{
     let height: Int
     let createdAt: String?
     let description: String?
-    let likedByUser: Bool
+    var likedByUser: Bool
     let urls: URlImageResult
     
     var dateCreatedAt: Date?{
@@ -39,6 +39,10 @@ struct PhotoResult: Decodable{
 struct URlImageResult:Decodable{
     let thumb: String
     let full: String
+}
+
+struct LikeResponce: Decodable {
+    let photo: PhotoResult
 }
     
 let dateFormatter: DateFormatter = {

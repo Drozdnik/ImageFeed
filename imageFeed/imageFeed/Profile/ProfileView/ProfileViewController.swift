@@ -8,6 +8,7 @@ class ProfileViewController: UIViewController{
     private lazy var idLabel = UILabel()
     private lazy var statusLabel = UILabel()
     private var profileImageServiceObserver: NSObjectProtocol?
+    private var logoutService = ProfileLogoutService.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,12 +94,24 @@ class ProfileViewController: UIViewController{
     private func updateAvatar(){
         guard
             let profileImageUrl = ProfileImageService.shared.avatarURL,
-            let url = URL(string: profileImageUrl) else {return}
+            let url = URL(string: profileImageUrl) else {
+            return
+            
+        }
         avatarImageView.kf.setImage(with: url)
     }
     
+    private func toAuthController(){
+        guard let window = UIApplication.shared.windows.first else {return}
+        let authViewController = SplashViewController()
+        window.rootViewController = UINavigationController(rootViewController: authViewController)
+        window.makeKeyAndVisible()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil, completion: nil)
+    }
+    
     @objc private func didTapButton(){
-        avatarImageView.image = UIImage(systemName: "person.crop.circle.fill")
-        avatarImageView.tintColor = .gray
+        logoutService.logout()
+        toAuthController()
+        
         }
 }

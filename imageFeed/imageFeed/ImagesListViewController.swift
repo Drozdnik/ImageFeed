@@ -89,7 +89,6 @@ extension ImagesListViewController{
                 with: url,
                 placeholder: UIImage(named: "Stub"),
                 options: [
-                    .cacheOriginalImage,
                     .transition(.fade(1))
                 ]
                 )

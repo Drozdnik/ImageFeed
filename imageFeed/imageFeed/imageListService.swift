@@ -30,6 +30,9 @@ final class ImageListService {
                 debugPrint("task внутри замыкания")
                 switch result {
                 case .success(let photoResult):
+                    if self?.lastLoadedPage == 0 {
+                        UIBlockingProgressHUD.dismiss()
+                    }
                     let photos = photoResult.map {Photo(photoResult: $0)}
                     self?.photos.append(contentsOf: photos)
                     self?.lastLoadedPage += 1

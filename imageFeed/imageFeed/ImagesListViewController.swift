@@ -10,6 +10,7 @@ class ImagesListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.sectionHeaderHeight = 300
+        UIBlockingProgressHUD.show()
         fetchPhotosNextPage()
         NotificationCenter.default.addObserver(
             self,

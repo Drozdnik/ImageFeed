@@ -161,7 +161,7 @@ extension ImagesListViewController: ImageListCellDelegate{
     func imageListCellDidTapLike(_ cell: ImageListCell) {
         guard let indexPath = tableView.indexPath(for: cell) else {return}
         let photo = photos[indexPath.row]
-        let isLiked = !photo.isLiked
+        let isLiked = photo.isLiked
         
         ImageListService.shared.changeLike(photoId: photo.id, isLike: isLiked) {[weak self] result in
             switch result {

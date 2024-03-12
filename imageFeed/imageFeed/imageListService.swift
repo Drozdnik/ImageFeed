@@ -64,14 +64,14 @@ final class ImageListService {
             return
         }
         
-        let task = urlSession.objectTask(for: request) { [weak self] (result: Result<PhotoResult, Error>) in
+        let task = urlSession.objectTask(for: request) { [weak self] (result: Result<LikeResponce, Error>) in
             guard let self else {return}
             DispatchQueue.main.async {
                 switch result {
-                case .success(let photoLike):
+                case .success(let likeResponce):
                     if let index = self.photos.firstIndex(where: { $0.id == photoId }) {
                         var updatedPhoto = self.photos[index]
-                        updatedPhoto.isLiked = isLike
+                        updatedPhoto.isLiked = likeResponce.photo.likedByUser
                         self.photos[index] = updatedPhoto
                     }
                     completion(.success(()))

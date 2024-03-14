@@ -103,10 +103,9 @@ class ProfileViewController: UIViewController{
     
     private func toAuthController(){
         guard let window = UIApplication.shared.windows.first else {return}
-        let authViewController = SplashViewController()
-        window.rootViewController = UINavigationController(rootViewController: authViewController)
-        window.makeKeyAndVisible()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        let authViewController = UIStoryboard(name: "Main", bundle: .main)
+            .instantiateViewController(identifier: "AuthController")
+        window.rootViewController = authViewController
     }
     
     @objc private func didTapButton(){

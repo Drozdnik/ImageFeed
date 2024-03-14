@@ -222,7 +222,7 @@
         <!--Auth View Controller-->
         <scene sceneID="iyz-G8-CFj">
             <objects>
-                <viewController id="XEP-17-O8A" customClass="AuthViewController" customModule="imageFeed" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthController" id="XEP-17-O8A" customClass="AuthViewController" customModule="imageFeed" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PeX-dy-O8f">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

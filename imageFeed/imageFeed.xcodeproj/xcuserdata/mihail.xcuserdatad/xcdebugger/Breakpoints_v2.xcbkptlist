@@ -2953,8 +2953,8 @@
             filePath = "imageFeed/Profile/ProfileView/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "didTapButton()"
             landmarkType = "7">
             <Locations>
@@ -3197,6 +3197,22 @@
                   offsetFromSymbolStart = "288">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "748C9580-A116-4E07-B41A-2318E50BA7E1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "imageFeed/SplashViewController/SplashViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "fetchOAuthToken(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

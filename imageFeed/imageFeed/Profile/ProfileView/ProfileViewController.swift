@@ -101,16 +101,16 @@ class ProfileViewController: UIViewController{
         avatarImageView.kf.setImage(with: url)
     }
     
-    private func toAuthController(){
+    private func toSplashViewController(){
         guard let window = UIApplication.shared.windows.first else {return}
-        let authViewController = UIStoryboard(name: "Main", bundle: .main)
-            .instantiateViewController(identifier: "AuthController")
-        window.rootViewController = authViewController
+        let splashViewController = UIStoryboard(name: "Main", bundle: .main)
+            .instantiateViewController(identifier: "SplashViewController")
+        window.rootViewController = splashViewController
     }
     
     @objc private func didTapButton(){
         logoutService.logout()
-        toAuthController()
+        toSplashViewController()
         
         }
 }

@@ -2953,8 +2953,8 @@
             filePath = "imageFeed/Profile/ProfileView/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "didTapButton()"
             landmarkType = "7">
             <Locations>
@@ -3011,7 +3011,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A27F2CB5-C896-4EF0-8454-070E292CBBCA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "imageFeed/Profile/ProfileView/ProfileViewController.swift"

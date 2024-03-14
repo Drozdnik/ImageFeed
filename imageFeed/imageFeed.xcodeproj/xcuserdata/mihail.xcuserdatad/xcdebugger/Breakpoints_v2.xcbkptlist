@@ -3241,8 +3241,8 @@
             filePath = "imageFeed/SingleImageViewController/SingleImageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "didTapShareButton()"
             landmarkType = "7">
             <Locations>
@@ -3289,8 +3289,8 @@
             filePath = "imageFeed/SingleImageViewController/SingleImageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "didTapShareButton()"
             landmarkType = "7">
             <Locations>
@@ -3427,7 +3427,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "11BAD328-4404-4D41-8EA6-1D7A615D0C7C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "imageFeed/SingleImageViewController/SingleImageViewController.swift"

@@ -17,7 +17,7 @@ final class SingleImageViewController: UIViewController{
         addSubViews()
         configureConstraints()
         
-//        UIBlockingProgressHUD.show()
+        UIBlockingProgressHUD.show()
         scrollView.minimumZoomScale = 0.1
         scrollView.maximumZoomScale = 1.25
         if let imageURL = imageURL {
@@ -27,7 +27,8 @@ final class SingleImageViewController: UIViewController{
     }
     
     private lazy var stubImageView: UIImageView = {
-       let stubView = UIImageView()
+        let stubView = UIImageView()
+        stubView.image = UIImage(named: "stub")
         stubView.translatesAutoresizingMaskIntoConstraints = false
         return stubView
     }()
@@ -92,7 +93,6 @@ final class SingleImageViewController: UIViewController{
     }
     
     private func addSubViews(){
-        stubImageView.image = UIImage(named: "stub")
         view.addSubview(scrollView)
         view.addSubview(stubImageView)
         view.addSubview(imageView)
@@ -106,9 +106,8 @@ final class SingleImageViewController: UIViewController{
             
             switch result{
             case .success(let photoFull):
-                self.imageView.image = photoFull.image
-//                self.rescaleAndCenterImageInScrollView(image: photoFull.image)
                 UIBlockingProgressHUD.dismiss()
+                self.imageView.image = photoFull.image
             case .failure(let error):
                 UIBlockingProgressHUD.dismiss()
                 debugPrint(error)

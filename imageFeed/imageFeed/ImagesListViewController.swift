@@ -23,8 +23,8 @@ class ImagesListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showSingleImageSegueIdentifier {
             if let viewController = segue.destination as? SingleImageViewController,
-                let indexPath = sender as? IndexPath{
-                let photo = photos[indexPath.section]
+               let indexPath = sender as? IndexPath{
+                let photo = photos[indexPath.row]
                 viewController.imageURL = URL(string: photo.largeImageURL)
             }
         } else {
@@ -91,10 +91,10 @@ extension ImagesListViewController{
                 options: [
                     .transition(.fade(1))
                 ]
-                )
+            )
         }
         let dateFormatterForImageView: DateFormatter = {
-           let formatter = DateFormatter()
+            let formatter = DateFormatter()
             formatter.dateFormat = "d MMMM yyyy 'года'"
             formatter.locale = Locale(identifier: "ru_RU")
             return formatter
@@ -105,7 +105,7 @@ extension ImagesListViewController{
         } else {
             cell.dateLabel.text = " "
         }
-       
+        
         
         
         let likeImage = photo.isLiked ? UIImage(named: "buttonTapped") : UIImage(named: "buttonDisabled")

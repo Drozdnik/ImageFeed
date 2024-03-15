@@ -109,12 +109,12 @@ class ProfileViewController: UIViewController{
     }
     
     @objc private func didTapButton(){
-        let alertController = UIAlertController(title: "Выход?", message: "Вы уверены, что хотите выйти?", preferredStyle: .alert)
-        let logoutAction = UIAlertAction(title: "Да", style: .destructive) {[weak self] _ in
+        let alertController = UIAlertController(title: "Пока, пока!", message: "Уверены, что хотите выйти?", preferredStyle: .alert)
+        let logoutAction = UIAlertAction(title: "Да", style: .default) {[weak self] _ in
             self?.logoutService.logout()
             self?.toSplashViewController()
         }
-        let cancelAction = UIAlertAction(title: "Нет", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Нет", style: .default, handler: nil)
         alertController.addAction(logoutAction)
         alertController.addAction(cancelAction)
         present(alertController, animated: true)

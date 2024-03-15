@@ -1,4 +1,5 @@
 import Foundation
+let isoDateFormatter = ISO8601DateFormatter()
 
 struct Photo: Decodable{
     let id: String
@@ -31,7 +32,7 @@ struct PhotoResult: Decodable{
     
     var dateCreatedAt: Date?{
         guard let createdAtString = createdAt else {return nil}
-        return dateFormatter.date(from: createdAtString)
+        return isoDateFormatter.date(from: createdAtString)
         
     }
 }
@@ -45,8 +46,8 @@ struct LikeResponce: Decodable {
     let photo: PhotoResult
 }
     
-let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-    return formatter
-}()
+//let dateFormatter: DateFormatter = {
+//    let formatter = DateFormatter()
+//    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+//    return formatter
+//}()

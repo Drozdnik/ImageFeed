@@ -93,10 +93,11 @@ extension ImagesListViewController{
                 ]
             )
         }
+        
         let dateFormatterForImageView: DateFormatter = {
             let formatter = DateFormatter()
-            formatter.dateFormat = "d MMMM yyyy 'года'"
-            formatter.locale = Locale(identifier: "ru_RU")
+            formatter.dateStyle = .long
+            formatter.timeStyle = .none
             return formatter
         }()
         

@@ -161,6 +161,7 @@ extension ImagesListViewController: ImageListCellDelegate{
                 cell.setLikeButton(enabled: true)
             case .failure(let error):
                 debugPrint(error)
+                UIBlockingProgressHUD.dismiss()
             }
         }
     }

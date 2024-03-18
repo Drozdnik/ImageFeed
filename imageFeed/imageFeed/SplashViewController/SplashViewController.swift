@@ -44,7 +44,7 @@ final class SplashViewController: UIViewController{
     private func toBarController(){
         guard let window = UIApplication.shared.windows.first else {fatalError("Invalid conf")}
         let tabBarController = UIStoryboard(name: "Main", bundle: .main)
-            .instantiateViewController(identifier: "TabBarController") //Вот тут упасть может
+            .instantiateViewController(identifier: "TabBarController") 
         window.rootViewController = tabBarController
     }
     

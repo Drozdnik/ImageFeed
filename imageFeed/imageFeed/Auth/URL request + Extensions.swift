@@ -12,7 +12,7 @@ extension URLRequest {
                return request
        }
     
-    static func makeProfileRequest(
+    static func makeRequestWithToken(
         path:String,
         httpMethod: String,
         token: String,

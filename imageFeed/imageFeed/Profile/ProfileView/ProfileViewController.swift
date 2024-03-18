@@ -8,6 +8,7 @@ class ProfileViewController: UIViewController{
     private lazy var idLabel = UILabel()
     private lazy var statusLabel = UILabel()
     private var profileImageServiceObserver: NSObjectProtocol?
+    private var logoutService = ProfileLogoutService.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +85,7 @@ class ProfileViewController: UIViewController{
     }
     
     private func updateLabels(){
-        guard let profile = ProfileService.sharedProfile.profile else {return}
+        guard let profile = profileService.profile else {return}
         nameLabel.text = profile.name
         idLabel.text = profile.loginName
         statusLabel.text = profile.bio
@@ -93,12 +94,30 @@ class ProfileViewController: UIViewController{
     private func updateAvatar(){
         guard
             let profileImageUrl = ProfileImageService.shared.avatarURL,
-            let url = URL(string: profileImageUrl) else {return}
+            let url = URL(string: profileImageUrl) else {
+            return
+            
+        }
         avatarImageView.kf.setImage(with: url)
     }
     
+    private func toSplashViewController(){
+        guard let window = UIApplication.shared.windows.first else {return}
+        let splashViewController = UIStoryboard(name: "Main", bundle: .main)
+            .instantiateViewController(identifier: "SplashViewController")
+        window.rootViewController = splashViewController
+    }
+    
     @objc private func didTapButton(){
-        avatarImageView.image = UIImage(systemName: "person.crop.circle.fill")
-        avatarImageView.tintColor = .gray
+        let alertController = UIAlertController(title: "Пока, пока!", message: "Уверены, что хотите выйти?", preferredStyle: .alert)
+        let logoutAction = UIAlertAction(title: "Да", style: .default) {[weak self] _ in
+            self?.logoutService.logout()
+            self?.toSplashViewController()
+        }
+        let cancelAction = UIAlertAction(title: "Нет", style: .default, handler: nil)
+        alertController.addAction(logoutAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
+        
         }
 }

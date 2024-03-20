@@ -27,7 +27,6 @@ final class ImageListService {
         
         let task = urlSession.objectTask(for: request) {[weak self] (result: Result<[PhotoResult], Error>) in
             DispatchQueue.main.async {
-                debugPrint("task внутри замыкания")
                 switch result {
                 case .success(let photoResult):
                     if self?.lastLoadedPage == 0 {

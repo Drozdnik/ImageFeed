@@ -57,11 +57,26 @@ class AuthViewController: UIViewController{
 
 extension AuthViewController: WebViewControllerDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueIdToWebView,
-           let webViewController = segue.destination as? WebViewController{
-            webViewController.delegate = self
+        if segue.identifier == segueIdToWebView {
+            guard
+                let webViewViewController = segue.destination as? WebViewController
+            else {
+                assertionFailure("Failed to prepare for \(segueIdToWebView)")
+                return
+            }
+            let webViewPresenter = WebViewPresenter()
+            webViewViewController.presenter = webViewPresenter
+            webViewPresenter.view = webViewViewController
+            webViewViewController.delegate = self
+        } else {
+            super.prepare(for: segue, sender: sender)
         }
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == segueIdToWebView,
+//           let webViewController = segue.destination as? WebViewController{
+//            webViewController.delegate = self
+//        }
     
     func webViewViewController(_ vc: WebViewController, didAuthenticateWithCode code: String) {
         UIBlockingProgressHUD.show()

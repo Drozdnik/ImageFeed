@@ -1,7 +1,12 @@
 import UIKit
 import WebKit
 
-final class WebViewController: UIViewController{
+public protocol WebViewViewControllerProtocol: AnyObject {
+    var presenter: WebViewPresenterProtocol? { get set }
+}
+
+final class WebViewController: UIViewController & WebViewViewControllerProtocol{
+    var presenter: WebViewPresenterProtocol?
     private let UnsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
     
     weak var delegate: WebViewControllerDelegate?

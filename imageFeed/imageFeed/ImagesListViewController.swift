@@ -107,8 +107,6 @@ extension ImagesListViewController{
             cell.dateLabel.text = " "
         }
         
-        
-        
         let likeImage = photo.isLiked ? UIImage(named: "buttonTapped") : UIImage(named: "buttonDisabled")
         cell.likeButton.setImage(likeImage, for: .normal)
     }

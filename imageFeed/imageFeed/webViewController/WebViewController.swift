@@ -19,7 +19,7 @@ final class WebViewController: UIViewController & WebViewViewControllerProtocol{
         // Added Observer
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress),options: .new, context: nil)
     }
-
+    
     private func addSubview(){
         view.addSubview(webView)
         view.addSubview(backButton)
@@ -72,8 +72,8 @@ final class WebViewController: UIViewController & WebViewViewControllerProtocol{
     func load(request:URLRequest){
         webView.load(request)
     }
-   @objc private func didTapBackButton(){
-       delegate?.webViewViewControllerDidCancel(self)
+    @objc private func didTapBackButton(){
+        delegate?.webViewViewControllerDidCancel(self)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -84,11 +84,6 @@ final class WebViewController: UIViewController & WebViewViewControllerProtocol{
         }
     }
     
-//    private func updateProgress(){
-//        progressView.progress = Float(webView.estimatedProgress)
-//        progressView.isHidden = fabs(webView.estimatedProgress - 1.0) <= 0.0001
-//    }
-    
     func setProgressValue(_ newValue: Float){
         progressView.progress = newValue
     }
@@ -97,11 +92,11 @@ final class WebViewController: UIViewController & WebViewViewControllerProtocol{
         progressView.isHidden = isHidden
     }
 }
-    
+
 extension WebViewController: WKNavigationDelegate{
     func webView(_ webView:WKWebView,
-                         decidePolicyFor navigationAction: WKNavigationAction,
-                         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
+                 decidePolicyFor navigationAction: WKNavigationAction,
+                 decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
     ){
         if let code = code(from: navigationAction){
             delegate?.webViewViewController(self, didAuthenticateWithCode: code)
@@ -112,16 +107,10 @@ extension WebViewController: WKNavigationDelegate{
     }
     
     private func code (from navigationAction: WKNavigationAction) -> String?{
-        if
-            let url = navigationAction.request.url,
-            let urlComponents = URLComponents(string: url.absoluteString),
-            urlComponents.path == "/oauth/authorize/native",
-            let items = urlComponents.queryItems,
-            let codeItem = items.first(where: {$0.name == "code"})
-        {
-            return codeItem.value
-        } else {
-            return nil
+        if let url = navigationAction.request.url{
+            return presenter?.code(from: url)
         }
+        return nil
     }
 }
+

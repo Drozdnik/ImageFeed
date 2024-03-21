@@ -13,14 +13,6 @@ final class WebViewController: UIViewController & WebViewViewControllerProtocol{
         presenter?.viewDidLoad()
         addSubview()
         configureConstraints()
-        estimatedProgressObservation = webView.observe(
-            \.estimatedProgress,
-              options: [],
-             changeHandler: {[weak self] _, _ in
-                 guard let self = self else {return}
-                 self.updateProgress()
-             }
-        )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,15 +78,23 @@ final class WebViewController: UIViewController & WebViewViewControllerProtocol{
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == #keyPath(WKWebView.estimatedProgress){
-            updateProgress()
+            presenter?.didUpdateProgressValue(webView.estimatedProgress)
         } else{
             super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }
     }
     
-    private func updateProgress(){
-        progressView.progress = Float(webView.estimatedProgress)
-        progressView.isHidden = fabs(webView.estimatedProgress - 1.0) <= 0.0001
+//    private func updateProgress(){
+//        progressView.progress = Float(webView.estimatedProgress)
+//        progressView.isHidden = fabs(webView.estimatedProgress - 1.0) <= 0.0001
+//    }
+    
+    func setProgressValue(_ newValue: Float){
+        progressView.progress = newValue
+    }
+    
+    func setProgressHidden(_ isHidden: Bool){
+        progressView.isHidden = isHidden
     }
 }
     

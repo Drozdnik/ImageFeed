@@ -28,7 +28,7 @@ final class SingleImageViewController: UIViewController{
     
     private lazy var stubImageView: UIImageView = {
         let stubView = UIImageView()
-        stubView.image = UIImage(named: "stub")
+        stubView.image = UIImage(named: "stubForSingeImage")
         stubView.translatesAutoresizingMaskIntoConstraints = false
         return stubView
     }()

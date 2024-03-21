@@ -1,13 +1,8 @@
 import UIKit
 import WebKit
 
-public protocol WebViewViewControllerProtocol: AnyObject {
-    var presenter: WebViewPresenterProtocol? { get set }
-}
-
 final class WebViewController: UIViewController & WebViewViewControllerProtocol{
     var presenter: WebViewPresenterProtocol?
-    private let UnsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
     
     weak var delegate: WebViewControllerDelegate?
     private var estimatedProgressObservation: NSKeyValueObservation?
@@ -15,6 +10,7 @@ final class WebViewController: UIViewController & WebViewViewControllerProtocol{
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.navigationDelegate = self
+        presenter?.viewDidLoad()
         addSubview()
         configureConstraints()
         estimatedProgressObservation = webView.observe(
@@ -25,20 +21,6 @@ final class WebViewController: UIViewController & WebViewViewControllerProtocol{
                  self.updateProgress()
              }
         )
-        
-        var urlComponents = URLComponents(string: UnsplashAuthorizeURLString)!
-        urlComponents.queryItems = [
-            URLQueryItem(name: "client_id", value: accessKey),
-               URLQueryItem(name: "redirect_uri", value: redirectURI),
-               URLQueryItem(name: "response_type", value: "code"),
-               URLQueryItem(name: "scope", value: acessScope)
-        ]
-        
-        guard let url = urlComponents.url else {
-            return
-        }
-        let request = URLRequest(url: url)
-        webView.load(request)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,6 +77,9 @@ final class WebViewController: UIViewController & WebViewViewControllerProtocol{
         return progressView
     }()
     
+    func load(request:URLRequest){
+        webView.load(request)
+    }
    @objc private func didTapBackButton(){
        delegate?.webViewViewControllerDidCancel(self)
     }

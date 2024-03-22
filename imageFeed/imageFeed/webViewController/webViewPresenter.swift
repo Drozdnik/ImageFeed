@@ -3,10 +3,16 @@ import Foundation
 final class WebViewPresenter: WebViewPresenterProtocol {
     weak var view: WebViewViewControllerProtocol?
     private let UnsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
+    var authHelper: AuthHelperProtocol
+    
+    init (authHelper: AuthHelperProtocol){
+        self.authHelper = authHelper
+    }
     
     func viewDidLoad() {
         // Request
         guard var urlComponents = URLComponents(string: UnsplashAuthorizeURLString) else {return}
+        
         urlComponents.queryItems = [
             URLQueryItem(name: "client_id", value: Constants.accessKey),
             URLQueryItem(name: "redirect_uri", value: Constants.redirectURI),
@@ -18,10 +24,9 @@ final class WebViewPresenter: WebViewPresenterProtocol {
             return
         }
         
-        let request = URLRequest(url: url)
+        guard let request = authHelper.authRequest() else {return}
         
         didUpdateProgressValue(0)
-        
         view?.load(request: request)
     }
     // updateProgress
@@ -38,14 +43,6 @@ final class WebViewPresenter: WebViewPresenterProtocol {
     }
     
     func code (from url: URL) -> String? {
-        if let urlComponents = URLComponents(string: url.absoluteString),
-           urlComponents.path == "/oauth/authorize/native",
-           let items = urlComponents.queryItems,
-           let codeItem = items.first(where: { $0.name == "code" })
-        {
-            return codeItem.value
-        } else {
-            return nil
-        }
+        authHelper.code(from: url)
     }
 }

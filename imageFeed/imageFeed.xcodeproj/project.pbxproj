@@ -24,6 +24,8 @@
 		8775F4A42BA7506300116B81 /* WebViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775F4A32BA7506300116B81 /* WebViewControllerProtocol.swift */; };
 		8775F4A62BA7526F00116B81 /* WebViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775F4A52BA7526F00116B81 /* WebViewPresenterProtocol.swift */; };
 		8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788BDF12B62805400722EF5 /* SingleImageViewController.swift */; };
+		878C819F2BAD66D900D89FFA /* AuthHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878C819E2BAD66D900D89FFA /* AuthHelperProtocol.swift */; };
+		878C81A12BAE154900D89FFA /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878C81A02BAE154900D89FFA /* AuthHelper.swift */; };
 		8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */; };
 		8791DD112B5C1B08003E8A0C /* YSDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */; };
 		8791DD122B5C1B08003E8A0C /* YSDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */; };
@@ -85,6 +87,8 @@
 		8775F4A32BA7506300116B81 /* WebViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerProtocol.swift; sourceTree = "<group>"; };
 		8775F4A52BA7526F00116B81 /* WebViewPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenterProtocol.swift; sourceTree = "<group>"; };
 		8788BDF12B62805400722EF5 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
+		878C819E2BAD66D900D89FFA /* AuthHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelperProtocol.swift; sourceTree = "<group>"; };
+		878C81A02BAE154900D89FFA /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
 		8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8791DD0F2B5C1B08003E8A0C /* YSDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Medium.ttf"; sourceTree = "<group>"; };
 		8791DD102B5C1B08003E8A0C /* YSDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YSDisplay-Bold.ttf"; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				87B14C102B72CA8F00433B46 /* URL request + Extensions.swift */,
 				879E25702B8276D60065C4C6 /* UIBlockingProgressHUD.swift */,
 				87F6C8C12B93C538009C8531 /* URLSession extension.swift */,
+				878C819E2BAD66D900D89FFA /* AuthHelperProtocol.swift */,
+				878C81A02BAE154900D89FFA /* AuthHelper.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 				87BE41E82BAB1B4A00A265AD /* webViewPresenter.swift in Sources */,
 				8734BA312B6FE99400764B71 /* OAuth2Servive.swift in Sources */,
 				879E25762B8A9A730065C4C6 /* ProfileModels.swift in Sources */,
+				878C819F2BAD66D900D89FFA /* AuthHelperProtocol.swift in Sources */,
 				87FB44142B4C14C700A8338B /* ImageListCell.swift in Sources */,
 				8734BA382B70189600764B71 /* AuthViewControllerDelegate.swift in Sources */,
 				8791DD0B2B5BEC4D003E8A0C /* ProfileViewController.swift in Sources */,
@@ -479,6 +486,7 @@
 				873C76312B6EA0E800B62A93 /* AuthConfiguration.swift in Sources */,
 				87B14C112B72CA8F00433B46 /* URL request + Extensions.swift in Sources */,
 				873C76362B6EC93100B62A93 /* UIColor.swift in Sources */,
+				878C81A12BAE154900D89FFA /* AuthHelper.swift in Sources */,
 				8775F4A42BA7506300116B81 /* WebViewControllerProtocol.swift in Sources */,
 				873C76342B6EBEF200B62A93 /* AuthViewController.swift in Sources */,
 				87B14C0F2B72C39800433B46 /* enum networkError.swift in Sources */,

@@ -27,7 +27,9 @@ class ProfileViewController: UIViewController{
     
     private func configureConstraints(){
         nameLabel = createLabel("Name", size: 23, color: .white)
+        nameLabel.accessibilityIdentifier = "Name Lastname"
         idLabel = createLabel("@Id", color: .gray)
+        idLabel.accessibilityIdentifier = "@username"
         statusLabel = createLabel("Status", color: .white)
         view.backgroundColor = customBlack
         view.addSubview(nameLabel)
@@ -72,6 +74,7 @@ class ProfileViewController: UIViewController{
         
         exitButton.tintColor = customRedForBackButton
         exitButton.translatesAutoresizingMaskIntoConstraints = false
+        exitButton.accessibilityIdentifier = "logout button"
         return exitButton
     }()
     

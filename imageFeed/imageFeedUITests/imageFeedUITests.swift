@@ -86,6 +86,6 @@ final class imageFeedUITests: XCTestCase {
         
         app.buttons["logout button"].tap()
         
-        app.alerts["Bye bye!"].scrollViews.otherElements.buttons["Yes"].tap()
+        app.alerts["Пока, пока!"].scrollViews.otherElements.buttons["Да"].tap()
     }
 }

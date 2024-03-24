@@ -47,6 +47,7 @@ class AuthViewController: UIViewController{
         authButton.layer.masksToBounds = true
         authButton.translatesAutoresizingMaskIntoConstraints = false
         authButton.addTarget(self, action: #selector (didTapButton), for: .touchUpInside)
+        authButton.accessibilityIdentifier = "Authenticate"
         return authButton
     }()
     

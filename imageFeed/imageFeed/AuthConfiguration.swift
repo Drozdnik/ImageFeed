@@ -2,15 +2,15 @@ import Foundation
 enum Constants{
     static let accessKey: String = "TTxNmP3O3DhG3TyWrnQs_Ry_fXjSSExAI6WIe8WmENw"
     static let secretKey: String = "PU9_PPg5qpOgAVsMog9TqURjhiobKqjCdvozO5vUxvM"
+    // вторые ключи
+//    static let accessKey:String = "QJ4kGWU3hUjtZZLJj9SZ28_BahDeeYvIsh6ap-F_ASM"
+//    static let secretKey = "oLM6U1AUYmkRSXlOjUXH4ivGskOC_NOdnJMqOok2q_M"
     static let redirectURI: String = "urn:ietf:wg:oauth:2.0:oob"
     static let accessScope: String = "public+read_user+write_likes"
     static let defaultBaseUrl = URL(string: "https://api.unsplash.com")
     static let defaultBaseURL = URL(string: "https://api.unsplash.com")!
     static let unsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
 }
-// вторые ключи
-//let accessKey:String = "QJ4kGWU3hUjtZZLJj9SZ28_BahDeeYvIsh6ap-F_ASM"
-//let secretKey = "oLM6U1AUYmkRSXlOjUXH4ivGskOC_NOdnJMqOok2q_M"
 
 struct AuthConfiguration {
     let accessKey: String

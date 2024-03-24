@@ -144,11 +144,12 @@ extension ImagesListViewController{
 
 extension ImagesListViewController: ImageListCellDelegate{
     func imageListCellDidTapLike(_ cell: ImageListCell) {
-        cell.setLikeButton(enabled: false)
         UIBlockingProgressHUD.show()
         guard let indexPath = tableView.indexPath(for: cell) else {return}
         let photo = photos[indexPath.row]
         let isLiked = !photo.isLiked
+        
+        cell.setLikeButton(enabled: false, isLiked: isLiked)
         
         ImageListService.shared.changeLike(photoId: photo.id, isLike: isLiked) {[weak self] result in
             switch result {
@@ -156,7 +157,7 @@ extension ImagesListViewController: ImageListCellDelegate{
                 UIBlockingProgressHUD.dismiss()
                 self?.photos[indexPath.row].isLiked = isLiked
                 self?.tableView.reloadRows(at: [indexPath], with: .automatic)
-                cell.setLikeButton(enabled: true)
+                cell.setLikeButton(enabled: true, isLiked: isLiked)
             case .failure(let error):
                 debugPrint(error)
                 UIBlockingProgressHUD.dismiss()

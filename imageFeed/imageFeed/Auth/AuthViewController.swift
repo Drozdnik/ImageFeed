@@ -83,6 +83,4 @@ extension AuthViewController: WebViewControllerDelegate{
     func webViewViewControllerDidCancel(_ vc: WebViewController) {
         dismiss(animated: true)
     }
-    
-    
 }

@@ -1,7 +1,7 @@
 import Foundation
 
 protocol ImageListPresenterProtocol{
-    var photo: [Photo] {get}
+    var photos: [Photo] {get}
     
     func viewDidLoad()
     func willDisplayItem(at indexPath: IndexPath)

@@ -6,4 +6,5 @@ protocol ImagesListViewProtocol: AnyObject {
     func reloadRows(at indexPaths: [IndexPath])
     func displayError(_ error: Error)
     func setLikeButtonState(forItemAt indexPath: IndexPath, isLiked: Bool)
+    func navigateToShowSingleImage(forPhoto photo: Photo)
 }

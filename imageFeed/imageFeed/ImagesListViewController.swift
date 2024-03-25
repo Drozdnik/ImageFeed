@@ -1,6 +1,6 @@
 import UIKit
 import Kingfisher
-class ImagesListViewController: UIViewController {
+class ImagesListViewController: UIViewController, ImagesListViewProtocol{
     @IBOutlet private var tableView: UITableView!
     
     private let showSingleImageSegueIdentifier = "ShowSingleImage"
@@ -20,17 +20,7 @@ class ImagesListViewController: UIViewController {
         )
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == showSingleImageSegueIdentifier {
-            if let viewController = segue.destination as? SingleImageViewController,
-               let indexPath = sender as? IndexPath{
-                let photo = photos[indexPath.row]
-                viewController.imageURL = URL(string: photo.largeImageURL)
-            }
-        } else {
-            super.prepare(for: segue, sender: sender)
-        }
-    }
+
     
 }
 
@@ -110,22 +100,22 @@ extension ImagesListViewController{
         cell.likeButton.setImage(likeImage, for: .normal)
     }
     
-    private func fetchPhotosNextPage(){
-        ImageListService.shared.fetchPhotosNextPage{ [weak self] result in
-            switch result{
-            case .success(let newPhoto):
-                let currentCount = self?.photos.count ?? 0
-                let (start, end) = (currentCount, currentCount + newPhoto.count)
-                let indexPaths = (start..<end).map{IndexPath(row: $0, section: 0)}
-                
-                self?.photos.append(contentsOf: newPhoto)
-                self?.tableView.insertRows(at: indexPaths, with: .automatic)
-                
-            case .failure(let error):
-                debugPrint(error)
-            }
-        }
-    }
+//    private func fetchPhotosNextPage(){
+//        ImageListService.shared.fetchPhotosNextPage{ [weak self] result in
+//            switch result{
+//            case .success(let newPhoto):
+//                let currentCount = self?.photos.count ?? 0
+//                let (start, end) = (currentCount, currentCount + newPhoto.count)
+//                let indexPaths = (start..<end).map{IndexPath(row: $0, section: 0)}
+//                
+//                self?.photos.append(contentsOf: newPhoto)
+//                self?.tableView.insertRows(at: indexPaths, with: .automatic)
+//                
+//            case .failure(let error)
+//                debugPrint(error)
+//            }
+//        }
+//    }
     
     @objc private func handeDataServiceUpdate(_ notification: Notification){
         guard let newPhotos = notification.userInfo?["photos"] as? [Photo] else {
@@ -141,26 +131,20 @@ extension ImagesListViewController{
     }
 }
 
-extension ImagesListViewController: ImageListCellDelegate{
-    func imageListCellDidTapLike(_ cell: ImageListCell) {
-        UIBlockingProgressHUD.show()
-        guard let indexPath = tableView.indexPath(for: cell) else {return}
-        let photo = photos[indexPath.row]
-        let isLiked = !photo.isLiked
-        
-        cell.setLikeButton(enabled: false, isLiked: isLiked)
-        
-        ImageListService.shared.changeLike(photoId: photo.id, isLike: isLiked) {[weak self] result in
-            switch result {
-            case .success():
-                UIBlockingProgressHUD.dismiss()
-                self?.photos[indexPath.row].isLiked = isLiked
-                self?.tableView.reloadRows(at: [indexPath], with: .automatic)
-                cell.setLikeButton(enabled: true, isLiked: isLiked)
-            case .failure(let error):
-                debugPrint(error)
-                UIBlockingProgressHUD.dismiss()
+extension ImagesListViewController{
+    func navigateToShowSingleImage(forPhoto photo: Photo) {
+        performSegue(withIdentifier: showSingleImageSegueIdentifier, sender: photo)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == showSingleImageSegueIdentifier {
+            if let viewController = segue.destination as? SingleImageViewController,
+               let indexPath = sender as? IndexPath{
+                let photo = photos[indexPath.row]
+                viewController.imageURL = URL(string: photo.largeImageURL)
             }
+        } else {
+            super.prepare(for: segue, sender: sender)
         }
     }
 }

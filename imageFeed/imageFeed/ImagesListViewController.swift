@@ -19,7 +19,7 @@ class ImagesListViewController: UIViewController {
             object: nil
         )
     }
-    
+    // в презентер
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showSingleImageSegueIdentifier {
             if let viewController = segue.destination as? SingleImageViewController,
@@ -62,7 +62,7 @@ extension ImagesListViewController: UITableViewDelegate{
             fetchPhotosNextPage()
         }
     }
-    
+    // в презентер
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ShowSingleImage", sender: indexPath)
     }
@@ -110,7 +110,7 @@ extension ImagesListViewController{
         let likeImage = photo.isLiked ? UIImage(named: "buttonTapped") : UIImage(named: "buttonDisabled")
         cell.likeButton.setImage(likeImage, for: .normal)
     }
-    
+    // В презентер
     private func fetchPhotosNextPage(){
         ImageListService.shared.fetchPhotosNextPage{ [weak self] result in
             switch result{
@@ -143,6 +143,7 @@ extension ImagesListViewController{
 }
 
 extension ImagesListViewController: ImageListCellDelegate{
+    // В презентер
     func imageListCellDidTapLike(_ cell: ImageListCell) {
         UIBlockingProgressHUD.show()
         guard let indexPath = tableView.indexPath(for: cell) else {return}

@@ -7,4 +7,5 @@ protocol ImageListPresenterProtocol{
     func willDisplayItem(at indexPath: IndexPath)
     func didSelectItem(at indexPath: IndexPath)
     func didTapLikeButton(at indexPath: IndexPath)
+    func fetchPhotosNextPage()
 }

@@ -36,14 +36,15 @@ extension ImageListPresenter: ImageListPresenterProtocol{
     func fetchPhotosNextPage(){
         
         imageListService.fetchPhotosNextPage{ [weak self] result in
+            guard let self = self else { return }
             switch result{
             case .success(let newPhoto):
-                let currentCount = self?.photos.count ?? 0
+                let currentCount = self.photos.count 
                 let (start, end) = (currentCount, currentCount + newPhoto.count)
                 let indexPaths = (start..<end).map{IndexPath(row: $0, section: 0)}
                 
-                self?.photos.append(contentsOf: newPhoto)
-                self?.view?.insertRows(indexPaths)
+                self.photos.append(contentsOf: newPhoto)
+                self.view?.insertRows(indexPaths)
                 
             case .failure(let error):
                 debugPrint(error)

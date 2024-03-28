@@ -9,7 +9,7 @@ final class ImageListService {
     private var task: URLSessionTask?
     private lazy var lastLoadedPage: Int = 0
     private (set) var photos: [Photo] = []
-    init(){}
+
     
     func fetchPhotosNextPage(completion: @escaping (Result<[Photo], Error>) -> Void) {
         let nextPage = lastLoadedPage + 1

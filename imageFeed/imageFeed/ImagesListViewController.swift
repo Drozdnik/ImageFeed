@@ -6,21 +6,22 @@ protocol ImageListViewControllerProtocol{
     func showBlockingHud()
     func dismissBlockingHud()
     func animationUpdate(indexPath: [IndexPath])
+    var presenter: ImageListPresenterProtocol? {get set}
 }
 
 class ImagesListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
+    var presenter: ImageListPresenterProtocol?
     
     private let showSingleImageSegueIdentifier = "ShowSingleImage"
-    var presenter: ImageListPresenterProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
+        let presenter = ImageListPresenter(view: self)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.sectionHeaderHeight = 300
         UIBlockingProgressHUD.show()
-        presenter?.viewDidLoad()
-       
+        presenter.viewDidLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -168,7 +169,7 @@ extension ImagesListViewController: ImageListCellDelegate{
 
 extension ImagesListViewController: ImageListViewControllerProtocol{
     func insertRows(_ indexPath: [IndexPath]){
-        self.tableView.insertRows(at: indexPath, with: .automatic)
+        tableView.insertRows(at: indexPath, with: .automatic)
     }
     
     func showBlockingHud(){

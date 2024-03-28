@@ -6,13 +6,16 @@ protocol ImageListPresenterProtocol{
     func setNotification()
     func viewDidLoad()
     var  photos: [Photo] {get set}
-    
+    var view:ImageListViewControllerProtocol? {get set}
 }
 final class ImageListPresenter {
     var view: ImageListViewControllerProtocol?
     var  photos: [Photo] = []
     var imageListService = ImageListService.shared
     
+    init (view: ImageListViewControllerProtocol){
+        self.view = view
+    }
     
     @objc private func handeDataServiceUpdate(_ notification: Notification){
         guard let newPhotos = notification.userInfo?["photos"] as? [Photo] else {
@@ -31,6 +34,7 @@ extension ImageListPresenter: ImageListPresenterProtocol{
     }
     
     func fetchPhotosNextPage(){
+        
         imageListService.fetchPhotosNextPage{ [weak self] result in
             switch result{
             case .success(let newPhoto):

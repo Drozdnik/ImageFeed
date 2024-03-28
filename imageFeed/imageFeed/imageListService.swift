@@ -35,6 +35,7 @@ final class ImageListService {
                     let photos = photoResult.map {Photo(photoResult: $0)}
                     self?.photos.append(contentsOf: photos)
                     self?.lastLoadedPage += 1
+                    
                     completion(.success(photos))
                     NotificationCenter.default.post(
                         name: ImageListService.didChangeNotification,

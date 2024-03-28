@@ -6,6 +6,7 @@ protocol ImageListViewControllerProtocol{
     func showBlockingHud()
     func dismissBlockingHud()
     func animationUpdate(indexPath: [IndexPath])
+    func reloadRowsWhenLiked(at indexPath: [IndexPath])
     var presenter: ImageListPresenterProtocol? {get set}
 }
 
@@ -62,7 +63,7 @@ extension ImagesListViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         presenter?.willDisplay(for: indexPath)
     }
-    // в презентер
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "ShowSingleImage", sender: indexPath)
     }
@@ -110,60 +111,13 @@ extension ImagesListViewController{
         let likeImage = photo.isLiked ? UIImage(named: "buttonTapped") : UIImage(named: "buttonDisabled")
         cell.likeButton.setImage(likeImage, for: .normal)
     }
-    // В презентер
-//    private func fetchPhotosNextPage(){
-//        ImageListService.shared.fetchPhotosNextPage{ [weak self] result in
-//            switch result{
-//            case .success(let newPhoto):
-//                let currentCount = self?.photos.count ?? 0
-//                let (start, end) = (currentCount, currentCount + newPhoto.count)
-//                let indexPaths = (start..<end).map{IndexPath(row: $0, section: 0)}
-//                
-//                self?.photos.append(contentsOf: newPhoto)
-//                self?.tableView.insertRows(at: indexPaths, with: .automatic)
-//                
-//            case .failure(let error):
-//                debugPrint(error)
-//            }
-//        }
-//    }
-    // в презентер
-//    @objc private func handeDataServiceUpdate(_ notification: Notification){
-//        guard let newPhotos = notification.userInfo?["photos"] as? [Photo] else {
-//            return
-//        }
-//        let oldPhotosCount = photos.count
-//        let newIndexPath = (oldPhotosCount..<photos.count).map{IndexPath(row: $0, section: 0) }
-//        
-//        tableView.performBatchUpdates({
-//            tableView.insertRows(at: newIndexPath, with: .automatic)
-//        }, completion: nil) // можно вставить доп логику после завершения анимации
-//        
-//    }
+    
 }
-#warning ("доделать")
+
 extension ImagesListViewController: ImageListCellDelegate{
-    // В презентер
     func imageListCellDidTapLike(_ cell: ImageListCell) {
-//        UIBlockingProgressHUD.show()
-//        guard let indexPath = tableView.indexPath(for: cell) else {return}
-//        let photo = presenter?.photos[indexPath.row]
-//        let isLiked = !photo.isLiked
-//        
-//        cell.setLikeButton(enabled: false, isLiked: isLiked)
-//        
-//        ImageListService.shared.changeLike(photoId: photo.id, isLike: isLiked) {[weak self] result in
-//            switch result {
-//            case .success():
-//                UIBlockingProgressHUD.dismiss()
-//                self?.photos[indexPath.row].isLiked = isLiked
-//                self?.tableView.reloadRows(at: [indexPath], with: .automatic)
-//                cell.setLikeButton(enabled: true, isLiked: isLiked)
-//            case .failure(let error):
-//                debugPrint(error)
-//                UIBlockingProgressHUD.dismiss()
-//            }
-//        }
+        guard let indexPath = tableView.indexPath(for: cell) else {return}
+        presenter?.imageListCellDidTapLike(cell, indexPath: indexPath)
     }
 }
 
@@ -184,5 +138,9 @@ extension ImagesListViewController: ImageListViewControllerProtocol{
         tableView.performBatchUpdates({
             tableView.insertRows(at: indexPath, with: .automatic)
         }, completion: nil) // можно вставить доп логику после завершения анимации
+    }
+    
+    func reloadRowsWhenLiked(at indexPath: [IndexPath]){
+        tableView.reloadRows(at: indexPath, with: .automatic)
     }
 }

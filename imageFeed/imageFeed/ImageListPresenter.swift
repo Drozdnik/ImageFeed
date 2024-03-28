@@ -5,8 +5,10 @@ protocol ImageListPresenterProtocol{
     func fetchPhotosNextPage()
     func setNotification()
     func viewDidLoad()
+    func imageListCellDidTapLike(_ cell: ImageListCell, indexPath: IndexPath)
     var  photos: [Photo] {get set}
     var view:ImageListViewControllerProtocol? {get set}
+    
 }
 final class ImageListPresenter {
     var view: ImageListViewControllerProtocol?
@@ -34,12 +36,11 @@ extension ImageListPresenter: ImageListPresenterProtocol{
     }
     
     func fetchPhotosNextPage(){
-        
         imageListService.fetchPhotosNextPage{ [weak self] result in
             guard let self = self else { return }
             switch result{
             case .success(let newPhoto):
-                let currentCount = self.photos.count 
+                let currentCount = self.photos.count
                 let (start, end) = (currentCount, currentCount + newPhoto.count)
                 let indexPaths = (start..<end).map{IndexPath(row: $0, section: 0)}
                 
@@ -66,6 +67,26 @@ extension ImageListPresenter: ImageListPresenterProtocol{
             name: ImageListService.didChangeNotification,
             object: nil
         )
-    
+    }
+    func imageListCellDidTapLike(_ cell: ImageListCell, indexPath: IndexPath) {
+        view?.showBlockingHud()
+        let photo = photos[indexPath.row]
+        let isLiked = !photo.isLiked
+        
+        cell.setLikeButton(enabled: false, isLiked: isLiked)
+        
+        ImageListService.shared.changeLike(photoId: photo.id, isLike: isLiked) {[weak self] result in
+            switch result {
+            case .success():
+                UIBlockingProgressHUD.dismiss()
+                self?.photos[indexPath.row].isLiked = isLiked
+                self?.view?.reloadRowsWhenLiked(at: [indexPath])
+                cell.setLikeButton(enabled: true, isLiked: isLiked)
+            case .failure(let error):
+                debugPrint(error)
+                self?.view?.dismissBlockingHud()
+            }
+        }
     }
 }
+

@@ -7,7 +7,7 @@ public protocol ProfileViewControllerProtocol: UIViewController {
     func updateLabels()
 }
 
-class ProfileViewController: UIViewController{
+class ProfileViewController: UIViewController, ProfileViewControllerProtocol{
     
     private let profileService = ProfileService.sharedProfile
     private lazy var nameLabel = UILabel()
@@ -19,8 +19,6 @@ class ProfileViewController: UIViewController{
         super.viewDidLoad()
         addSubviews()
         configureConstraints()
-        //        updateLabels()
-        //        updateAvatar()
     }
     
     func addSubviews(){
@@ -90,7 +88,7 @@ class ProfileViewController: UIViewController{
         return label
     }
 
-    private func updateLabels(){
+    internal func updateLabels(){
         if let profile = presenter?.updateLabels(){
             nameLabel.text = profile.name
             idLabel.text = profile.loginName
@@ -100,7 +98,7 @@ class ProfileViewController: UIViewController{
         }
     }
     
-    private func updateAvatar(url: URL){
+    func updateAvatar(url: URL){
         avatarImageView.kf.setImage(with: url)
     }
     

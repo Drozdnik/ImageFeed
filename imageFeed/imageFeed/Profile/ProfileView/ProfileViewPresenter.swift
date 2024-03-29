@@ -13,7 +13,7 @@ public protocol ProfilePresenterProtocol {
 final class ProfileViewPresenter: ProfilePresenterProtocol{
     var view: ProfileViewControllerProtocol?
     
-    private var profileImageServiceObserver: NSObjectProtocol?
+    
     private var logoutService = ProfileLogoutService.shared
         func logout() {
         logoutService.logout()

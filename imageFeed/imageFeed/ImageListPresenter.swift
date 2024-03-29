@@ -1,15 +1,6 @@
 
 import Foundation
-protocol ImageListPresenterProtocol{
-    func willDisplay(for indexPath: IndexPath)
-    func fetchPhotosNextPage()
-    func setNotification()
-    func viewDidLoad()
-    func imageListCellDidTapLike(_ cell: ImageListCell, indexPath: IndexPath)
-    var  photos: [Photo] {get set}
-    var view:ImageListViewControllerProtocol? {get set}
-    
-}
+
 final class ImageListPresenter {
     var view: ImageListViewControllerProtocol?
     var  photos: [Photo] = []
@@ -78,7 +69,7 @@ extension ImageListPresenter: ImageListPresenterProtocol{
         ImageListService.shared.changeLike(photoId: photo.id, isLike: isLiked) {[weak self] result in
             switch result {
             case .success():
-                UIBlockingProgressHUD.dismiss()
+                self?.view?.dismissBlockingHud()
                 self?.photos[indexPath.row].isLiked = isLiked
                 self?.view?.reloadRowsWhenLiked(at: [indexPath])
                 cell.setLikeButton(enabled: true, isLiked: isLiked)

@@ -1,15 +1,6 @@
 import UIKit
 import Kingfisher
 
-protocol ImageListViewControllerProtocol{
-    func insertRows(_ indexPath: [IndexPath])
-    func showBlockingHud()
-    func dismissBlockingHud()
-    func animationUpdate(indexPath: [IndexPath])
-    func reloadRowsWhenLiked(at indexPath: [IndexPath])
-    var presenter: ImageListPresenterProtocol? {get set}
-}
-
 class ImagesListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
     var presenter: ImageListPresenterProtocol?

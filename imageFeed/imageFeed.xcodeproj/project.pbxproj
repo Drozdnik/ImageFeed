@@ -10,6 +10,8 @@
 		871BCEC62BB028F80085E244 /* imageFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871BCEC52BB028F80085E244 /* imageFeedUITests.swift */; };
 		871BCEC82BB028F80085E244 /* imageFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871BCEC72BB028F80085E244 /* imageFeedUITestsLaunchTests.swift */; };
 		871BCED52BB4AEF50085E244 /* ImageListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871BCED42BB4AEF50085E244 /* ImageListPresenter.swift */; };
+		871BCED72BB5E1370085E244 /* ImageList protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871BCED62BB5E1370085E244 /* ImageList protocols.swift */; };
+		871BCED92BB5E5160085E244 /* ProfileViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871BCED82BB5E5160085E244 /* ProfileViewPresenter.swift */; };
 		8734BA2F2B6F92D600764B71 /* WebViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8734BA2E2B6F92D600764B71 /* WebViewControllerDelegate.swift */; };
 		8734BA312B6FE99400764B71 /* OAuth2Servive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8734BA302B6FE99400764B71 /* OAuth2Servive.swift */; };
 		8734BA332B6FFDB900764B71 /* OAuth2TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8734BA322B6FFDB900764B71 /* OAuth2TokenStorage.swift */; };
@@ -79,6 +81,8 @@
 		871BCEC52BB028F80085E244 /* imageFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFeedUITests.swift; sourceTree = "<group>"; };
 		871BCEC72BB028F80085E244 /* imageFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		871BCED42BB4AEF50085E244 /* ImageListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListPresenter.swift; sourceTree = "<group>"; };
+		871BCED62BB5E1370085E244 /* ImageList protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageList protocols.swift"; sourceTree = "<group>"; };
+		871BCED82BB5E5160085E244 /* ProfileViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewPresenter.swift; sourceTree = "<group>"; };
 		8734BA2E2B6F92D600764B71 /* WebViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerDelegate.swift; sourceTree = "<group>"; };
 		8734BA302B6FE99400764B71 /* OAuth2Servive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Servive.swift; sourceTree = "<group>"; };
 		8734BA322B6FFDB900764B71 /* OAuth2TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2TokenStorage.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				8791DD0A2B5BEC4D003E8A0C /* ProfileViewController.swift */,
+				871BCED82BB5E5160085E244 /* ProfileViewPresenter.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				876042ED2B990C44008AB202 /* ImageListModel.swift */,
 				87BC7F6E2BA0465000AC2DEA /* ImageListCellDelegate.swift */,
 				871BCED42BB4AEF50085E244 /* ImageListPresenter.swift */,
+				871BCED62BB5E1370085E244 /* ImageList protocols.swift */,
 			);
 			name = ImageList;
 			sourceTree = "<group>";
@@ -489,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871BCED72BB5E1370085E244 /* ImageList protocols.swift in Sources */,
 				879E25712B8276D70065C4C6 /* UIBlockingProgressHUD.swift in Sources */,
 				878C81A72BAF1B6A00D89FFA /* WebViewViewControllerSpy.swift in Sources */,
 				87EFD2DC2B418A1C00735931 /* ImagesListViewController.swift in Sources */,
@@ -519,6 +526,7 @@
 				87F6C8C22B93C538009C8531 /* URLSession extension.swift in Sources */,
 				8788BDF22B62805400722EF5 /* SingleImageViewController.swift in Sources */,
 				8775F4A62BA7526F00116B81 /* WebViewPresenterProtocol.swift in Sources */,
+				871BCED92BB5E5160085E244 /* ProfileViewPresenter.swift in Sources */,
 				8734BA332B6FFDB900764B71 /* OAuth2TokenStorage.swift in Sources */,
 				879E257D2B8BD9300065C4C6 /* ProfileImage Model.swift in Sources */,
 				87BC7F712BA0E48900AC2DEA /* ProfileLogoutService.swift in Sources */,

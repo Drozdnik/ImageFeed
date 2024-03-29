@@ -12,8 +12,6 @@ class ProfileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
         addSubviews()
         configureConstraints()
         updateLabels()
@@ -86,7 +84,7 @@ class ProfileViewController: UIViewController{
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }
-    
+    //В презентер
     private func updateLabels(){
         guard let profile = profileService.profile else {return}
         nameLabel.text = profile.name

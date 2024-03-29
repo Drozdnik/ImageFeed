@@ -1,10 +1,3 @@
-//
-//  imageFeedUITests.swift
-//  imageFeedUITests
-//
-//  Created by Михаил  on 24.03.2024.
-//
-
 import XCTest
 
 final class imageFeedUITests: XCTestCase {
@@ -18,7 +11,7 @@ final class imageFeedUITests: XCTestCase {
     }
     
     func testAuth() throws {
-        sleep (2)
+        sleep (15)
         app.buttons["Authenticate"].tap()
         
         let webView = app.webViews["UnsplashWebView"]
@@ -58,23 +51,23 @@ final class imageFeedUITests: XCTestCase {
         
         let cellToLike = tablesQuery.children(matching: .cell).element(boundBy: 1)
         
-        cellToLike.buttons["buttonDisabled"].tap()
+        cellToLike.buttons["likeButton"].tap()
         sleep (1)
-        cellToLike.buttons["buttonTapped"].tap()
+        cellToLike.buttons["likeButton"].tap()
         
         sleep(2)
         
         cellToLike.tap()
         
-        sleep(5)
+        sleep(6)
         
         let image = app.scrollViews.images.element(boundBy: 0)
         // Zoom in
-        image.pinch(withScale: 1, velocity: 1) // zoom in
+        image.pinch(withScale: 3, velocity: 1) // zoom in
         // Zoom out
         image.pinch(withScale: 0.5, velocity: -1)
         
-        let navBackButtonWhiteButton = app.buttons["nav back button white"]
+        let navBackButtonWhiteButton = app.buttons["backButton"]
         navBackButtonWhiteButton.tap()
     }
     

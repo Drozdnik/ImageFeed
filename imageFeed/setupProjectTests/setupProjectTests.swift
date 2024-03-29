@@ -93,3 +93,21 @@ final class WebViewTests: XCTestCase{
     }
 }
 
+// ImageListTests
+final class ImagesListTests: XCTestCase {
+    func testImageListPresenterCalledViewDidLoad() {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ImagesListViewController") as! ImagesListViewController
+        // given
+        
+        let presenter = ImagesListPresenterSpy()
+        viewController.presenter = presenter
+        presenter.view = viewController
+        
+        // when
+        _ = viewController.view
+        
+        //then
+        XCTAssertTrue(presenter.viewDidLoadCalled)
+    }
+}

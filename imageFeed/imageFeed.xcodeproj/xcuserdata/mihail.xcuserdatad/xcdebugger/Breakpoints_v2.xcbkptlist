@@ -3023,7 +3023,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "126"
             endingLineNumber = "126"
-            landmarkName = "didTapShareButton()"
+            landmarkName = "didTapBackButton()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -3190,7 +3190,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "11BAD328-4404-4D41-8EA6-1D7A615D0C7C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "imageFeed/SingleImageViewController/SingleImageViewController.swift"
@@ -3200,6 +3200,53 @@
             endingLineNumber = "10"
             landmarkName = "image"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "11BAD328-4404-4D41-8EA6-1D7A615D0C7C - 9cbbaafdbb552226"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SingleImageViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; imageFeed.SingleImageViewController"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SingleImageViewController/SingleImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "11BAD328-4404-4D41-8EA6-1D7A615D0C7C - 3e8a19fc8b7ab966"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SingleImageViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;imageFeed.SingleImageViewController&gt;"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SingleImageViewController/SingleImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "11BAD328-4404-4D41-8EA6-1D7A615D0C7C - 699c59a55fd46654"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "imageFeed.SingleImageViewController.image.didset : Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "imageFeed"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SingleImageViewController/SingleImageViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3715,81 +3762,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0E30581B-A459-4DB9-8552-FB071E9BAB2F"
+            uuid = "04A60B07-AADD-4ED1-A335-1691803D8557"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "imageFeed/SingleImageViewController/SingleImageViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "loadImage(from:)"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "viewForZooming(in:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8A143AA7-8516-4D34-AFE3-DEC9B2511DC5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "imageFeed/SingleImageViewController/SingleImageViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "loadImage(from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2C2647FB-9D61-4E94-B92B-396FF3A874E1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "imageFeed/SingleImageViewController/SingleImageViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "loadImage(from:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2C2647FB-9D61-4E94-B92B-396FF3A874E1 - ab50bdcdc227cf32"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Kingfisher.RetrieveImageResult, Kingfisher.KingfisherError&gt;) -&gt; () in imageFeed.SingleImageViewController.loadImage(from: Foundation.URL) -&gt; ()"
-                  moduleName = "imageFeed"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SingleImageViewController/SingleImageViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "584">
-               </Location>
-               <Location
-                  uuid = "2C2647FB-9D61-4E94-B92B-396FF3A874E1 - ab50bdcdc227cf32"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Kingfisher.RetrieveImageResult, Kingfisher.KingfisherError&gt;) -&gt; () in imageFeed.SingleImageViewController.loadImage(from: Foundation.URL) -&gt; ()"
-                  moduleName = "imageFeed"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mihail/Desktop/ImageFeed/imageFeed/imageFeed/SingleImageViewController/SingleImageViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "516">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

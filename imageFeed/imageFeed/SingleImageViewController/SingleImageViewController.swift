@@ -109,7 +109,7 @@ final class SingleImageViewController: UIViewController{
             switch result{
             case .success(let photoFull):
                 UIBlockingProgressHUD.dismiss()
-                self.imageView.image = photoFull.image
+                self.image = photoFull.image
                 self.stubImageView.removeFromSuperview()
             case .failure(let error):
                 UIBlockingProgressHUD.dismiss()

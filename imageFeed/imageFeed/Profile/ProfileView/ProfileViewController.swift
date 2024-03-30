@@ -17,7 +17,6 @@ class ProfileViewController: UIViewController, ProfileViewControllerProtocol{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = ProfileViewPresenter(view: self)
         addSubviews()
         configureConstraints()
         presenter?.viewDidLoad()

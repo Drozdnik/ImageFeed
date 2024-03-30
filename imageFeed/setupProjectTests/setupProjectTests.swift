@@ -111,3 +111,19 @@ final class ImagesListTests: XCTestCase {
         XCTAssertTrue(presenter.viewDidLoadCalled)
     }
 }
+
+// ProfileTest
+
+final class ProfileTests: XCTestCase {
+    
+    func testViewControllerCallsUpdateProfileDetailes() {
+        let viewController = ProfileViewController()
+        let presenter = ProfilePresenterSpy()
+        viewController.presenter = presenter
+        presenter.view = viewController
+        
+        _ = viewController.view
+        
+        XCTAssertTrue(presenter.viewDidloadCalled)
+    }
+}

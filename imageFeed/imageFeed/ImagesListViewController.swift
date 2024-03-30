@@ -8,10 +8,10 @@ class ImagesListViewController: UIViewController {
     private let showSingleImageSegueIdentifier = "ShowSingleImage"
     override func viewDidLoad() {
         super.viewDidLoad()
-//        presenter = ImageListPresenter(view: self)
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.sectionHeaderHeight = 300
+        presenter = ImageListPresenter(view: self)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.sectionHeaderHeight = 300
         UIBlockingProgressHUD.show()
         presenter?.viewDidLoad()
     }

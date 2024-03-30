@@ -13,7 +13,9 @@ public protocol ProfilePresenterProtocol {
 final class ProfileViewPresenter: ProfilePresenterProtocol{
     var view: ProfileViewControllerProtocol?
     
-    
+    init (view: ProfileViewControllerProtocol){
+        self.view = view
+    }
     private var logoutService = ProfileLogoutService.shared
         func logout() {
         logoutService.logout()

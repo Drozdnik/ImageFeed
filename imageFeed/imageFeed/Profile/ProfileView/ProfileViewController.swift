@@ -1,33 +1,37 @@
 import UIKit
 import Kingfisher
 
-class ProfileViewController: UIViewController{
+public protocol ProfileViewControllerProtocol: UIViewController {
+    var presenter: ProfilePresenterProtocol? { get set }
+    func updateAvatar(url: URL)
+    func updateLabels()
+}
+
+class ProfileViewController: UIViewController, ProfileViewControllerProtocol{
     
     private let profileService = ProfileService.sharedProfile
     private lazy var nameLabel = UILabel()
     private lazy var idLabel = UILabel()
     private lazy var statusLabel = UILabel()
-    private var profileImageServiceObserver: NSObjectProtocol?
-    private var logoutService = ProfileLogoutService.shared
+    var presenter: ProfilePresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
         addSubviews()
         configureConstraints()
-        updateLabels()
-        updateAvatar()
+        presenter?.viewDidLoad()
     }
     
-     func addSubviews(){
+    func addSubviews(){
         view.addSubview(avatarImageView)
         view.addSubview(exitButton)
     }
     
     private func configureConstraints(){
         nameLabel = createLabel("Name", size: 23, color: .white)
+        nameLabel.accessibilityIdentifier = "Name Lastname"
         idLabel = createLabel("@Id", color: .gray)
+        idLabel.accessibilityIdentifier = "@username"
         statusLabel = createLabel("Status", color: .white)
         view.backgroundColor = customBlack
         view.addSubview(nameLabel)
@@ -62,7 +66,7 @@ class ProfileViewController: UIViewController{
         avatarImageView.layer.masksToBounds = true
         return avatarImageView
     }()
-
+    
     private lazy var exitButton: UIButton = {
         let exitButton = UIButton.systemButton(
             with: UIImage(systemName: "ipad.and.arrow.forward")!,
@@ -72,6 +76,7 @@ class ProfileViewController: UIViewController{
         
         exitButton.tintColor = customRedForBackButton
         exitButton.translatesAutoresizingMaskIntoConstraints = false
+        exitButton.accessibilityIdentifier = "logout button"
         return exitButton
     }()
     
@@ -83,41 +88,34 @@ class ProfileViewController: UIViewController{
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }
-    
-    private func updateLabels(){
-        guard let profile = profileService.profile else {return}
-        nameLabel.text = profile.name
-        idLabel.text = profile.loginName
-        statusLabel.text = profile.bio
+
+    internal func updateLabels(){
+        if let profile = presenter?.updateLabels(){
+            nameLabel.text = profile.name
+            idLabel.text = profile.loginName
+            statusLabel.text = profile.bio
+        } else {
+            return
+        }
     }
     
-    private func updateAvatar(){
-        guard
-            let profileImageUrl = ProfileImageService.shared.avatarURL,
-            let url = URL(string: profileImageUrl) else {
-            return
-            
-        }
+    func updateAvatar(url: URL){
         avatarImageView.kf.setImage(with: url)
     }
     
-    private func toSplashViewController(){
-        guard let window = UIApplication.shared.windows.first else {return}
-        let splashViewController = UIStoryboard(name: "Main", bundle: .main)
-            .instantiateViewController(identifier: "SplashViewController")
-        window.rootViewController = splashViewController
-    }
+    
     
     @objc private func didTapButton(){
         let alertController = UIAlertController(title: "Пока, пока!", message: "Уверены, что хотите выйти?", preferredStyle: .alert)
         let logoutAction = UIAlertAction(title: "Да", style: .default) {[weak self] _ in
-            self?.logoutService.logout()
-            self?.toSplashViewController()
+            self?.presenter?.logout()
+            self?.presenter?.toSplashViewController()
         }
+        
         let cancelAction = UIAlertAction(title: "Нет", style: .default, handler: nil)
         alertController.addAction(logoutAction)
         alertController.addAction(cancelAction)
         present(alertController, animated: true)
         
-        }
+    }
 }

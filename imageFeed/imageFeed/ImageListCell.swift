@@ -19,8 +19,11 @@ final class ImageListCell: UITableViewCell{
         delegate?.imageListCellDidTapLike(self)
     }
     
-    func setLikeButton(enabled: Bool){
+    func setLikeButton(enabled: Bool, isLiked: Bool){
         likeButton.isEnabled = enabled
+        likeButton.isSelected = isLiked
+        likeButton.accessibilityIdentifier = isLiked ? "like button off" : "like button on"
+        
     }
 }
-    
+

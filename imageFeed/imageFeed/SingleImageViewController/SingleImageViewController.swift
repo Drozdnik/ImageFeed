@@ -28,7 +28,7 @@ final class SingleImageViewController: UIViewController{
     
     private lazy var stubImageView: UIImageView = {
         let stubView = UIImageView()
-        stubView.image = UIImage(named: "stub")
+        stubView.image = UIImage(named: "stubForSingeImage")
         stubView.translatesAutoresizingMaskIntoConstraints = false
         return stubView
     }()
@@ -44,6 +44,7 @@ final class SingleImageViewController: UIViewController{
         button.setImage(UIImage(named: "nav_back_button_white"), for: .normal)
         button.addTarget(self, action: #selector (didTapBackButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "backButton"
         return button
     }()
     
@@ -57,6 +58,7 @@ final class SingleImageViewController: UIViewController{
     
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
+        scrollView.delegate = self
         scrollView.backgroundColor = customBlack
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.delegate = self
@@ -95,9 +97,9 @@ final class SingleImageViewController: UIViewController{
     private func addSubViews(){
         view.addSubview(scrollView)
         view.addSubview(stubImageView)
-        view.addSubview(imageView)
         view.addSubview(backButton)
         view.addSubview(shareButton)
+        scrollView.addSubview(imageView)
     }
     
     private func loadImage(from url: URL){
@@ -107,7 +109,8 @@ final class SingleImageViewController: UIViewController{
             switch result{
             case .success(let photoFull):
                 UIBlockingProgressHUD.dismiss()
-                self.imageView.image = photoFull.image
+                self.image = photoFull.image
+                self.stubImageView.removeFromSuperview()
             case .failure(let error):
                 UIBlockingProgressHUD.dismiss()
                 debugPrint(error)
@@ -152,5 +155,26 @@ extension SingleImageViewController: UIScrollViewDelegate{
         let x = (newContentSize.width - visibleRectSize.width) / 2
         let y = (newContentSize.height - visibleRectSize.height) / 2
         scrollView.setContentOffset(CGPoint(x: x, y: y), animated: false)
+        centerImage()
+    }
+    
+    func centerImage() {
+        let visibleRectSize = scrollView.bounds.size
+        let contentSize = scrollView.contentSize
+        var xOffset: CGFloat = 0
+        var yOffset: CGFloat = 0
+        if contentSize.width < visibleRectSize.width {
+            xOffset = (visibleRectSize.width - contentSize.width) * 0.5
+        }
+        if contentSize.height < visibleRectSize.height {
+            yOffset = (visibleRectSize.height - contentSize.height) * 0.5
+        }
+        scrollView.contentInset = UIEdgeInsets(top: yOffset, left: xOffset, bottom: 0, right: 0)
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        centerImage()
     }
 }
+
+

@@ -5,7 +5,7 @@ extension URLRequest {
     static func makeHTTPRequest(
         path: String,
         httpMethod: String,
-        baseURL: URL = defaultBaseURL
+        baseURL: URL = Constants.defaultBaseURL
     ) -> URLRequest {
         var request = URLRequest(url: URL(string: path, relativeTo: baseURL)!)
                request.httpMethod = httpMethod
@@ -16,7 +16,7 @@ extension URLRequest {
         path:String,
         httpMethod: String,
         token: String,
-        baseUrl: URL = defaultBaseURL
+        baseUrl: URL = Constants.defaultBaseURL
     ) -> URLRequest? {
         guard let url = URL(string: path, relativeTo: baseUrl) else {
             print("Невозможно создать profile get запрос")

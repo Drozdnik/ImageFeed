@@ -9,7 +9,7 @@ final class ImageListService {
     private var task: URLSessionTask?
     private lazy var lastLoadedPage: Int = 0
     private (set) var photos: [Photo] = []
-    init(){}
+
     
     func fetchPhotosNextPage(completion: @escaping (Result<[Photo], Error>) -> Void) {
         let nextPage = lastLoadedPage + 1
@@ -27,7 +27,6 @@ final class ImageListService {
         
         let task = urlSession.objectTask(for: request) {[weak self] (result: Result<[PhotoResult], Error>) in
             DispatchQueue.main.async {
-                debugPrint("task внутри замыкания")
                 switch result {
                 case .success(let photoResult):
                     if self?.lastLoadedPage == 0 {
@@ -36,6 +35,7 @@ final class ImageListService {
                     let photos = photoResult.map {Photo(photoResult: $0)}
                     self?.photos.append(contentsOf: photos)
                     self?.lastLoadedPage += 1
+                    
                     completion(.success(photos))
                     NotificationCenter.default.post(
                         name: ImageListService.didChangeNotification,

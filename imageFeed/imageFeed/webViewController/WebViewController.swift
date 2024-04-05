@@ -1,8 +1,8 @@
 import UIKit
 import WebKit
 
-final class WebViewController: UIViewController{
-    private let UnsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
+final class WebViewController: UIViewController & WebViewViewControllerProtocol{
+    var presenter: WebViewPresenterProtocol?
     
     weak var delegate: WebViewControllerDelegate?
     private var estimatedProgressObservation: NSKeyValueObservation?
@@ -10,37 +10,16 @@ final class WebViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.navigationDelegate = self
+        presenter?.viewDidLoad()
         addSubview()
         configureConstraints()
-        estimatedProgressObservation = webView.observe(
-            \.estimatedProgress,
-              options: [],
-             changeHandler: {[weak self] _, _ in
-                 guard let self = self else {return}
-                 self.updateProgress()
-             }
-        )
-        
-        var urlComponents = URLComponents(string: UnsplashAuthorizeURLString)!
-        urlComponents.queryItems = [
-            URLQueryItem(name: "client_id", value: accessKey),
-               URLQueryItem(name: "redirect_uri", value: redirectURI),
-               URLQueryItem(name: "response_type", value: "code"),
-               URLQueryItem(name: "scope", value: acessScope)
-        ]
-        
-        guard let url = urlComponents.url else {
-            return
-        }
-        let request = URLRequest(url: url)
-        webView.load(request)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         // Added Observer
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress),options: .new, context: nil)
     }
-
+    
     private func addSubview(){
         view.addSubview(webView)
         view.addSubview(backButton)
@@ -79,6 +58,7 @@ final class WebViewController: UIViewController{
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.backgroundColor =  customWhiteBackGrounds
         webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.accessibilityIdentifier = "UnsplashWebView"
         return webView
     }()
     
@@ -90,28 +70,34 @@ final class WebViewController: UIViewController{
         return progressView
     }()
     
-   @objc private func didTapBackButton(){
-       delegate?.webViewViewControllerDidCancel(self)
+    func load(request:URLRequest){
+        webView.load(request)
+    }
+    @objc private func didTapBackButton(){
+        delegate?.webViewViewControllerDidCancel(self)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == #keyPath(WKWebView.estimatedProgress){
-            updateProgress()
+            presenter?.didUpdateProgressValue(webView.estimatedProgress)
         } else{
             super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
         }
     }
     
-    private func updateProgress(){
-        progressView.progress = Float(webView.estimatedProgress)
-        progressView.isHidden = fabs(webView.estimatedProgress - 1.0) <= 0.0001
+    func setProgressValue(_ newValue: Float){
+        progressView.progress = newValue
+    }
+    
+    func setProgressHidden(_ isHidden: Bool){
+        progressView.isHidden = isHidden
     }
 }
-    
+
 extension WebViewController: WKNavigationDelegate{
     func webView(_ webView:WKWebView,
-                         decidePolicyFor navigationAction: WKNavigationAction,
-                         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
+                 decidePolicyFor navigationAction: WKNavigationAction,
+                 decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
     ){
         if let code = code(from: navigationAction){
             delegate?.webViewViewController(self, didAuthenticateWithCode: code)
@@ -122,16 +108,10 @@ extension WebViewController: WKNavigationDelegate{
     }
     
     private func code (from navigationAction: WKNavigationAction) -> String?{
-        if
-            let url = navigationAction.request.url,
-            let urlComponents = URLComponents(string: url.absoluteString),
-            urlComponents.path == "/oauth/authorize/native",
-            let items = urlComponents.queryItems,
-            let codeItem = items.first(where: {$0.name == "code"})
-        {
-            return codeItem.value
-        } else {
-            return nil
+        if let url = navigationAction.request.url{
+            return presenter?.code(from: url)
         }
+        return nil
     }
 }
+

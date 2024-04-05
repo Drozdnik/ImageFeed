@@ -47,6 +47,7 @@ class AuthViewController: UIViewController{
         authButton.layer.masksToBounds = true
         authButton.translatesAutoresizingMaskIntoConstraints = false
         authButton.addTarget(self, action: #selector (didTapButton), for: .touchUpInside)
+        authButton.accessibilityIdentifier = "Authenticate"
         return authButton
     }()
     
@@ -57,12 +58,23 @@ class AuthViewController: UIViewController{
 
 extension AuthViewController: WebViewControllerDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == segueIdToWebView,
-           let webViewController = segue.destination as? WebViewController{
-            webViewController.delegate = self
+        if segue.identifier == segueIdToWebView {
+            guard
+                let webViewViewController = segue.destination as? WebViewController
+            else {
+                assertionFailure("Failed to prepare for \(segueIdToWebView)")
+                return
+            }
+            let authHelper = AuthHelper()
+            let webViewPresenter = WebViewPresenter(authHelper: authHelper)
+            webViewViewController.presenter = webViewPresenter
+            webViewPresenter.view = webViewViewController
+            webViewViewController.delegate = self
+        } else {
+            super.prepare(for: segue, sender: sender)
         }
     }
-    
+
     func webViewViewController(_ vc: WebViewController, didAuthenticateWithCode code: String) {
         UIBlockingProgressHUD.show()
         delegate?.authViewController(self, didAuthWithCode: code)
